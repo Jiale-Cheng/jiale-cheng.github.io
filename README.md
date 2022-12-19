@@ -1,16 +1,16 @@
 # If you want to use this theme
 
-Please read [this link](https://jialecheng.github.io/jekyll/Jekyll-Build.html#what-should-i-modify). 
+Please read [this link](https://yk-liu.github.io/jekyll/Jekyll-Build.html#what-should-i-modify). 
 
-I **strongly** recommand that you use the other [repo](https://github.com/jialecheng/PointingToTheMoon) I specially prepared for you! It has all the features that this webiste has and has no personal information of me. You can fork that repo or leave a star if you like. 
+I **strongly** recommand that you use this repo that I specially prepared for you! It has all the features that my personal webiste has and has no personal information of me. You can fork that repo or leave a star if you like. 
 
 However, you can still use this repo for some fine-tuning or hackering. But please at least use the "theme-for-fork" branch rather than the master branch.
 
-If you still want to use the master branch for some reason, please remove files/ descriptions about `jialecheng` so I don't have to pester you to clean up. Also I would appreciate if you don't fork this repo, but clone it and upload to your own, so there is no network between you and me. And if you really like this repo, maybe consider giving it a star.
+If you still want to use the master branch for some reason, please remove files/ descriptions about `yk-liu` so I don't have to pester you to clean up. Also I would appreciate if you don't fork this repo, but clone it and upload to your own, so there is no network between you and me. And if you really like this repo, maybe consider giving it a star.
 
 # About this website
 
-This website (source code [here](https://github.com/jialecheng/jialecheng.github.io)) uses these sources:
+This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) uses these sources:
 
 | Module                                                       | Mainly used in                                  | License/ TOS                                                 |
 | ------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------ |

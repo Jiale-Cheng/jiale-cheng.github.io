@@ -9,18 +9,18 @@
 
 var string = "This is bitdegree.org!";
 var siteurl = "{page.url}"
-var page_real_name = siteurl.replace("https://jialecheng.github.io","")
-var page_real_name = siteurl.replace("https://jialecheng.github.io","")
+var page_real_name = siteurl.replace("https://yk-liu.github.io","")
+var page_real_name = siteurl.replace("https://yk-liu.github.io","")
 
-var result = string.replace("<img = ' ", "<img src=\"https://raw.githubusercontent.com/jialecheng/jialecheng.github.io/master/_posts/2018-08-20-One-Forms/");
+var result = string.replace("<img = ' ", "<img src=\"https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-One-Forms/");
 
 // convert all local img to raw.github to comply with kramdown
-// replace "<img = ' ", "<img src=\"https://raw.githubusercontent.com/jialecheng/jialecheng.github.io/master/_posts"
+// replace "<img = ' ", "<img src=\"https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts"
 // and replace {{ page.url}} 
-// (which is "https://jialecheng.github.io/2018/08/20/One-Form") to "2018-08-20-One-Forms" : remove "...github.io/" & replace / to -
+// (which is "https://yk-liu.github.io/2018/08/20/One-Form") to "2018-08-20-One-Forms" : remove "...github.io/" & replace / to -
 // and put that behind
-string.replace("<img = ' ", "<img src=\"https://raw.githubusercontent.com/jialecheng/jialecheng.github.io/master/_posts/");
-string2="{page.url}".replace("https://jialecheng.github.io/","")
+string.replace("<img = ' ", "<img src=\"https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/");
+string2="{page.url}".replace("https://yk-liu.github.io/","")
 string2.replace("///g","/-")
 
 add "/" to the tail
