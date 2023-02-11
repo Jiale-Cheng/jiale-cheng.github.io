@@ -1,27 +1,27 @@
 # Site settings
 title: Website Title
 description: Website short description
-baseurl: "" 
+baseurl: "https://jialecheng.github.io" 
 #change the baseurl to "" if you are using it as your user GitHub Pages
-url: "https://yk-liu.github.io"  
+url: "https://jialecheng.github.io"  
 
 
 # GitHub User settings
-username: Username
-github_username: github_username
-user_description: user_description
-user_title: user_title
-email: 
+username: Jiale Cheng
+github_username: Jiale_Cheng
+user_description: Interested in information theory, coding, and mathematics foundations of ML.
+user_title: Mr.
+email: jlcheng@seu.edu.cn
 
 # Blog Author settings
-author:
-  name:            
+author: Jiale Cheng
+  name:  Jiale Cheng          
   picture:        
-  email:           
+  email:  jlcheng@seu.edu.cn         
   description:     
   twitter:
   facebook:
-  github:          
+  github:  https://github.com/Jiale-Cheng/        
   linkedin:
   clustrmap:      
 
