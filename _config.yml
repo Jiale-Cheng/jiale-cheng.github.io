@@ -1,28 +1,28 @@
 # Site settings
 title: Pointing to the Moon
-description: Blog of Yingkai Liu
+description: Blog of Jiale Cheng
 baseurl: "" 
-url: "https://yk-liu.github.io" 
+url: "https://jiale-cheng.github.io" 
 
 # GitHub User settings
-username: Yingkai Liu
-github_username: yk-liu
-user_description: A Physics graduate student with a broad interest
-user_title: Physics PhD student
+username: Jiale Cheng
+github_username: jiale-cheng
+user_description: A Ph.D. candidate with interest in information theory, coding and mathematical background of ML with their applications to data privacy/security.
+user_title: PhD candidate
 email: yingkai.liu@outlook.com
 
 # Blog Author settings
 author:
-  name:           Yingkai Liu
+  name:           Jiale Cheng
   picture:        
-  email:          yingkai.liu@outlook.com
-  description:    I'm a Physics graduate student with a broad interest.
+  email:          jlcheng@seu.edu.cn
+  description:    Interested in information theory, coding and mathematical background of ML with their applications to data privacy/security.
   twitter:
   facebook:
-  github:         https://github.com/yk-liu
+  github:         https://github.com/Jiale-Cheng
   linkedin:
   # # If you're forking this site, make sure you delete this entry!
-  clustrmap:      MlqUzlcZFdHetSQuxml5oHyt9RwVjZrsGbvyaRpMwgU 
+  clustrmap:      yX6fKVAPwoN64YALu1NiouBF9fG5nA769GCuOGalMDg 
   # If you're forking this site, make sure you delete this entry!
 
 

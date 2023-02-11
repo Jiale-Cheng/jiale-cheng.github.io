@@ -148,4 +148,4 @@ $$
 \end{align*}
 $$
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Phase-lift.png' width="50%">
+<img src='https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Phase-lift.png' width="50%">

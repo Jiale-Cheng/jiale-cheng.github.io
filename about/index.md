@@ -18,7 +18,7 @@ As for my current interest, on my CV I wrote:
 
 > Learning Mathematical tools that explain the topological aspects of materials. Understanding the phenomenon of integer discreetness arising from continuous symmetry. Describing and discovering topological quantum systems. Learning through examples and models, especially coding and seeing the numerical result.
 
-Here is my [CV](https://yk-liu.github.io/about/CV-of-Liu-Yingkai.pdf) (last update: 2019-11-28).
+Here is my [CV](https://jiale-cheng.github.io/about/CV-of-Liu-Yingkai.pdf) (last update: 2019-11-28).
 
 # This Site
 
@@ -42,7 +42,7 @@ The posts are at different status.
 
 # Sources
 
-This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) uses these sources:
+This website (source code [here](https://github.com/jiale-cheng/jiale-cheng.github.io)) uses these sources:
 
 | Module                                                       | Mainly used in                                  | License/ TOS                                                 |
 | ------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------ |
@@ -60,7 +60,7 @@ This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) us
 | [404 T-rex game](https://github.com/wayou/t-rex-runner)      | 404 page                                        | from [Chromium source code](https://cs.chromium.org/chromium/src/components/neterror/resources/offline.js?q=t-rex+package), [license](https://chromium.googlesource.com/chromium/src.git/+/master/LICENSE) |
 | [Encryption](https://github.com/robinmoisson/staticrypt)     | Secret Pages                                    | [MIT](http://opensource.org/licenses/MIT)                    |
 
-Additional licensing information can be found [here](https://github.com/yk-liu/yk-liu.github.io/blob/master/LICENSE.md).
+Additional licensing information can be found [here](https://github.com/jiale-cheng/jiale-cheng.github.io/blob/master/LICENSE.md).
 
 I mainly use [Typora](https://www.typora.io) to write my post.
 

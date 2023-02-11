@@ -5,7 +5,7 @@ mathjax: true
 categories: Topology Lie-group
 tags: Lie-algebra Lie-group
 keywords: Lie-algebra Lie-group
-description: My understanding of Lie-group and its Lie-algebra. The statement "Lie-algebra is approximation of Lie-group" is inaccurate since they essentially live in different spaces. This post is not finished. Check posts under [`Lie Group`](https://yk-liu.github.io/blog/tags#Lie-group) and/or [`Lie Algebra`](https://yk-liu.github.io/blog/tags#lie-algebra) where I rewrote and added more aspects of Lie group and Lie algebra.
+description: My understanding of Lie-group and its Lie-algebra. The statement "Lie-algebra is approximation of Lie-group" is inaccurate since they essentially live in different spaces. This post is not finished. Check posts under [`Lie Group`](https://jiale-cheng.github.io/blog/tags#Lie-group) and/or [`Lie Algebra`](https://jiale-cheng.github.io/blog/tags#lie-algebra) where I rewrote and added more aspects of Lie group and Lie algebra.
 mermaid: true
 highlight: true
 status: Archived
@@ -189,7 +189,7 @@ A[1维曲线]--> B[2维曲面]
 
 简单地说, 给一个拓扑空间配备一个性质足够好(可<u>微分</u>)的坐标映射, 就得到<u>微分</u>流形
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra-cn/流形.png" alt='流形' style="zoom:50%" />
+<img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra-cn/流形.png" alt='流形' style="zoom:50%" />
 
 (未完)
 
@@ -245,7 +245,7 @@ $$
 
 诱导出一个切空间的微分映射$dL _ g$. 如图所示.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra-cn/切空间.png" alt="切空间" style="zoom:30%" />
+<img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra-cn/切空间.png" alt="切空间" style="zoom:30%" />
 
 由此可以得到
 

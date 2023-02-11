@@ -16,7 +16,7 @@ THIS SOFTWARE IS PROVIDED BY YINGKAILIU ''AS IS'' AND ANY EXPRESS OR IMPLIED WAR
 
 ---
 
-This website includes code from the following libraries/packages, used under the following license respectively. For more information, see https://yk-liu.github.io/about/
+This website includes code from the following libraries/packages, used under the following license respectively. For more information, see https://jiale-cheng.github.io/about/
 
 # [Particle.js](https://github.com/VincentGarreau/particles.js)
 
