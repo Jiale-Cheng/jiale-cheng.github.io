@@ -1,7 +1,7 @@
 # Site settings
 title: Jiale Cheng's Personal Page
 description: Let's start from NOW!
-baseurl: "https://jialecheng.github.io" 
+baseurl: "" 
 #change the baseurl to "" if you are using it as your user GitHub Pages
 url: "https://jialecheng.github.io"  
 
@@ -15,7 +15,7 @@ email: jlcheng@seu.edu.cn
 
 # Blog Author settings
 author: Jiale Cheng
-  name:  Jiale Cheng          
+  name:  Jiale_Cheng
   picture:        
   email:  jlcheng@seu.edu.cn         
   description:     
