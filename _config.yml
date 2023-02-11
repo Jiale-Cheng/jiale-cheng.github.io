@@ -1,6 +1,6 @@
 # Site settings
-title: Website Title
-description: Website short description
+title: Jiale Cheng's Personal Page
+description: Let's start from NOW!
 baseurl: "https://jialecheng.github.io" 
 #change the baseurl to "" if you are using it as your user GitHub Pages
 url: "https://jialecheng.github.io"  
