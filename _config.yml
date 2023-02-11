@@ -1,47 +1,49 @@
 # Site settings
-title: Jiale Cheng's Personal Page
-description: Let's start from NOW!
+title: Pointing to the Moon
+description: Blog of Yingkai Liu
 baseurl: "" 
-#change the baseurl to "" if you are using it as your user GitHub Pages
-url: "https://jialecheng.github.io"  
-
+url: "https://yk-liu.github.io" 
 
 # GitHub User settings
-username: Jiale Cheng
-github_username: Jiale_Cheng
-user_description: Interested in information theory, coding, and mathematics foundations of ML.
-user_title: Mr.
-email: jlcheng@seu.edu.cn
+username: Yingkai Liu
+github_username: yk-liu
+user_description: A Physics graduate student with a broad interest
+user_title: Physics PhD student
+email: yingkai.liu@outlook.com
 
 # Blog Author settings
 author:
-  name:  Jiale_Cheng
+  name:           Yingkai Liu
   picture:        
-  email:  jlcheng@seu.edu.cn         
-  description:     
+  email:          yingkai.liu@outlook.com
+  description:    I'm a Physics graduate student with a broad interest.
   twitter:
   facebook:
-  github:  https://github.com/Jiale-Cheng/        
+  github:         https://github.com/yk-liu
   linkedin:
-  clustrmap:      
+  # # If you're forking this site, make sure you delete this entry!
+  clustrmap:      MlqUzlcZFdHetSQuxml5oHyt9RwVjZrsGbvyaRpMwgU 
+  # If you're forking this site, make sure you delete this entry!
 
 
 # markdown
-markdown: kramdown
+# markdown: kramdown
+
+# future: true
   
-kramdown:
- footnote_nr: 1
- entity_output: as_char
- # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
- syntax_highlighter: rouge
- syntax_highlighter_opts:
-  # Use existing pygments syntax highlighting css
-  css_class: 'highlight'
- span:
-  line_numbers: false
- block:
-  line_numbers: true
-  start_line: 1
+# kramdown:
+#  footnote_nr: 1
+#  entity_output: as_char
+#  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+#  syntax_highlighter: rouge
+#  syntax_highlighter_opts:
+#   # Use existing pygments syntax highlighting css
+#   css_class: 'highlight'
+#  span:
+#   line_numbers: false
+#  block:
+#   line_numbers: true
+#   start_line: 1
  
 highlighter: rouge
     
@@ -49,7 +51,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   
-permalink: none
+permalink: /:year/:title/
 
 defaults:
   -
@@ -72,6 +74,14 @@ exclude:
  - LICENSE.md
  - README.md
  - "*.cdf"
+ - "*.tex"
+ - "*.aux"
+ - "*.log"
+ - "*.out"
+ - "*.gz"
+ - "*.toc"
+ - "*.bib"
  - "*.nb"
  - "*.bk"
  - "*.draft.md"
+ - "*.source.*"

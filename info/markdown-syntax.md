@@ -1,10 +1,12 @@
 ---
 layout: info
 title: Markdown Syntax
-edit: 2019-03-26
+edit: 2019-05-17
 mathjax: true
 mermaid: true
+numbering: true
 highlight: true
+toc: true
 ---
 
 # Basics Markdown Syntax
@@ -22,7 +24,11 @@ _This is also italic._ __This is also Bold__. _ If underscore is surrounded by s
 
 You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[this](https://bit.ly)**, but not like `[this](https://bit.ly)`.
 
-==Highlighting is not supported by GFM, but I implemented on this theme.==
+Highlighting is not supported by GFM, but I implemented on this theme. Is is implemented on client-side so I can't demo here. Just add two equal signs before and after (no space) the text you want to highlight. You can see the source code.
+
+~~This is strike through.~~
+
+<sup>super</sup> and <sub>sub</sub> scripts are manually typed.
 
 ```
 
@@ -35,6 +41,10 @@ _This is also italic._ __This is also Bold__. _ If underscore is surrounded by s
 You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[this](https://bit.ly)**, but not like `[this](https://bit.ly)`.
 
 ==Highlighting is not supported by GFM, but I implemented on this theme.==
+
+~~This is strike through.~~
+
+<sup>super</sup> and <sub>sub</sub> scripts are manually typed.
 
 ## Lists
 
@@ -102,20 +112,20 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ```markdown
 Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
 
-![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
+![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
 
 So I prefer using HTML tags like this:
 
-<img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
 ```
 
 Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
 
-![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
+![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
 
 So I prefer using HTML tags like this:
 
-<img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
 
 > Note: I consulted GitHub support about using `raw.github` link for pictures, they said it's okay to do so:
 >
@@ -203,7 +213,7 @@ You can mix them as well, like
 
 | You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| ![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
+| ![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 ```
 
 | This column is left aligned | This column is centered | This column is right aligned |
@@ -214,7 +224,7 @@ You can mix them as well, like
 
 | You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| ![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
+| ![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 
 ## Mathjax
 
@@ -263,7 +273,7 @@ $$
 \newcommand{\NewOp}[2]{\lbrace{#1}\mid \otimes{#2}\rbrace}
 $$
 
-And `\NewOp` will be available in all later math blocks, whether inline $\NewOp{x}{y}​$ or display
+And `\NewOp` will be available in all later math blocks, whether inline $\NewOp{x}{y}$ or display
 
 $$
 \NewOp{x}{y}
@@ -332,14 +342,14 @@ $$
 2. do not use `x_1` in inline math, write that as `x _ 1`. Jekyll will parse that as italic fonts. You can do that by replacing, but be careful that some of the links contains `_` so make sure you correct those links afterwards.
 
 ```
-   Using underscores like this $x_1$, $x_2$, $x_{c_2}^{c_3}$, with $y_{c_2}^{c_3}$, will be processed as _italic_.
+   Using underscores like this $\left(F_{a\sigma\sigma}^1\right)_c^\sigma  \left(F_{\sigma\sigma c}^1\right)_\sigma ^a  = \sum_e F_e^a  \left(F_{\sigma e\sigma}^1\right)_\sigma^\sigma  F_c^e$ will be processed as _italic_.
 
-   Wrap underscores with whitespaces like this $x _ 1$, $x _ 2$, $x _ {c _ 2}^{c _ 3}$, with $y _ {c _ 2}^{c _ 3 }$.
+   Wrap underscores with whitespaces like this $\left(F _ {a\sigma\sigma}^1\right) _ c^\sigma  \left(F _ {\sigma\sigma c}^1\right) _ \sigma ^a  = \sum _ e F _ e^a  \left(F _ {\sigma e\sigma}^1\right) _ \sigma^\sigma  F _ c^e$ can help.
 ```
 
-   Using underscores like this $x_1$, $x_2$, $x_{c_2}^{c_3}$, with $y_{c_2}^{c_3}$, will be processed as _italic_.
+   Using underscores like this $\left(F_{a\sigma\sigma}^1\right)_c^\sigma  \left(F_{\sigma\sigma c}^1\right)_\sigma ^a  = \sum_e F_e^a  \left(F_{\sigma e\sigma}^1\right)_\sigma^\sigma  F_c^e$ will be processed as _italic_.
 
-   Wrap underscores with whitespaces like this $x _ 1$, $x _ 2$, $x _ {c _ 2}^{c _ 3}$, with $y _ {c _ 2}^{c _ 3 }​$.
+   Wrap underscores with whitespaces like this $\left(F _ {a\sigma\sigma}^1\right) _ c^\sigma  \left(F _ {\sigma\sigma c}^1\right) _ \sigma ^a  = \sum _ e F _ e^a  \left(F _ {\sigma e\sigma}^1\right) _ \sigma^\sigma  F _ c^e$ can help.
 
 3. ```
    Be **very careful** with the vertical bar symbol and underscore in math. If you use it like $|x|\ge 0$, $|0|=0$, or like $\lbrace x | x\gt 0\rbrace$, you will get a bunch of gibberish.
@@ -347,7 +357,7 @@ $$
    Use `\vert` in $\vert x\vert\ge 0$, $\vert 0\vert=0$. Use `\mid` in $\lbrace x \mid x\gt 0​$ instead.
    ```
 
-   Be **very careful** with the vertical bar symbol and underscore in math. If you use it like $|x|\ge 0$, $|0|=0$, or like $\lbrace x | x\gt 0\rbrace​$, you will get a bunch of gibberish.
+   Be **very careful** with the vertical bar symbol and underscore in math. If you use it like $|x|\ge 0$, $|0|=0$, or like $\lbrace x | x\gt 0\rbrace$, you will get a bunch of gibberish.
 
    Use `\vert` in $\vert x\vert\ge 0$, $\vert 0\vert=0$. Use `\mid` in $\lbrace x \mid x\gt 0\rbrace$ instead.
 
@@ -390,8 +400,8 @@ This is a note[^1]. Footnotes can have captions like[^this]. You can reference t
 The Foot notes are like this
 
 
-[^1]: https://jiale-cheng.github.io
-[^this]: https://jiale-cheng.github.io
+[^1]: https://yk-liu.github.io
+[^this]: https://yk-liu.github.io
 
 [^this-one]: 
     > Blockquotes can be in a footnote.
@@ -402,5 +412,5 @@ The Foot notes are like this
 
 [^that]: or, naturally, simple paragraphs.
 
-[^linkid]: https://jiale-cheng.github.io "Optional Title"
+[^linkid]: https://yk-liu.github.io "Optional Title"
 
