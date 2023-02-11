@@ -14,7 +14,7 @@ mathjax: true
 * National Mobile Communications Research Laboratory, Room 5319
 * Born in Bozhou, China, on Nov. 17th, 1999
 * Tel: (+86)158-5069-8678
-* Email: jlcheng AT seu DOT edu DOT cn (jlcheng@seu.edu.cn) or click the [mailbox](mailto:jlcheng.github.io).
+* Email: jlcheng AT seu DOT edu DOT cn (jlcheng@seu.edu.cn) or click the [mailbox](mailto:jlcheng@seu.edu.cn).
 * Personal Website: [jiale-cheng.github.io](jiale-cheng.github.io)
 * My [CV](https://jiale-cheng.github.io/about/CV-of-Jiale-Cheng.pdf) (last update: 2022-12-15).
 
