@@ -6,7 +6,7 @@ mathjax: true
 mermaid: true
 tags: tag1 tag2 tag3
 categories: sample post
-description: This is a sample post testing and demonstrating all the markdown syntaxes. In the description you can also use markdowns to do *A* **B** ***C*** and `D` and other stuff like a [link](https://yk-liu.github.io).
+description: This is a sample post testing and demonstrating all the markdown syntaxes. In the description you can also use markdowns to do *A* **B** ***C*** and `D` and other stuff like a [link](https://jiale-cheng.github.io).
 ---
 
 This page's comment is disabled, scroll down to see.
@@ -119,11 +119,11 @@ Wrap underscores with whitespaces like this $x _ 1$, $x _ 2$, $x _ {c _ 2}^{c _ 
 
 Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
 
-![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
+![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
 
 So I prefer using HTML tags like this:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
+<img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
 
 # Lists
 
@@ -234,7 +234,7 @@ sequenceDiagram
 
 | You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| ![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
+| ![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 
 # Foot Notes
 
@@ -258,8 +258,8 @@ This is a note[^1]. Footnotes can have captions like[^this]. You can reference t
 
 The Foot notes are like this
 
-[^1]: https://yk-liu.github.io
-[^this]: https://yk-liu.github.io
+[^1]: https://jiale-cheng.github.io
+[^this]: https://jiale-cheng.github.io
 [^this-one]: 
 
 ```
@@ -272,4 +272,4 @@ The Foot notes are like this
 
 [^that]: or, naturally, simple paragraphs.
 
-[linkid]: https://yk-liu.github.io	"Optional Title"
+[linkid]: https://jiale-cheng.github.io	"Optional Title"
