@@ -6,6 +6,11 @@ tags:                               #标签
     - Information Theory
 layout: post
 title: Typicality
+
+commentable: true
+numbering: 
+type:
+repopath:
 mathjax: true
 categories: Basic-IT
 tags: Basic-IT
