@@ -8,6 +8,7 @@ layout: post
 title: Typicality
 
 commentable: true
+protected:
 numbering: 
 type:
 repopath:
