@@ -32,6 +32,7 @@ markdown: kramdown
 future: true
   
 kramdown:
+ math_engine: katex
  footnote_nr: 1
  entity_output: as_char
  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
