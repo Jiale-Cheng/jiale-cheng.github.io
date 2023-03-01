@@ -21,6 +21,7 @@ Zermelo-Fraenkel set theory with the Axiom of Choice (ZFC) is a widely accepted 
 
 The Extensionality Axiom is one of the fundamental axioms of ZFC set theory. It states that two sets are equal if and only if they have the same elements.
 
+
 $$
 \forall x \forall y [\forall z (z \in x \Leftrightarrow z \in y) \Rightarrow x=y]
 $$
@@ -28,6 +29,7 @@ $$
 This means that if two sets have exactly the same elements, then they are identical sets. Conversely, if two sets are identical, then they have exactly the same elements. This may seem like a trivial statement, but it is actually quite powerful and fundamental to the rest of set theory.
 
 The Extensionality Axiom allows us to reason about sets purely in terms of their elements. If we know the elements of two sets, we can determine whether or not they are the same set. It also allows us to define sets by specifying their elements. For example, we can define the set of all even natural numbers as follows:
+
 
 $$
 \{n \in \mathbb{N} \mid n \text{ is even}\}
@@ -40,6 +42,7 @@ In summary, the Extensionality Axiom allows us to reason about sets purely in te
 # Regularity
 
 The Regularity Axiom is one of the nine axioms of ZFC set theory. It states that every non-empty set has an element that is disjoint from it.
+
 
 $$
 \forall x [\exists y (y \in x) \Rightarrow \exists z (z \in x \land z \cap x = \varnothing)]
@@ -58,6 +61,7 @@ In summary, the Regularity Axiom ensures the existence of "minimal" elements in 
 # Pairing
 
 The Axiom of Pairing is one of the nine axioms of ZFC set theory. It allows us to create a new set that contains exactly two given elements.
+
 
 $$
 \forall x \forall y \exists z \forall w [w \in z \Leftrightarrow (w = x \lor w = y)]
@@ -79,6 +83,7 @@ In summary, the Axiom of Pairing allows us to create pairs of sets and has impor
 
 The Axiom of Union is one of the nine axioms of ZFC set theory. It allows us to create a new set that contains all the elements of a collection of sets.
 
+
 $$
 \forall A \exists B \forall x [(x \in B) \Leftrightarrow (\exists y \in A) (x \in y)]
 $$
@@ -98,6 +103,7 @@ In summary, the Axiom of Union allows us to construct unions of sets and has imp
 # Power Set
 
 The Axiom of Power Set is one of the nine axioms of ZFC set theory. It states that for any set $A$, there exists a set $P(A)$, called the power set of $A$, that contains all the subsets of $A$.
+
 
 $$
 \forall A \exists P(A) \forall B [(B \subseteq A) \Rightarrow (B \in P(A))]
@@ -119,11 +125,13 @@ In summary, the Axiom of Power Set allows us to construct a set that contains al
 
 The Axiom of Choice is one of the nine axioms of ZFC set theory. It states that given any collection of non-empty sets, there exists a way to choose exactly one element from each set in the collection.
 
+
 $$
 \forall \mathcal{A} [\emptyset \notin \mathcal{A} \Rightarrow \exists f : \mathcal{A} \rightarrow \bigcup \mathcal{A}\, \text{such that}\, f(A) \in A\,\,\forall A \in \mathcal{A}]
 $$
 
 This means that for any collection of non-empty sets $\mathcal{A}$, there exists a function $f$ that assigns to each set in $\mathcal{A}$ exactly one element that belongs to that set. The Axiom of Choice is often written using the notation of set theory as follows:
+
 
 $$
 \forall \mathcal{A} [\emptyset \notin \mathcal{A} \Rightarrow \prod \mathcal{A} \neq \emptyset]
@@ -141,6 +149,7 @@ An alternative to the Axiom of Choice is the Axiom of Countable Choice, which st
 
 The Axiom of Infinity is one of the nine axioms of ZFC set theory. It states that there exists at least one set that contains the empty set and is closed under the successor operation.
 
+
 $$
 \exists \mathbb{N} [\emptyset \in \mathbb{N} \wedge \forall x \in \mathbb{N}(x\cup\{x\} \in \mathbb{N})]
 $$
@@ -148,6 +157,7 @@ $$
 This means that there exists a set $\mathbb{N}$ that contains the empty set $\emptyset$ and is closed under the successor operation, which adds one element to a set. The axiom guarantees the existence of an infinite set, which is crucial in many areas of mathematics.
 
 There are alternative descriptions of the Axiom of Infinity that are equivalent to the above statement. One such description is to say that there exists a set that contains the empty set and is closed under the power set operation:
+
 
 $$
 \exists S [\emptyset \in S \wedge \forall x (x\in S \Rightarrow \mathcal{P}(x)\in S)]
@@ -163,6 +173,7 @@ It is worth noting that the Axiom of Infinity does not specify the size or struc
 
 The Axiom of Foundation is one of the nine axioms of ZFC set theory. It is also known as the Axiom of Regularity. The axiom states that every non-empty set $x$ contains an element $y$ that is disjoint from $x$.
 
+
 $$
 \forall x (\exists y (y\in x) \Rightarrow \exists y (y\in x \wedge \forall z(z \in y \Rightarrow z \notin x)))
 $$
@@ -172,6 +183,7 @@ In other words, every non-empty set $x$ has an element $y$ that is "earlier" tha
 The Axiom of Foundation implies several important results in set theory, such as the existence of a well-founded relation on the class of all sets, and the fact that every set can be well-ordered. It also allows for the development of transfinite induction, which is a powerful tool in the study of infinite sets.
 
 There are alternative descriptions of the Axiom of Foundation that are equivalent to the above statement. One such description is to say that every non-empty set $x$ has an element $y$ that is minimal with respect to the $\in$-relation:
+
 
 $$
 \forall x (\exists y (y\in x) \Rightarrow \exists y (y\in x \wedge \neg\exists z (z \in y \wedge z \in x)))
@@ -185,6 +197,7 @@ Overall, the Axiom of Foundation ensures the well-behaved nature of the membersh
 
 The Axiom of Replacement is one of the nine axioms of ZFC set theory. It allows us to construct a new set by applying a definable function to the elements of an existing set.
 
+
 $$
 \forall x \forall y_1 \forall y_2 \cdots \forall y_n (\forall z(z \in x \Rightarrow \exists ! w \phi(w,z,y_1,y_2,\ldots,y_n)) \Rightarrow \exists y \forall z(z \in x \Rightarrow \phi(y,z,y_1,y_2,\ldots,y_n)))
 $$
@@ -194,6 +207,7 @@ In other words, for any set $x$ and definable function $\phi$, we can create a n
 The Axiom of Replacement is a powerful tool in set theory, allowing us to construct new sets from old ones and proving many important results. It implies the existence of a set of all ordered pairs, as well as the existence of the power set of any set.
 
 There are alternative descriptions of the Axiom of Replacement that are equivalent to the above statement. One such description is to say that if $\phi$ is a function such that for every $x$ there exists a unique $y$ satisfying $\phi(x,y)$, then the range of $\phi$ exists as a set:
+
 
 $$
 \forall \phi \forall A (\forall x \in A \exists ! y \phi(x,y) \Rightarrow \exists B \forall y(y \in B \Leftrightarrow \exists x \in A \phi(x,y)))
@@ -215,34 +229,42 @@ We will prove the compatibility of each pair of axioms:
 
 ### Proof 1. Compatibility of Extensionality
 
+* **Extensionality and Regularity:**
 
-1. **Extensionality and Regularity:**
-   Let $A$ be a set. By the Extensionality axiom, the set $A$ is uniquely determined by its elements, so we can define the set $B={A}$.
-   Now, by the Regularity axiom, there exists an element $C\in B$ such that $C\cap B=\varnothing$. Since $C\in B$, we have $C=A$, so $A\cap{A}=\varnothing$. This means that $A$ does not contain itself, which satisfies the Regularity axiom.
-   Therefore, Extensionality and Regularity are compatible with each other.
-2. **Extensionality and Pairing:**
-   Let $A$ and $B$ be sets. By the Pairing axiom, there exists a set $C={A,B}$. Suppose for contradiction that $C$ is not uniquely determined by its elements, i.e., there exists a set $D\neq C$ such that $x\in C$ if and only if $x\in D$.
-   Then, either $A\in D$ and $B\notin D$, or $A\notin D$ and $B\in D$. Without loss of generality, assume that $A\in D$ and $B\notin D$. Then, by the Extensionality axiom, $C\neq D$, which is a contradiction.
-   Therefore, Extensionality and Pairing are compatible with each other.
-3. **Extensionality and Union:**
-   Let $A$ be a set. By the Union axiom, there exists a set $B=\bigcup A$. Suppose for contradiction that $B$ is not uniquely determined by its elements, i.e., there exists a set $C\neq B$ such that $x\in B$ if and only if $x\in C$.
-   Then, for all $a\in A$, $a\subseteq B$ and $a\subseteq C$, so $B\subseteq C$ and $C\subseteq B$. Therefore, $B=C$, which is a contradiction.
-   Therefore, Extensionality and Union are compatible with each other.
-4. **Extensionality and Power Set:**
-   Let $A$ be a set. By the Power Set axiom, there exists a set $B=\mathcal{P}(A)$. Suppose for contradiction that $B$ is not uniquely determined by its elements, i.e., there exists a set $C\neq B$ such that $x\in B$ if and only if $x\in C$.
-   Then, for all $a\subseteq A$, $a\in B$ if and only if $a\in C$, so $B=C$, which is a contradiction.
-   Therefore, Extensionality and Power Set are compatible with each other.
-5. **Extensionality and Infinity:**
-   By the Infinity axiom, there exists an infinite set $A$. By the Extensionality axiom, any two sets with the same elements are equal, so any infinite set $A$ has the same elements as any other infinite set. Therefore, there is no contradiction between Extensionality and Infinity.
+Let $A$ be a set. By the Extensionality axiom, the set $A$ is uniquely determined by its elements, so we can define the set $B={A}$.
+Now, by the Regularity axiom, there exists an element $C\in B$ such that $C\cap B=\varnothing$. Since $C\in B$, we have $C=A$, so $A\cap{A}=\varnothing$. This means that $A$ does not contain itself, which satisfies the Regularity axiom.
+Therefore, Extensionality and Regularity are compatible with each other.
 
-**6. Foundation Axiom**
+* **Extensionality and Pairing:**
 
-    The Foundation axiom states that every non-empty set$A$ contains an element that is disjoint from $A$. This axiom is not affected by the Extensionality axiom, since the existence of a disjoint element is determined by the elements of the set, which are uniquely determined by the set's Extensionality.
+Let $A$ and $B$ be sets. By the Pairing axiom, there exists a set $C={A,B}$. Suppose for contradiction that $C$ is not uniquely determined by its elements, i.e., there exists a set $D\neq C$ such that $x\in C$ if and only if $x\in D$.
+Then, either $A\in D$ and $B\notin D$, or $A\notin D$ and $B\in D$. Without loss of generality, assume that $A\in D$ and $B\notin D$. Then, by the Extensionality axiom, $C\neq D$, which is a contradiction.
+Therefore, Extensionality and Pairing are compatible with each other.
 
-**7. Replacement Axiom**
+* **Extensionality and Union:**
+
+Let $A$ be a set. By the Union axiom, there exists a set $B=\bigcup A$. Suppose for contradiction that $B$ is not uniquely determined by its elements, i.e., there exists a set $C\neq B$ such that $x\in B$ if and only if $x\in C$.
+Then, for all $a\in A$, $a\subseteq B$ and $a\subseteq C$, so $B\subseteq C$ and $C\subseteq B$. Therefore, $B=C$, which is a contradiction.
+Therefore, Extensionality and Union are compatible with each other.
+
+* **Extensionality and Power Set:**
+
+Let $A$ be a set. By the Power Set axiom, there exists a set $B=\mathcal{P}(A)$. Suppose for contradiction that $B$ is not uniquely determined by its elements, i.e., there exists a set $C\neq B$ such that $x\in B$ if and only if $x\in C$.
+Then, for all $a\subseteq A$, $a\in B$ if and only if $a\in C$, so $B=C$, which is a contradiction.
+Therefore, Extensionality and Power Set are compatible with each other.
+
+* **Extensionality and Infinity:**
+
+By the Infinity axiom, there exists an infinite set $A$. By the Extensionality axiom, any two sets with the same elements are equal, so any infinite set $A$ has the same elements as any other infinite set. Therefore, there is no contradiction between Extensionality and Infinity.
+
+* **Foundation Axiom:**
+
+The Foundation axiom states that every non-empty set$A$ contains an element that is disjoint from $A$. This axiom is not affected by the Extensionality axiom, since the existence of a disjoint element is determined by the elements of the set, which are uniquely determined by the set's Extensionality.
+
+* **Replacement Axiom:**
 
 The Replacement axiom states that given any set $A$ and any functional relation $f$, there exists a set that contains the image of $A$ under $f$. This axiom is not affected by the Extensionality axiom, since the image of $A$ under $f$ is uniquely determined by the Extensionality of $A$ and the properties of the functional relation $f$.
 
-**8. Axiom of Choice**
+* **Axiom of Choice:**
 
 The Axiom of Choice states that given any collection of non-empty sets, there exists a way to choose one element from each set in the collection. This axiom is also not affected by the Extensionality axiom, since the choice of elements is determined by the elements of the sets, which are uniquely determined by the sets' Extensionality.
