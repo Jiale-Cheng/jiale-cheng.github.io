@@ -1,12 +1,4 @@
 ---
-#subtitle:   检测理论概述 #副标题
-header-img: img/post-web.jpg    #这篇文章标题背景图片
-catalog: true                       # 是否归档
-tags:                               #标签
-    - Information Theory
-layout: post
-title: Typicality
-
 commentable: true
 protected:
 numbering: 
