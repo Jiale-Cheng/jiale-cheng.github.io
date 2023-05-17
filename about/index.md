@@ -12,11 +12,9 @@ mathjax: true
 * Name: Jiale Cheng ([ORCiD:0000-0003-1379-4324](https://orcid.org/my-orcid?orcid=0000-0003-1379-4324))
 * Southeast University, Nanjing, China (Post Code: 210096)
 * National Mobile Communications Research Laboratory, Room 5319
-* Born in Bozhou, China, on Nov. 17th, 1999
-* Tel: (+86)158-5069-8678
-* Email: jlcheng AT seu DOT edu DOT cn (jlcheng@seu.edu.cn) or click the [mailbox](mailto:jlcheng@seu.edu.cn).
+* Email: jlcheng AT umich DOT edu (jlcheng@umich.edu) or click the [mailbox](mailto:jlcheng@umich.edu).
 * Personal Website: [jiale-cheng.github.io](jiale-cheng.github.io)
-* My [CV](https://jiale-cheng.github.io/about/CV-of-Jiale-Cheng.pdf) (last update: 2022-12-15).
+* My [CV](https://jiale-cheng.github.io/about/CV-of-Jiale-Cheng.pdf) (last update: 2023-5-15).
 
 # BASIC INFORMATION
 
@@ -33,26 +31,36 @@ Information Theory, Network Coding and its applications
 * Bachelor of Engineering in InformationEngineering
 * Honors: Honored Graduate of Chien-Shiung Wu Honored College, National Endeavour Fellowship
 
-### Southeast University (SEU), School of Information Science and Engineering, Nanjing, China, 09/2020- Present
+### Southeast University (SEU), School of Information Science and Engineering, Nanjing, China, 09/2020-06/2023
 
 * Master of Engineering (Pursuing) in Communications
 * Supervisor: Nan Liu, Wei Kang
 * Research Fields: Information Theory, Network Coding, Private Information Retrieval, Coded Caching, Secure Multiparty Computation
 
+### University of Michigan, Ann Arbor, U.S., Doctor of Philosophy (pursuing) in Electrical and Computer Engineering(ECE), 08/2023-Present
+
+* Supervisor: Hessam Mahdavifar
+* Track: Network, Communication, and Information Systems
+* Research Fields: information theory, network coding, coding theory
+
 # JOURNAL PUBLICATIONS
 
-1. J. Cheng, N. Liu, W. Kang and Y. Li, "The Capacity of Symmetric Private Information Retrieval Under Arbitrary Collusion and Eavesdropping Patterns," in IEEE Transactions on Information Forensics and Security, vol. 17, pp. 3037-3050, 2022, doi: 10.1109/TIFS.2022.3201375.
+1. J. Cheng, N. Liu, W. Kang and Y. Li, "The Capacity of Symmetric Private Information Retrieval Under Arbitrary Collusion and Eavesdropping Patterns," in IEEE Transactions on Information Forensics and Security, vol. 17, pp. 3037-3050, 2022.
 
 * Abstract: We study the symmetric private information retrieval (SPIR) problem under arbitrary collusion and eavesdropping patterns for replicated databases. We find its capacity, which is the same as the capacity of the original SPIR problem with the number of servers N replaced by a number $ F^* $ . The number $ F^* $ is the optimal solution to a linear programming problem, and it is a function of the joint pattern, which is the union of the collusion and eavesdropping pattern. This is the first result that shows how two arbitrary patterns collectively affect the capacity of the SPIR problem. We draw the conclusion that for SPIR problems, the collusion and eavesdropping constraints are interchangeable in terms of capacity, i.e., the two patterns play the same role in the SPIR problem and the capacity remains unchanged if we exchange the colluding and eavesdropping patterns. As corollaries of our result, the capacity of the SPIR problem under arbitrary collusion patterns, and the capacity of the PIR problem where each colluding set is included in some eavesdropping set, are also found. Some extensions with restrictions to finite message lengths are provided, and in this case, upper and lower bounds on the capacity are given. The lower bound is described with a solution to an integer linear programming problem.
 * Date of Publication: 24 August 2022
 * DOI: 10.1109/TIFS.2022.3201375
 * [Get Paper](https://ieeexplore.ieee.org/document/9865995)
 
-2. J. Cheng, N. Liu, W. Kang, "On the Asymptotic Capacity of Information Theoretical Privacy-preserving Epidemiological Data Collection," to be submitted to Entropy.
+2. J. Cheng, N. Liu, W. Kang, "On the
+   Asymptotic Capacity of Information Theoretical Privacy-preserving
+   Epidemiological Data Collection," in *Entropy (Special
+   Issue: Advances in Information and Coding Theory)*, vol. 25, no. 4:625, 2023, . (Featured Paper)
 
 * Abstract: We formulate a new secure distributed computation problem, where a simulation center can require any linear combination of K workers’ data through a caching layer consisted of $N$ servers. The workers, servers and the simulation center do not trust each other. For workers, any worker’s data is required to be protected from up to $E$ servers; for the server, any more information than the desired linear combination cannot be leaked; and for the simulation center, any single server know nothing about the coefﬁcients of the linear combination. Our goal is to ﬁnd the optimal download cost which is deﬁned as the size of message uploaded to the simulation center by the servers, to the size of desired linear combination. We proposed a scheme with the optimal download cost when $E < N − 1$. We also prove that when $E ≥ N − 1$, the scheme is not feasible.
-* To be submitted to Entropy Special Issue "Advances in Information and Coding Theory"
-* [Get Paper](basesite.url/img/entropy01.pdf)
+* Date of Publication: 26 March 2023
+* DOI: 10.3390/e25040625
+* [Get Paper](https://www.mdpi.com/1099-4300/25/4/625)
 
 # CONFERENCE PARTICIPATION
 
@@ -93,6 +101,7 @@ Information Theory, Network Coding and its applications
 
 ## HONORS & AWARDS
 
+* The Rackham Ph.D. Student Fellowship, 2023
 * National Endeavour Fellowship of China, SEU, 2017
 * Honor Mentioned in Mathematical Contest of  Modeling (MCM), 2019
 * IEEE Student Member,2021
