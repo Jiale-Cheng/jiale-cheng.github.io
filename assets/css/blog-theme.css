@@ -758,18 +758,18 @@ html.blog-theme {
   font-weight: 650;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1399px) {
   .blog-post-layout,
   .blog-page-layout {
     display: block;
   }
 
   .blog-post-layout {
-    width: min(100%, 1140px);
+    max-width: 1140px;
   }
 
   .blog-page-layout {
-    width: min(100%, 820px);
+    max-width: 820px;
   }
 
   .blog-toc {
@@ -793,6 +793,10 @@ html.blog-theme {
   .blog-hero__inner {
     width: min(100% - 2rem, 840px);
     padding: 6.5rem 0 4.4rem;
+  }
+
+  .blog-hero--post .blog-hero__inner {
+    width: min(100% - 2rem, 1140px);
   }
 
   .blog-hero h1,
