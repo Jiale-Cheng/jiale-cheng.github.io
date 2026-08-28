@@ -2,19 +2,27 @@
 {% assign resultLimit = 15 %}
 
 <div id="search-container">
-   <input type="text" id="search-input" placeholder="What are you looking for?">
+   <label class="search-visually-hidden" for="search-input">Search posts</label>
+   <input type="search" id="search-input" placeholder="What are you looking for?" autocomplete="off">
    
-   <div class='search-configs'>
-      <p>
-         Enable full-content search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Since the search is not server-side, you need to download about {{ totalPosts | times: 0.01 | round: 2}} MB (one-time download only when you check the box) to perform a full-content search.</span></a></sup>: <input type="checkbox" id="Full-content" onclick="updateConfig()">
+   <fieldset class="search-configs">
+      <legend>Search options</legend>
+      <p class="search-option">
+         <input type="checkbox" id="Full-content" onclick="updateConfig()">
+         <label for="Full-content">Enable full-content search</label>
+         <button type="button" class="tooltip" aria-label="About full-content search" aria-describedby="tooltip-full-content">&#128712;<span class="tooltiptext" id="tooltip-full-content" role="tooltip">Since the search is not server-side, you need to download about {{ totalPosts | times: 0.01 | round: 2}} MB (one-time download only when you check the box) to perform a full-content search.</span></button>
       </p>
-      <p>
-         Enable fuzzy search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Only use this if you cannot find any results. You may get a mass of irrelevant results, if both of fuzzy search and full-content search are enabled.</span></a></sup>: <input type="checkbox" id="fuzzy" onclick="updateConfig()"> 
+      <p class="search-option">
+         <input type="checkbox" id="fuzzy" onclick="updateConfig()">
+         <label for="fuzzy">Enable fuzzy search</label>
+         <button type="button" class="tooltip" aria-label="About fuzzy search" aria-describedby="tooltip-fuzzy">&#128712;<span class="tooltiptext" id="tooltip-fuzzy" role="tooltip">Only use this if you cannot find any results. You may get a mass of irrelevant results, if both fuzzy search and full-content search are enabled.</span></button>
       </p>
-      <p>
-         Search in all posts<sup><a class="tooltip">&#128712;<span class="tooltiptext">This allows you to see up to {{ totalPosts }} results, which is the total number of posts on this website. Else only {{ resultLimit }} results will be shown.</span></a></sup>: <input type="checkbox" id="all-posts" onclick="updateConfig()"> 
+      <p class="search-option">
+         <input type="checkbox" id="all-posts" onclick="updateConfig()">
+         <label for="all-posts">Search in all posts</label>
+         <button type="button" class="tooltip" aria-label="About searching all posts" aria-describedby="tooltip-all-posts">&#128712;<span class="tooltiptext" id="tooltip-all-posts" role="tooltip">This allows you to see up to {{ totalPosts }} results, which is the total number of posts on this website. Otherwise only {{ resultLimit }} results will be shown.</span></button>
       </p>
-   </div>
+   </fieldset>
 
    
    <div class='results-display'>
@@ -53,9 +61,10 @@
    var allposts= document.getElementById("all-posts");
    if (allposts.checked == true){
     SJSconfig.limit = {{ totalPosts }}
+   } else {
+    SJSconfig.limit = {{ resultLimit }}
    }
    
-   console.log("config updated!")
    SimpleJekyllSearch(SJSconfig) 
    }
    

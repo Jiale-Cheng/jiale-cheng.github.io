@@ -15,6 +15,7 @@ body{
 .background-image img{
 	width: 10rem
 }
+}
 
 .home-body .status-indicator {
     display: inline-flex;
@@ -35,7 +36,6 @@ body{
 .home-body .status-indicator--writing { background: #2c7a3f; }
 .home-body .status-indicator--paused { background: #a46129; }
 .home-body .status-indicator--archived { background: #48696b; }
-}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
     display:block
 }

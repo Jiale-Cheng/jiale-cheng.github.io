@@ -150,9 +150,10 @@
     box-shadow: 0 12px 32px rgba(20, 35, 50, 0.18);
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
     transform: translateY(-0.5rem) scale(0.98);
     transform-origin: top right;
-    transition: opacity 0.18s ease, transform 0.18s ease;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
   }
 
   .blog-nav.is-open {
@@ -163,7 +164,9 @@
   .blog-nav.is-open .blog-nav__menu {
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
     transform: translateY(0) scale(1);
+    transition-delay: 0s;
   }
 
   .blog-nav.is-open .blog-nav__toggle span:nth-child(1) {

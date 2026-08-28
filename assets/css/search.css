@@ -22,6 +22,18 @@
   outline-offset: 1px;
 }
 
+.search-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .search-configs {
   display: grid;
   gap: 0.35rem;
@@ -33,8 +45,27 @@
   border-radius: 0.35rem;
 }
 
+.search-configs legend {
+  padding: 0 0.35rem;
+  color: #46545c;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .search-configs p {
   margin: 0.2rem 0;
+}
+
+.search-option {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.search-option label {
+  cursor: pointer;
 }
 
 .search-configs input[type="checkbox"] {
@@ -69,7 +100,19 @@
 .tooltip {
   position: relative;
   display: inline-block;
+  padding: 0.1rem 0.2rem;
+  color: #53626b;
   font-weight: initial !important;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 0.2rem;
+  cursor: help;
+}
+
+.tooltip:focus-visible {
+  outline: 3px solid rgba(0, 133, 161, 0.2);
+  outline-offset: 2px;
 }
 
 .tooltip .tooltiptext {
@@ -97,4 +140,12 @@
 .tooltip:focus-within .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .tooltip .tooltiptext {
+    right: 0;
+    left: auto;
+    transform: none;
+  }
 }
