@@ -381,6 +381,7 @@ html.blog-theme {
 
 .blog-article .MathJax,
 .blog-page__content .MathJax {
+  display: inline-block !important;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
