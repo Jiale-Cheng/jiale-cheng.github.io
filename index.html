@@ -44,9 +44,9 @@ edit: 2026-08-28
   <p><a href="{{ '/blog/' | relative_url }}">View all posts</a></p>
 </div>
 
-{% if site.author.clustrmap %}
+{% if site.mapmyvisitors.enabled and site.mapmyvisitors.widget_id %}
 <section class="home-analytics is-pending" aria-labelledby="visitor-map-title" data-visitor-map>
   <h2 id="visitor-map-title">Visitor Map</h2>
-  {% include clustrmap.html style="js" %}
+  {% include visitor-map.html style="js" %}
 </section>
 {% endif %}

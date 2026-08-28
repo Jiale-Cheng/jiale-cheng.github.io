@@ -28,7 +28,10 @@
     {% endcomment %}
 
     {% capture my_toc %}{% endcapture %}
-    {% assign orderedList = include.ordered | default: true %}
+    {% assign orderedList = true %}
+    {% if include.ordered == false %}
+        {% assign orderedList = false %}
+    {% endif %}
     {% assign minHeader = include.h_min | default: 1 %}
     {% assign maxHeader = include.h_max | default: 6 %}
     {% assign nodes = include.html | split: '<h' %}
@@ -37,6 +40,7 @@
     {% capture listModifier %}{% if orderedList %}1.{% else %}-{% endif %}{% endcapture %}
 
     {% for node in nodes %}
+        {% assign listItemClass = '' %}
         {% if node == "" %}
             {% continue %}
         {% endif %}

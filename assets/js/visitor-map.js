@@ -8,7 +8,7 @@
 
   function revealWhenReady() {
     var widget = section.querySelector(
-      "#clustrmaps-widget, .clustrmaps-map, .clustrmaps-map-container, a[href*='clustrmaps.com'], canvas, iframe, svg"
+      "a[href*='mapmyvisitors.com/web/'], img[src*='mapmyvisitors.com/map.png'], canvas, iframe, svg"
     );
 
     if (widget) {

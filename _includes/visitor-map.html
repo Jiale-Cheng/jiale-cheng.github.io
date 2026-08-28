@@ -1,0 +1,17 @@
+{% if include.style == "js" %}
+<script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ site.mapmyvisitors.widget_id }}&amp;cl=ffffff&amp;w=a"></script>
+<noscript>
+  <style>.home-analytics.is-pending{position:static;visibility:visible;pointer-events:auto}</style>
+  <a href="https://mapmyvisitors.com/web/{{ site.mapmyvisitors.public_id }}" title="Visit tracker">
+    <img src="https://mapmyvisitors.com/map.png?d={{ site.mapmyvisitors.widget_id }}&amp;cl=ffffff" alt="Visitor map">
+  </a>
+</noscript>
+{% elsif include.style == "hiddenpng" %}
+<div hidden class="analytics" aria-hidden="true">
+  <img src="https://mapmyvisitors.com/map.png?d={{ site.mapmyvisitors.widget_id }}&amp;cl=ffffff" alt="">
+</div>
+{% else %}
+<a href="https://mapmyvisitors.com/web/{{ site.mapmyvisitors.public_id }}" title="Visit tracker">
+  <img src="https://mapmyvisitors.com/map.png?d={{ site.mapmyvisitors.widget_id }}&amp;cl=ffffff" alt="Visitor map">
+</a>
+{% endif %}

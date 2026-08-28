@@ -3,6 +3,6 @@
       &copy; 2018&ndash;{{ site.time | date: '%Y' }}, {{ site.author.name }}. This site is open source. {% if page.edit %}<a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/commits/{{ site.repository_branch }}/{{ page.path }}">Version history</a>.{% endif %} <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/edit/{{ site.repository_branch }}/{{ page.path }}" target="_blank" rel="noopener noreferrer">Improve this page</a>. <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/blob/{{ site.repository_branch }}/LICENSE.md" target="_blank" rel="noopener noreferrer">License</a>. <a href="{{ '/info/disclaimer' | relative_url }}">Disclaimer</a>.
    </p>
    {% unless include.analytics == false %}
-      {% if site.author.clustrmap %}{% include clustrmap.html style="hiddenpng" %}{% endif %}
+      {% if site.mapmyvisitors.enabled and site.mapmyvisitors.widget_id %}{% include visitor-map.html style="hiddenpng" %}{% endif %}
    {% endunless %}
 </footer>

@@ -27,7 +27,7 @@
       </section>
       <script src="{{ '/assets/js/particles.min.js' | relative_url }}"></script>
       <script src="{{ '/assets/js/particles_conf.js' | relative_url }}"></script>
-      {% if site.author.clustrmap %}<script src="{{ '/assets/js/visitor-map.js' | relative_url }}"></script>{% endif %}
+      {% if site.mapmyvisitors.enabled and site.mapmyvisitors.widget_id %}<script src="{{ '/assets/js/visitor-map.js' | relative_url }}"></script>{% endif %}
       {% include footer.html analytics=false %}
       <script src="{{ '/assets/js/blog-nav.js' | relative_url }}"></script>
    </body>
