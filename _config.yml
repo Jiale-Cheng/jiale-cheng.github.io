@@ -46,7 +46,6 @@ giscus:
   input_position: bottom
   theme: preferred_color_scheme
   lang: en
-  loading: lazy
 
 
 # markdown

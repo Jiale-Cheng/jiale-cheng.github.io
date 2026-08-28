@@ -92,18 +92,28 @@
     var distance = targetTop - startTop;
     var duration = 700;
     var startTime = null;
+    var root = document.documentElement;
+    var previousScrollBehavior = root.style.scrollBehavior;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      root.style.scrollBehavior = "auto";
       window.scrollTo(0, targetTop);
+      root.style.scrollBehavior = previousScrollBehavior;
       return;
     }
+
+    root.style.scrollBehavior = "auto";
 
     function step(timestamp) {
       if (startTime === null) startTime = timestamp;
       var progress = Math.min((timestamp - startTime) / duration, 1);
       var eased = 0.5 - Math.cos(Math.PI * progress) / 2;
       window.scrollTo(0, startTop + distance * eased);
-      if (progress < 1) window.requestAnimationFrame(step);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        root.style.scrollBehavior = previousScrollBehavior;
+      }
     }
 
     window.requestAnimationFrame(step);
