@@ -14,7 +14,22 @@
    </head>
    <body class="home-body">
       {% include blog-nav.html active='home' overlay=true %}
-      <div id="particles-js" style="background-image: url('{{ '/about/Mars.png' | relative_url }}');background-size: 20%;background-repeat: no-repeat;background-position: 80% 20%;">
+      <div id="particles-js">
+         <div class="home-planet-clock" data-planet-clock role="img" aria-label="Mars rover clock showing local time">
+            <img class="home-planet-clock__planet" src="{{ '/about/Mars.png' | relative_url }}" width="553" height="553" alt="" aria-hidden="true">
+            <div class="home-planet-clock__orbit" data-rover-orbit aria-hidden="true">
+               <svg class="home-planet-clock__rover" viewBox="0 0 120 70" focusable="false" aria-hidden="true">
+                  <path d="M13 49h8l7-20 26-4 9-16h22l11 19 14 5 5 16z" fill="#f7f8fa" stroke="#dce4e8" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M66 13h16l8 15H58z" fill="#5d6d78"/>
+                  <path d="M43 27 37 12m-6 0h13" fill="none" stroke="#f7f8fa" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M22 48h90" fill="none" stroke="#f7f8fa" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="34" cy="54" r="10" fill="#1a222c" stroke="#f7f8fa" stroke-width="4"/>
+                  <circle cx="92" cy="54" r="10" fill="#1a222c" stroke="#f7f8fa" stroke-width="4"/>
+                  <circle cx="34" cy="54" r="3" fill="#aebbc3"/>
+                  <circle cx="92" cy="54" r="3" fill="#aebbc3"/>
+               </svg>
+            </div>
+         </div>
          <div class="header">
             <h1 class="site-title">Welcome to Jiale's Blog</h1>
          </div>
@@ -27,6 +42,7 @@
       </section>
       <script src="{{ '/assets/js/particles.min.js' | relative_url }}"></script>
       <script src="{{ '/assets/js/particles_conf.js' | relative_url }}"></script>
+      <script src="{{ '/assets/js/rover-clock.js' | relative_url }}"></script>
       {% if site.mapmyvisitors.enabled and site.mapmyvisitors.widget_id %}<script src="{{ '/assets/js/visitor-map.js' | relative_url }}"></script>{% endif %}
       {% include footer.html analytics=false %}
       <script src="{{ '/assets/js/blog-nav.js' | relative_url }}"></script>

@@ -188,6 +188,9 @@ sub,sup{
 #particles-js{
     background:#1a222c;
     display:flex;
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
     vertical-align:bottom;
     width:100%;
     min-height:100vh;
@@ -196,8 +199,45 @@ sub,sup{
     background-attachment:fixed
 }
 #particles-js .particles-js-canvas-el{
+    position:absolute;
+    inset:0;
+    z-index:1;
     width:100%!important;
     height:100vh!important
+}
+.home-planet-clock{
+    position:absolute;
+    top:clamp(5.5rem,14vh,9rem);
+    right:clamp(1rem,8vw,10rem);
+    z-index:0;
+    width:clamp(11rem,20vw,22rem);
+    aspect-ratio:1;
+    pointer-events:none
+}
+.home-planet-clock__planet{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    -webkit-clip-path:circle(47.1% at 50.09% 49.91%);
+    clip-path:circle(47.1% at 50.09% 49.91%);
+    filter:drop-shadow(0 1.1rem 1.8rem rgba(0,0,0,.28))
+}
+.home-planet-clock__orbit{
+    position:absolute;
+    inset:0;
+    transform-origin:50.09% 49.91%;
+    will-change:transform
+}
+.home-planet-clock__rover{
+    position:absolute;
+    top:2.53%;
+    left:50.09%;
+    width:15%;
+    height:auto;
+    overflow:visible;
+    filter:drop-shadow(0 .18rem .2rem rgba(0,0,0,.4));
+    transform:translate(-50%,-87%)
 }
 .header{
     z-index:2;
@@ -414,6 +454,13 @@ sub,sup{
 }
 
 @media screen and (max-width: 760px) {
+  .home-planet-clock{
+    top:5rem;
+    right:-.8rem;
+    width:clamp(9rem,42vw,11rem);
+    opacity:.82
+  }
+
   .user-details, .permlinks {
     width: 100%; 
   }
