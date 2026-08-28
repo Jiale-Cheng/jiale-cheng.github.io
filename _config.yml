@@ -33,8 +33,7 @@ mapmyvisitors:
   widget_id: 9XVmG3ggVYW9_R76bQ4joriKBSenikr3-zRvH502oFA
   public_id: 1c7sf
 
-# GitHub Discussions comments. Enable after Discussions is turned on, the
-# giscus app is installed, and a discussion category has been selected.
+# GitHub Discussions comments powered by giscus.
 giscus:
   enabled: true
   repo: Jiale-Cheng/jiale-cheng.github.io

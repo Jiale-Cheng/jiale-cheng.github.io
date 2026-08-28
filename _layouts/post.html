@@ -77,11 +77,9 @@ layout: blog-shell
   <aside class="blog-toc" aria-label="Table of contents">
     <hr aria-hidden="true">
     <h2>
-      <button class="blog-toc__toggle" type="button" aria-expanded="true" aria-controls="blog-toc-body">CATALOG</button>
+      <button class="catalog-toggle" type="button" aria-expanded="true" aria-controls="blog-catalog-body">CATALOG</button>
     </h2>
-    <div class="blog-toc__body" id="blog-toc-body">
-      {% include toc.html html=content sanitize=true h_min=1 h_max=3 ordered=false item_class="blog-toc__level-%level%" %}
-    </div>
+    {% include catalog.html html=content sanitize=true h_min=1 h_max=6 id="blog-catalog-body" %}
   </aside>
   {% endif %}
 </main>

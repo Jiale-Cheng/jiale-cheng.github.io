@@ -1,0 +1,19 @@
+{% assign catalog_min = include.h_min | default: 1 %}
+{% assign catalog_max = include.h_max | default: 6 %}
+{% assign catalog_nodes = include.html | split: '<h' %}
+<ul class="catalog-body"{% if include.id %} id="{{ include.id }}"{% endif %}>
+{% for catalog_node in catalog_nodes %}
+  {% if catalog_node != '' %}
+    {% assign catalog_level = catalog_node | replace: '"', '' | slice: 0, 1 | times: 1 %}
+    {% if catalog_level >= catalog_min and catalog_level <= catalog_max %}
+      {% assign catalog_workspace = catalog_node | split: '</h' %}
+      {% assign catalog_id_workspace = catalog_workspace[0] | split: 'id="' %}
+      {% assign catalog_id_workspace = catalog_id_workspace[1] | split: '"' %}
+      {% assign catalog_html_id = catalog_id_workspace[0] %}
+      {% capture catalog_attr %}{{ catalog_workspace[0] | split: '>' | first }}>{% endcapture %}
+      {% assign catalog_title = catalog_workspace[0] | replace: catalog_attr, '' %}
+      <li class="h{{ catalog_level }}_nav"><a href="#{{ catalog_html_id }}" rel="nofollow">{% if include.sanitize %}{{ catalog_title | strip_html }}{% else %}{{ catalog_title }}{% endif %}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
