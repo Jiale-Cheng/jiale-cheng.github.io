@@ -2,7 +2,7 @@
 title: "Axiomatized Set Theory: ZFC Axioms"
 commentable: true
 protected:
-numbering: 
+numbering: false
 type:
 repopath:
 mathjax: true
@@ -10,15 +10,11 @@ categories: Analysis
 tags: Analysis
 keywords: Fundemental-Math
 description: Zermelo-Fraenkel set theory with the Axiom of Choice (ZFC) is a widely accepted formal system for set theory. It consists of nine axioms.
-mermaid: true
-highlight: true
 status: Archived
 ---
-# Axiomatized Set Theory: ZFC Axioms
-
 Zermelo-Fraenkel set theory with the Axiom of Choice (ZFC) is a widely accepted formal system for set theory. It consists of nine axioms, which are:
 
-# Extensionality
+## Extensionality
 
 The Extensionality Axiom is one of the fundamental axioms of ZFC set theory. It states that two sets are equal if and only if they have the same elements.
 
@@ -40,7 +36,7 @@ This notation specifies a set by defining its elements (in this case, all even n
 
 In summary, the Extensionality Axiom allows us to reason about sets purely in terms of their elements, and to define sets by specifying their elements.
 
-# Regularity
+## Regularity
 
 The Regularity Axiom is one of the nine axioms of ZFC set theory. It states that every non-empty set has an element that is disjoint from it.
 
@@ -59,7 +55,7 @@ The Regularity Axiom has several important consequences and applications in set 
 
 In summary, the Regularity Axiom ensures the existence of "minimal" elements in sets, and has important consequences for the structure and behavior of sets and their membership graphs.
 
-# Pairing
+## Pairing
 
 The Axiom of Pairing is one of the nine axioms of ZFC set theory. It allows us to create a new set that contains exactly two given elements.
 
@@ -80,7 +76,7 @@ Another application of the Axiom of Pairing is in the construction of the natura
 
 In summary, the Axiom of Pairing allows us to create pairs of sets and has important consequences for the construction of other fundamental constructs such as relations and natural numbers.
 
-# Union
+## Union
 
 The Axiom of Union is one of the nine axioms of ZFC set theory. It allows us to create a new set that contains all the elements of a collection of sets.
 
@@ -101,7 +97,7 @@ Another application of the Axiom of Union is in the construction of the hierarch
 
 In summary, the Axiom of Union allows us to construct unions of sets and has important consequences for the construction of other fundamental constructs such as intersections, complements, and the hierarchy of sets.
 
-# Power Set
+## Power Set
 
 The Axiom of Power Set is one of the nine axioms of ZFC set theory. It states that for any set $A$, there exists a set $P(A)$, called the power set of $A$, that contains all the subsets of $A$.
 
@@ -114,7 +110,7 @@ This means that for any set $A$, there exists a set $P(A)$ that contains all the
 
 The Axiom of Power Set allows us to construct a set that contains all the possible subsets of a given set. This is a crucial concept in set theory and has many applications. For example, we can use the power set to define operations like set difference and complement.
 
-One important fact about the power set is that it is always larger than the original set. That is, $|P(A)| > |A|$ for any set $A$. This can be proved using the Axiom of Regularity and the Cantor's theorem.
+One important fact about the power set is that it is always larger than the original set. That is, $\lvert P(A)\rvert > \lvert A\rvert$ for any set $A$. This can be proved using the Axiom of Regularity and the Cantor's theorem.
 
 The Axiom of Power Set has several important consequences and applications in set theory. For example, it allows us to define the Cartesian product of two sets. Given sets $A$ and $B$, we can define their Cartesian product $A \times B$ as the set of all ordered pairs $(a,b)$ where $a \in A$ and $b \in B$. This set can be constructed using the power set and other ZFC axioms.
 
@@ -122,7 +118,7 @@ Another application of the Axiom of Power Set is in the construction of the real
 
 In summary, the Axiom of Power Set allows us to construct a set that contains all the possible subsets of a given set. This concept has many important applications in set theory, including the construction of the Cartesian product and the real numbers.
 
-# Axiom of Choice
+## Axiom of Choice
 
 The Axiom of Choice is one of the nine axioms of ZFC set theory. It states that given any collection of non-empty sets, there exists a way to choose exactly one element from each set in the collection.
 
@@ -146,7 +142,7 @@ Despite its many applications, the Axiom of Choice is also controversial among m
 
 An alternative to the Axiom of Choice is the Axiom of Countable Choice, which states that given any countable collection of non-empty sets, there exists a way to choose one element from each set in the collection. This weaker form of the Axiom of Choice has many of the same applications but avoids some of the more controversial consequences of the full axiom.
 
-# Infinity
+## Infinity
 
 The Axiom of Infinity is one of the nine axioms of ZFC set theory. It states that there exists at least one set that contains the empty set and is closed under the successor operation.
 
@@ -170,7 +166,7 @@ The Axiom of Infinity has many important consequences in mathematics, including 
 
 It is worth noting that the Axiom of Infinity does not specify the size or structure of the infinite set it guarantees. In fact, there are many different infinite sets that satisfy the axiom, such as the set of natural numbers, the set of even numbers, or the set of all finite sets. This is one of the reasons why the axiom is considered a foundational principle of set theory.
 
-# Foundation
+## Foundation
 
 The Axiom of Foundation is one of the nine axioms of ZFC set theory. It is also known as the Axiom of Regularity. The axiom states that every non-empty set $x$ contains an element $y$ that is disjoint from $x$.
 
@@ -194,7 +190,7 @@ where $\neg$ denotes logical negation.
 
 Overall, the Axiom of Foundation ensures the well-behaved nature of the membership relation $\in$, and leads to many important results in the study of sets and their properties.
 
-# Replacement
+## Replacement
 
 The Axiom of Replacement is one of the nine axioms of ZFC set theory. It allows us to construct a new set by applying a definable function to the elements of an existing set.
 
@@ -220,7 +216,7 @@ Overall, the Axiom of Replacement allows for the construction of new sets from o
 
 These nine axioms, together with first-order logic, form the basis of ZFC set theory. They allow for the development of a wide range of mathematical concepts and provide a rigorous foundation for modern mathematics.
 
-# Compatibility of ZFC
+## Compatibility of ZFC
 
 **Theorem:** The nine axioms of the ZFC framework are compatible with each other, i.e., there is no contradiction between them.
 

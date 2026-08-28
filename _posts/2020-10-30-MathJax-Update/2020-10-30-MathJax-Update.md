@@ -9,7 +9,7 @@ First inline math $1$
 
 
 
-Then inline complicated math $\matrix{1&1\\2&2}$ or $\cases{1\\2}$.
+Then inline complicated math $\matrix{1&1\\\\2&2}$ or $\cases{1\\\\2}$.
 
 I think github pages might have updated. Trying not loading mathjax and see if Github Pages is parsing $$ to \( \)
 
@@ -32,11 +32,11 @@ as & qs & asa& asacs\\
 \end{array}
 $$
 
-try other syntax, should not work:
+Alternative display math:
 
-\[
+$$
 qsqw
-\]
+$$
 
 
-Try new command $\newcommand{\s}{\sin}$, and then use it $\s$. 
+Try new command $\newcommand{\s}{\sin}$, and then use it $\s$.

@@ -19,9 +19,11 @@ date formatting syntax see http://strftime.net/
 
 
 <style>
-#calendar_wrapper{
-line-height: 0.5rem;
-width: 54rem
+.calendar-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  line-height: 0.5rem;
 }
 .not_this_year {
 background-color: {{notthisyear}};
@@ -41,20 +43,22 @@ background-color: {{activity_color_3}};
 .act_4 {
 background-color: {{activity_color_4}};
 }
-#calendar, #calendar th, #calendar td {
-border-collapse: collapse;
-border: 3px solid #f8f8f8;
-font-size: small;
-padding: unset;
-table-layout: fixed;
-padding: unset;
-font-family: 'Ubuntu Mono', monospace;
-font-size: x-small
+.blog-page__content .calendar, .calendar th, .calendar td {
+  padding: unset;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: x-small;
+  border: 3px solid #f8f8f8;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
-#calendar th, #calendar td {
-width: 0.8rem;
-height: 0.8rem;
-table-layout: fixed;
+.blog-page__content .calendar {
+  width: 54rem;
+  min-width: 54rem;
+}
+.calendar th, .calendar td {
+  width: 0.8rem;
+  height: 0.8rem;
+  table-layout: fixed;
 }
 </style>
 
@@ -88,8 +92,8 @@ generate empty calendar
       
       {% assign total_weeks_pp = total_weeks | plus: 1 %}
       
-      <div id="calendar_wrapper" style="overflow-x:auto;">
-      <table id="calendar">
+      <div class="calendar-wrapper">
+      <table class="calendar">
       <thead><tr>
       <th> </th> {% comment %} This column is for week days {% endcomment %}
       {% for week in (1..total_weeks_pp) %}
@@ -126,7 +130,7 @@ generate empty calendar
       </tr>
       </thead>
       
-      </tbody>
+      <tbody>
       {% for weekday in (1..7) %}
          <tr>
          {% for week in (0..total_weeks_pp) %} 
@@ -199,7 +203,7 @@ generate empty calendar
 <dl class="posts">
 	 {% for post in site.posts %}
 		<dt>
-    <code>{{ post.date | date_to_string }}</code> <i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% include status-indicator.html status=post.status%}
+	    <code>{{ post.date | date_to_string }}</code> <span aria-hidden="true">&rsaquo;</span> <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% include status-indicator.html status=post.status%}
     </dt>
     {% if post.description %}
  <dd style="text-align: justify">{{ post.description  | markdownify }}
@@ -208,5 +212,3 @@ generate empty calendar
 		
 		{% endfor %}
 	</dl>
-
-

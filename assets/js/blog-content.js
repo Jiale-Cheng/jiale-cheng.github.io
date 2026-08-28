@@ -17,7 +17,11 @@
   }
 
   document.querySelectorAll(".blog-article table, .blog-page__content table").forEach(function (table) {
-    if (table.parentElement && table.parentElement.classList.contains("blog-table-scroll")) return;
+    var existingWrapper = table.closest(".blog-table-scroll, .calendar-wrapper");
+    if (existingWrapper) {
+      if (wrappers.indexOf(existingWrapper) === -1) wrappers.push(existingWrapper);
+      return;
+    }
 
     var wrapper = document.createElement("div");
     wrapper.className = "blog-table-scroll";

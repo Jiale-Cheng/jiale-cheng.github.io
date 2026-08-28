@@ -1,3 +1,43 @@
 <script>
-   document.body.innerHTML = document.body.innerHTML.replace(/==([^ ][\s\S]*?[^ ])==/g, "<span class=\"highlight\">$1</span>");
+  (function () {
+    "use strict";
+
+    var pattern = /==(\S(?:[\s\S]*?\S)?)==/g;
+    var ignored = "pre, code, script, style, textarea, .MathJax, .MathJax_Display, mjx-container, mark, .blog-highlight";
+
+    document.querySelectorAll(".blog-article, .blog-page__content").forEach(function (root) {
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      var node;
+
+      while ((node = walker.nextNode())) {
+        if (node.parentElement && !node.parentElement.closest(ignored) && node.nodeValue.indexOf("==") !== -1) {
+          nodes.push(node);
+        }
+      }
+
+      nodes.forEach(function (textNode) {
+        var text = textNode.nodeValue;
+        var fragment = document.createDocumentFragment();
+        var lastIndex = 0;
+        var match;
+
+        pattern.lastIndex = 0;
+        while ((match = pattern.exec(text))) {
+          fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+
+          var mark = document.createElement("mark");
+          mark.className = "blog-highlight";
+          mark.textContent = match[1];
+          fragment.appendChild(mark);
+          lastIndex = pattern.lastIndex;
+        }
+
+        if (lastIndex > 0) {
+          fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+          textNode.parentNode.replaceChild(fragment, textNode);
+        }
+      });
+    });
+  }());
 </script>

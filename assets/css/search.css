@@ -54,7 +54,7 @@
   text-transform: uppercase;
 }
 
-.search-configs p {
+.blog-page__content .search-configs p {
   margin: 0.2rem 0;
 }
 

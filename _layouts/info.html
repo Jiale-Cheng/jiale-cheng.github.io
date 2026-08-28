@@ -2,6 +2,12 @@
 layout: blog-shell
 ---
 {% assign page_header_image = page.header_image | default: site.blog_page_header_image %}
+{% assign show_info_toc = false %}
+{% if page.toc %}
+  {% if content contains '<h1' or content contains '<h2' or content contains '<h3' %}
+    {% assign show_info_toc = true %}
+  {% endif %}
+{% endif %}
 <header class="blog-hero blog-hero--page" style="--blog-hero-image: url('{{ page_header_image | relative_url }}');">
   <div class="blog-hero__inner">
     <h1>{{ page.hero_title | default: page.title }}</h1>
@@ -11,21 +17,23 @@ layout: blog-shell
   </div>
 </header>
 
-<main id="main-content" class="blog-main{% if page.toc %} blog-page-layout{% else %} blog-page-layout blog-page-layout--single{% endif %}">
+<main id="main-content" class="blog-main blog-page-layout{% unless show_info_toc %} blog-page-layout--single{% endunless %}">
   <article id="content-container" class="blog-page__content">
-    {% if page.toc %}
+    {% if show_info_toc %}
     <details class="blog-toc-mobile">
       <summary>CONTENTS</summary>
-      {% include toc.html html=content sanitize=true h_min=2 h_max=3 ordered=false %}
+      {% include toc.html html=content sanitize=true h_min=1 h_max=3 ordered=false %}
     </details>
     {% endif %}
     {{ content }}
   </article>
 
-  {% if page.toc %}
+  {% if show_info_toc %}
   <aside class="blog-toc" aria-label="Table of contents">
-    <h2>CONTENTS</h2>
-    {% include toc.html html=content sanitize=true h_min=2 h_max=3 ordered=false %}
+    <h2>
+      <button class="catalog-toggle" type="button" aria-expanded="true" aria-controls="info-catalog-body">CONTENTS</button>
+    </h2>
+    {% include catalog.html html=content sanitize=true h_min=1 h_max=3 id="info-catalog-body" %}
   </aside>
   {% endif %}
 </main>

@@ -8,6 +8,12 @@ layout: blog-shell
 {% if post_header_image == nil or post_header_image == '' %}
   {% assign post_header_image = site.blog_post_header_image %}
 {% endif %}
+{% assign show_post_toc = false %}
+{% if page.toc and page.type != 'mdpdf' %}
+  {% if content contains '<h1' or content contains '<h2' or content contains '<h3' or content contains '<h4' or content contains '<h5' or content contains '<h6' %}
+    {% assign show_post_toc = true %}
+  {% endif %}
+{% endif %}
 
 <header class="blog-hero blog-hero--post" style="--blog-hero-image: url('{{ post_header_image | relative_url }}');">
   <div class="blog-hero__inner">
@@ -30,9 +36,9 @@ layout: blog-shell
   </div>
 </header>
 
-<main id="main-content" class="blog-main blog-post-layout">
+<main id="main-content" class="blog-main blog-post-layout{% unless show_post_toc %} blog-post-layout--single{% endunless %}">
   <article id="content-container" class="blog-article">
-    {% if page.toc %}
+    {% if show_post_toc %}
     <details class="blog-toc-mobile">
       <summary>CATALOG</summary>
       {% include toc.html html=content sanitize=true h_min=1 h_max=3 ordered=false %}
@@ -73,7 +79,7 @@ layout: blog-shell
     {% endif %}
   </article>
 
-  {% if page.toc %}
+  {% if show_post_toc %}
   <aside class="blog-toc" aria-label="Table of contents">
     <hr aria-hidden="true">
     <h2>
