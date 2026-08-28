@@ -10,13 +10,13 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
       {% if page.numbering %}
       <!-- link to counter.css -->
-      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/counter.css">
+      <link rel="stylesheet" href="{{ '/assets/css/counter.css' | relative_url }}">
       {% endif %}
       {% if page.commentable %}
-      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/commentit.css">
+      <link rel="stylesheet" href="{{ '/assets/css/commentit.css' | relative_url }}">
       {% endif %}
       <!-- link to responsive post.css -->
-      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/post.css">
+      <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
    </head>
    <body>
       <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -39,7 +39,7 @@
          <div class="content-container">
             <div class="page">
                {% include frontmatter.html %}
-               <div id="content-container" style="text-align:justify">
+               <div id="content-container">
                         {% if page.type == "mdpdf" %}	
                   <p>This post is also available in a <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/blob/{{ site.repository_branch }}/_posts/{{ page.repopath }}">PDF version</a>, which preserves its original equation layout.</p>
                         {% else %}
@@ -52,13 +52,13 @@
             </div>
          </div>
       </div>
-      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+      <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation" title="Toggle navigation"></label>
+      {% if page.mermaid %}
+      {% include markdown-enhancements/mermaid.html %}
+      {% endif %}
+      {% if page.highlight %}
+      {% include markdown-enhancements/highlight.html %}
+      {% endif %}
       {% include footer.html %} 
    </body>
-   {% if page.mermaid %}
-   {% include markdown-enhancements/mermaid.html %}
-   {% endif %}
-   {% if page.highlight %}
-   {% include markdown-enhancements/highlight.html %}
-   {% endif %}
 </html>

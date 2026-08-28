@@ -1,4 +1,5 @@
 ---
+title: Typicality and the Asymptotic Equipartition Property
 commentable: true
 protected:
 numbering: 
@@ -11,7 +12,7 @@ keywords: Typical-set RV
 description: Notes on Typicality
 mermaid: true
 highlight: true
-status: Archive
+status: Archived
 ---
 # Typicality
 

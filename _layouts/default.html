@@ -16,7 +16,7 @@
       <div id="main">
          <div class="page">
             {% include frontmatter.html %}
-            <div id="content-container" style="text-align:justify">
+            <div id="content-container">
                {{ content }}			
             </div>
             <!-- <div id="comment-session"> -->
@@ -24,12 +24,12 @@
             <!-- </div> -->
          </div>
       </div>
+      {% if page.mermaid %}
+      {% include markdown-enhancements/mermaid.html %}
+      {% endif %}
+      {% if page.highlight %}
+      {% include markdown-enhancements/highlight.html %}
+      {% endif %}
       {% include footer.html %} 
    </body>
-   {% if page.mermaid %}
-   {% include markdown-enhancements/mermaid.html %}
-   {% endif %}
-   {% if page.highlight %}
-   {% include markdown-enhancements/highlight.html %}
-   {% endif %}
 </html>

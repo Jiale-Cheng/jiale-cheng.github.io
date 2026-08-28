@@ -1,16 +1,7 @@
 ---
 layout: default
+title: Projects
+edit: 2026-08-28
 ---
 
-Here is a list of planning, ongoing and finished projects.
-
-**Notice**: Now I am focused on blogging, so these codes maybe outdated.
-
-| Name                                                         | status                    |
-| ------------------------------------------------------------ | ------------------------- |
-| [Flexible List-based Evolutionary Algorithm](https://github.com/jiale-cheng/flea) * | v0.0.9                    |
-| [curve-alignment](https://github.com/jiale-cheng/curve-alignment) | unfinished                |
-| [Ubuntu-on-thumb-drive](https://github.com/jiale-cheng/Ubuntu-on-thumb-drive) | to be organized           |
-| [Database for materials](https://github.com/jiale-cheng/database) | refactoring / writing doc |
-
-\* : A well organized EA can be found [here](https://github.com/PytLab/gaft). I am learning from his parallelization.
+This page previously listed several early software projects whose status is no longer maintained here. For current public code and research-related repositories, please visit my [GitHub profile](https://github.com/Jiale-Cheng).

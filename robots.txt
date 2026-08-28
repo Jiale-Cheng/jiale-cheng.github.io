@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /about/CV-of-Liu-Yingkai.pdf
 Disallow: /secret/
 Disallow: /secret
 
-SITEMAP: https://jiale-cheng.github.io/sitemap.xml
+Sitemap: https://jiale-cheng.github.io/sitemap.xml

@@ -1,40 +1,44 @@
 ---
 layout: home
-edit: 2019-05-15
+title: Jiale Cheng
+description: Ph.D. candidate at the University of Michigan researching graph alignment and information theory.
+edit: 2026-08-28
 ---
 <div class="user-details">
-<h2> Me and this website </h2>
-<p style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;I am a PhD candidate at Southeast University majoring in Electrical and Computer Engineering. This website (source code <a href="https://github.com/jiale-cheng/jiale-cheng.github.io">here</a>) is built to share my knowledge about information theory, coding and mathematical background of ML. All the suggestions on this site and friendly comments or doubts are welcomed. Feel free to leave the comments (GitHub account is required), or click on the <a href="mailto:jlcheng@seu.edu.cn"> mailbox</a> on the homepage and write any suggeation to me directly. Some of the old notes were written in Chinese. You can learn more at the <a href="/about"> about page</a>. </p>
-<div class="analytics"  style="border: solid lightgrey; border-radius: 5px;">
-	<h3> Analytics </h3>
-	{% include clustrmap.html style="js" %}
-	<p> <small> If you are not seeing a map, please disable Ad block and refresh </small></p>
+  <p class="eyebrow">University of Michigan EECS</p>
+  <h2>Jiale Cheng</h2>
+  <p>I am a Ph.D. candidate in Electrical and Computer Engineering at the University of Michigan, advised by Prof. Lei Ying.</p>
+  <p>My research focuses on graph alignment theory, information theory, and their applications to networks and systems. This site also preserves notes from earlier work in communications, coding, and mathematics.</p>
+  <p class="home-links">
+    <a href="mailto:jlcheng@umich.edu">Email</a>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+    <a href="{{ '/about/CV-of-Jiale-Cheng.pdf' | relative_url }}">CV</a>
+    <a href="https://orcid.org/0000-0003-1379-4324" target="_blank" rel="noopener noreferrer">ORCID</a>
+    <a href="https://github.com/Jiale-Cheng" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </p>
 </div>
-</div>
+
 <div class="permlinks">
-<h2>Recent Posts</h2>
-<dl>
-	{% for post in site.posts limit:3 %}
-	<dt><code>{{ post.date | date_to_string }} </code><i class="fas fa-angle-double-right" aria-hidden="true"></i><a href="{{ post.url }}">{{ post.title }}</a> &nbsp;{% include status-indicator.html status=post.status%}
-	{% if post.description %}
- <dd style="text-align: justify">{{ post.description | markdownify }}
-    </dd>
-	{% endif %}
-	{% endfor %}
-	<p>... <a href="/blog">Full Posts List</a> </p>
-</dl>
+  <h2>Research</h2>
+  <ul class="research-list">
+    <li>Graph and network alignment</li>
+    <li>Graph inference</li>
+    <li>Information theory and networked systems</li>
+  </ul>
 
-<h2>Upcoming Posts </h2>
-<ul>
-	<li>Code Constructions</li>
-	<li>Non-Shannon Type</li>
- <li>Connections on Fiber Bundles</li>
-</ul>
-</div>
-
-<div class="user-details">
-<h2>The Copyrights and Notions</h2>
-<p style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;1. This site is an open source website. For the source code of the website project, see <a href="https://github.com/jiale-cheng/jiale-cheng.github.io">Jiale Cheng's project address</a>. You may modify and redistribute the code under the terms of the GNU General Public License, Version 3, as published by the Free Software Foundation, or (at your option) with any later version. Source code is released in the hope that it will be useful, but without any warranty. There is not even an implied warranty of fitness for a particular purpose. See <a href="http://www.gnu.org/licenses/gpl.html">“GNU General Public License”</a> for more details.</p>
-<p style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;2. The development log is seen <a href="https://jaylencheng.github.io/Mybooks/Update-Logs/">Development Log</a></p>
-<p style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;3. This site is a non-profit website based on my own interests. I do not accept any advertisements or publicity, and I will not consider accepting any form of rewards and donations on the grounds of this site. All in all, the help I have received, the support of all readers, my desire to write and share have contributed to this website. If you like this site, you can go to <a href="https://github.com/jiale-cheng/jiale-cheng.github.io">Github</a> to rank a star, I will be appreciate it.</p>
+  <h2>Recent Posts</h2>
+  <dl class="posts-list">
+    {% for post in site.posts limit:3 %}
+    <dt>
+      <code>{{ post.date | date_to_string }}</code>
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% include status-indicator.html status=post.status %}
+    </dt>
+    {% if post.description %}
+    <dd>{{ post.description | markdownify }}</dd>
+    {% endif %}
+    {% endfor %}
+  </dl>
+  <p><a href="{{ '/blog/' | relative_url }}">View all posts</a></p>
 </div>

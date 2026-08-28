@@ -8,10 +8,10 @@
       <!-- change font -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
       <!-- link to post.css -->
-      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/displayindex.css">
+      <link rel="stylesheet" href="{{ '/assets/css/displayindex.css' | relative_url }}">
    </head>
    <body>
-      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
       <!-- this is side bar -->
       <div class="sidebar" id="sidebar">
          <nav class="sidebar-nav">
@@ -29,7 +29,7 @@
             </div>
          </div>
       </div>
-      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+      <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation" title="Toggle navigation"></label>
       {% include footer.html %} 
    </body>
 </html>

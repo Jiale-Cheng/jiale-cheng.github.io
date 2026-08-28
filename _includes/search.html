@@ -23,24 +23,24 @@
    
 </div>
 
-<script src="{{site.url}}{{site.baseurl}}/assets/js/search-script.js" type="text/javascript" ></script>
+<script src="{{ '/assets/js/search-script.js' | relative_url }}" type="text/javascript"></script>
 <script type="text/javascript">
    var SJSconfig = {
        searchInput: document.getElementById('search-input'),
        resultsContainer: document.getElementById('results-container'),
-       json: '{{site.url}}{{site.baseurl}}/blog/searchFull.json',
+       json: '{{ '/blog/searchFull.json' | relative_url }}',
        noResultsText: 'There is no match. Try browse posts by tags or by categories.',
        limit: {{ resultLimit }},
        fuzzy: false,
-       searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+       searchResultTemplate: '<li><a href="{url}">{title}</a></li>'
    }
    
    function updateConfig() {
    var full = document.getElementById("Full-content");
    if (full.checked == true){
-    SJSconfig.json = '{{site.url}}{{site.baseurl}}/blog/searchFull.json'
+    SJSconfig.json = '{{ '/blog/searchFull.json' | relative_url }}'
    } else {
-    SJSconfig.json = '{{site.url}}{{site.baseurl}}/blog/search.json'
+    SJSconfig.json = '{{ '/blog/search.json' | relative_url }}'
    }
    
    var fuzzy = document.getElementById("fuzzy");

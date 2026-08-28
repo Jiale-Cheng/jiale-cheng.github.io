@@ -9,7 +9,7 @@ title: Category Index
 	{% assign categories = site.categories | sort %}
 	{% for category in categories %}
 		<span class="site-tag">
-			<a href="{{site.url}}{{site.baseurl}}/blog/categories#{{ category [0] | slugify }}" style="text-decoration: none;" >
+			<a href="{{ '/blog/categories' | relative_url }}#{{ category [0] | slugify }}" style="text-decoration: none;" >
 				 <code class="highligher-rouge" style="font-size: {{ category | last | size  |  times: 2 | plus: 80  }}%">
 					<nobr>{{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})</nobr>
 				 </code>
@@ -25,7 +25,7 @@ title: Category Index
     <dt>
       <code>{{ post.date | date_to_string }}</code> 
 				<i class="fas fa-angle-double-right"></i> 
-					<a href="{{ post.url }}">{{ post.title }}</a>
+					<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 					&nbsp;{% include status-indicator.html status=post.status%}
     </dt>
     {% if post.description %}

@@ -1,4 +1,5 @@
 ---
+title: "Axiomatized Set Theory: ZFC Axioms"
 commentable: true
 protected:
 numbering: 
@@ -11,7 +12,7 @@ keywords: Fundemental-Math
 description: Zermelo-Fraenkel set theory with the Axiom of Choice (ZFC) is a widely accepted formal system for set theory. It consists of nine axioms.
 mermaid: true
 highlight: true
-status: Archive
+status: Archived
 ---
 # Axiomatized Set Theory: ZFC Axioms
 
