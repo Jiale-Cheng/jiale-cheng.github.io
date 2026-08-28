@@ -1,10 +1,12 @@
 ---
-title: About Me
+title: About
 layout: info
 toc: true
 edit: 2026-08-28
 commentable: false
 mathjax: false
+hero_title: ABOUT
+description: Research, education, publications, and contact information.
 ---
 
 ## Contact

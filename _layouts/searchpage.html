@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      {% include head.html %}  
-      {% include theme-vue.html%}
-      <!-- font awesome -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-      <!-- change font -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
-      <!-- link to post.css -->
-      <link rel="stylesheet" href="{{ '/assets/css/displayindex.css' | relative_url }}">
-      <!-- link to search.css -->
-      <link rel="stylesheet" href="{{ '/assets/css/search.css' | relative_url }}">
-      <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-   </head>
-   <body>
-      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-      <!-- this is side bar -->
-      <div class="sidebar" id="sidebar">
-         <nav class="sidebar-nav">
-            {% include navitem.html %}
-         </nav>
-      </div>
-      <!-- Add all page content inside this div if you want the side nav to push page content to the right
-         (not used if you only want the sidenav to sit on top of the page -->
-      <div class="wrap">
-         <div class="container content">
-            <div class="page">
-               <div id="content-container">
-                  {{ content }}			
-               </div>
-            </div>
-         </div>
-      <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation" title="Toggle navigation"></label>
-      </div>
-      {% include footer.html %} 
-   </body>
-</html>
+---
+layout: blog-shell
+---
+{% assign page_header_image = page.header_image | default: site.blog_page_header_image %}
+<header class="blog-hero blog-hero--page" style="--blog-hero-image: url('{{ page_header_image | relative_url }}');">
+  <div class="blog-hero__inner">
+    <h1>{{ page.hero_title | default: page.title }}</h1>
+    {% if page.description %}
+    <span class="blog-hero__subtitle">{{ page.description }}</span>
+    {% endif %}
+  </div>
+</header>
+
+<main id="main-content" class="blog-main blog-page-layout blog-page-layout--single">
+  <div class="blog-page__content">
+    {{ content }}
+  </div>
+</main>

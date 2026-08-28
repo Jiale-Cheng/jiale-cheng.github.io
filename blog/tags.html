@@ -1,0 +1,28 @@
+---
+layout: displayindex
+title: Tags
+hero_title: TAGS
+description: Browse the archive by topic.
+---
+<div class="blog-index">
+  {% assign tags = site.tags | sort %}
+  <nav class="blog-tag-cloud" aria-label="Tag cloud">
+    {% for tag in tags %}
+    <a class="blog-tag-cloud__link" href="#{{ tag[0] | slugify }}" title="{{ tag[1].size }} post{% if tag[1].size != 1 %}s{% endif %}">
+      {{ tag[0] | replace: '-', ' ' }} <span aria-hidden="true">&middot;</span> {{ tag[1].size }}
+    </a>
+    {% endfor %}
+  </nav>
+
+  {% for tag in tags %}
+  <section class="blog-tag-group" id="{{ tag[0] | slugify }}">
+    <h2 class="blog-tag-group__title">{{ tag[0] | replace: '-', ' ' }}</h2>
+    {% for post in tag[1] %}
+    <div class="blog-tag-post">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>

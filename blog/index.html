@@ -1,0 +1,40 @@
+---
+layout: displayindex
+title: Posts
+hero_title: POSTS
+description: Notes on mathematics, information theory, communications, and related topics.
+---
+<div class="blog-index">
+  <nav class="blog-index__tools" aria-label="Browse posts">
+    <a href="{{ '/blog/tags/' | relative_url }}">Browse by tag</a>
+    <a href="{{ '/blog/categories/' | relative_url }}">Browse by category</a>
+    <a href="{{ '/blog/search/' | relative_url }}">Search posts</a>
+  </nav>
+
+  {% for post in site.posts %}
+  <article class="post-preview">
+    <a class="post-preview__link" href="{{ post.url | relative_url }}">
+      <h2 class="post-preview__title">{{ post.title }}</h2>
+      <p class="post-preview__excerpt">
+        {% if post.description %}
+          {{ post.description | markdownify | strip_html | normalize_whitespace }}
+        {% else %}
+          {{ post.excerpt | strip_html | normalize_whitespace | truncate: 240 }}
+        {% endif %}
+      </p>
+    </a>
+    <p class="post-preview__meta">
+      <span>Posted by {{ post.author | default: site.author.name }} on {{ post.date | date: '%B %-d, %Y' }}</span>
+      {% include status-indicator.html status=post.status %}
+    </p>
+    {% if post.tags and post.tags != empty %}
+    <div class="post-preview__tags" aria-label="Tags for {{ post.title }}">
+      {% for tag in post.tags %}
+      <a href="{{ '/blog/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag | replace: '-', ' ' }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+  {% unless forloop.last %}<hr>{% endunless %}
+  {% endfor %}
+</div>

@@ -1,0 +1,28 @@
+---
+layout: displayindex
+title: Categories
+hero_title: CATEGORIES
+description: Browse the archive by broader subject area.
+---
+<div class="blog-index">
+  {% assign categories = site.categories | sort %}
+  <nav class="blog-tag-cloud" aria-label="Category cloud">
+    {% for category in categories %}
+    <a class="blog-tag-cloud__link" href="#{{ category[0] | slugify }}" title="{{ category[1].size }} post{% if category[1].size != 1 %}s{% endif %}">
+      {{ category[0] | replace: '-', ' ' }} <span aria-hidden="true">&middot;</span> {{ category[1].size }}
+    </a>
+    {% endfor %}
+  </nav>
+
+  {% for category in categories %}
+  <section class="blog-tag-group" id="{{ category[0] | slugify }}">
+    <h2 class="blog-tag-group__title">{{ category[0] | replace: '-', ' ' }}</h2>
+    {% for post in category[1] %}
+    <div class="blog-tag-post">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>
