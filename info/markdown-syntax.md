@@ -112,20 +112,20 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ```markdown
 Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
 
-![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
+![caption]({{ '/about/Moon.png' | relative_url }})
 
 So I prefer using HTML tags like this:
 
-<img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
+<img src="{{ '/about/Moon.png' | relative_url }}" width="30%" alt="Moon illustration">
 ```
 
 Markdown uses `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
 
-![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png)
+![caption]({{ '/about/Moon.png' | relative_url }})
 
 So I prefer using HTML tags like this:
 
-<img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
+<img src="{{ '/about/Moon.png' | relative_url }}" width="30%" alt="Moon illustration">
 
 > Note: I consulted GitHub support about using `raw.github` link for pictures, they said it's okay to do so:
 >
@@ -213,7 +213,7 @@ You can mix them as well, like
 
 | You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| ![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
+| ![caption]({{ '/about/Moon.png' | relative_url }}) | $1+1=2$                     | <img src="{{ '/about/Moon.png' | relative_url }}" width="30%" alt="Moon illustration"> |
 ```
 
 | This column is left aligned | This column is centered | This column is right aligned |
@@ -224,7 +224,7 @@ You can mix them as well, like
 
 | You can use `![caption](link)` in tables.                    | You can use Math in tables. | You can use `<img src="" width="">` in tables.               |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| ![caption](https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/jiale-cheng/jiale-cheng.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
+| ![caption]({{ '/about/Moon.png' | relative_url }}) | $1+1=2$                     | <img src="{{ '/about/Moon.png' | relative_url }}" width="30%" alt="Moon illustration"> |
 
 ## Mathjax
 
@@ -413,4 +413,3 @@ The Foot notes are like this
 [^that]: or, naturally, simple paragraphs.
 
 [^linkid]: https://jiale-cheng.github.io "Optional Title"
-

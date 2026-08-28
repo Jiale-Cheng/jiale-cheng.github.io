@@ -28,9 +28,9 @@ p_{X_i}(x_i)&=p_X(x_i), \forall i=1,2,\cdots,n,
 \end{align}
 $$
 
-`<a id="Equality">`sad `</a>`
+<span id="equality"></span>
 
-where we note $p_X: \mathcal{X}\to [0,1]$the distribution of $X$, and ([here](#Equality)) indicates that all the possibiility of $X_i, \forall i=[N]$, is the same  as $P_{X_i}=P_X$.* Note: In the following relations, we use $P_X $to denote the distribution of any $X $(rather than $X^n $), and do not care whose distribution it is.
+where we note $p_X: \mathcal{X}\to [0,1]$the distribution of $X$, and ([here](#equality)) indicates that all the possibiility of $X_i, \forall i=[N]$, is the same  as $P_{X_i}=P_X$.* Note: In the following relations, we use $P_X $to denote the distribution of any $X $(rather than $X^n $), and do not care whose distribution it is.
 
 In the context, the logarithms are in the base 2 by default.
 
@@ -468,12 +468,14 @@ $$
 	\end{align}
 $$
 
-`<a id="Empirical">`2 `</a>`
+<span id="empirical"></span>
 
-as the empirical distribution of any given $x^n$, and from ([here](Empirical)), empirical distribution $Q$can also be seen as the frequency  $P_{x^n}$.
+as the empirical distribution of any given $x^n$, and from ([here](#empirical)), empirical distribution $Q$can also be seen as the frequency  $P_{x^n}$.
 \#
 
 For i.i.d. sequence $X^n$with distribution $p_X$, and empirical distribution $P_{x^n}$in a specific $x^n\in\mathcal{X}^n$, we calculate the $Pr(X^n=x^n)$.
+
+<span id="cross-entropy"></span>
 
 $$
 \begin{align}
@@ -482,7 +484,7 @@ $$
 =&\frac{1}{n}log\prod_{i=1}^{n}P_X(x_i)\\
 =&\frac{1}{n}log\prod_{a\in\mathcal{X}}P_X(a)^{N(a|x^n)}\\
 =&\sum_{a\in\mathcal{X}}\frac{N(a|x^n)}{n}logP_X(a)\\
-=&\sum_{a\in\mathcal{X}}Q(a)logP_X(a)<a id="Cross Entropy">3</a>
+=&\sum_{a\in\mathcal{X}}Q(a)logP_X(a)\tag{3}
 \end{align}
 $$
 
@@ -492,16 +494,18 @@ This indicates that the probability of a random sequence only depends on the dis
 	(Cross Entropy):\\
 	We define the cross entropy in an i.i.d. trial with $n $implements of RV $X $as:
 
+<span id="def-cross-entropy"></span>
+
 $$
 \begin{align}
 
-	H(Q,P_X)=-\sum_{a\in\mathcal{X}}Q(a)logP_X(a), <a id="Def Cross Entropy">4</a>
+	H(Q,P_X)=-\sum_{a\in\mathcal{X}}Q(a)logP_X(a)\tag{4}
 	\end{align}
 $$
 
 \#
 
-From the definition ([here](#Def Cross Entropy)),
+From the definition ([here](#def-cross-entropy)),
 
 $$
 \begin{align}
@@ -587,13 +591,15 @@ $$
 
 We have:
 
+<span id="entr"></span>
+
 $$
 \begin{align}
 
 &\frac{1}{n}log|\mathcal{T}_Q^n|\\
 \sim &(lnn-1)-\sum_{a\in \mathcal{X}}Q(a)(ln[nQ(a)]-1)\\
 =&(lnn-1)-(lnn-1)\sum_{a\in\mathcal{X}}Q(a)-\sum_{a\in\mathcal{X}}Q(a)logQ(a)\\
-=&-\sum_{a\in\mathcal{X}}Q(a)logQ(a)=H(Q,Q), \quad n\to \infty <a id="entr">5</a>
+=&-\sum_{a\in\mathcal{X}}Q(a)logQ(a)=H(Q,Q), \quad n\to \infty\tag{5}
 \end{align}
 $$
 
@@ -609,12 +615,14 @@ $$
 \end{align}
 $$
 
-and by $[here](Def Cross Entropy)$, $\forall x^n\in \mathcal{T}_Q^n, P_{X^n}(x^n)=Q^n(x^n)=q^{-nH(Q)}$. So, we get the two-side bounds of the size of types: * Note: In fact we can choose any possible $P_X $as the number of types are independent with $p_X $.  We choose $P_X=Q $to get a proper lower bound, as the probability will be maximum when $p_X=Q $
+and by $[here](#def-cross-entropy)$, $\forall x^n\in \mathcal{T}_Q^n, P_{X^n}(x^n)=Q^n(x^n)=q^{-nH(Q)}$. So, we get the two-side bounds of the size of types: * Note: In fact we can choose any possible $P_X $as the number of types are independent with $p_X $.  We choose $P_X=Q $to get a proper lower bound, as the probability will be maximum when $p_X=Q $
+
+<span id="specsize"></span>
 
 $$
 \begin{align}
 
-\frac{q^{nH(Q)}}{\binom{n+|\mathcal{X}|-1}{n}} \leq |\mathcal{T}_Q^n|\leq q^{nH(Q)}, <a id="specsize">6</a>
+\frac{q^{nH(Q)}}{\binom{n+|\mathcal{X}|-1}{n}} \leq |\mathcal{T}_Q^n|\leq q^{nH(Q)}\tag{6}
 \end{align}
 $$
 
@@ -643,7 +651,7 @@ which can be an alternative definition of Kullback-Liebler Divergence (or relati
 \#
 
 **Proof:**
-We can simply calculate the probability of any given type $\mathcal{T}_Q^n$by the multiplication of the probability of any point in the type(as thay are uniformly distributed) and the size of the type, which is given in ([here](#Def Cross Entropy)) and ([here](#entr)):
+We can simply calculate the probability of any given type $\mathcal{T}_Q^n$by the multiplication of the probability of any point in the type(as thay are uniformly distributed) and the size of the type, which is given in ([here](#def-cross-entropy)) and ([here](#entr)):
 
 $$
 \begin{align}
@@ -655,7 +663,7 @@ $$
 	\end{align}
 $$
 
-`<a id="relativeentr">`7 `</a>`
+<span id="relative-entropy"></span>
 
 To put it more specifically from  ([here](#specsize)),
 
@@ -668,7 +676,7 @@ $$
 
 \#
 
-([here](relativeentr)) shows that the difference between $H(Q)$and $H(Q,P_X)$(i.e., the difference of empirical distribution and real distribution) determines the probability of a certain type. (Compared to the size of a type, which is only determined by the empirical distribution). We can intuitively cosnsider $D(Q||P_X)$as the "distance" between 2 distributions. The large the distance of $Q$and $P_X$is, the less $P_{X^n}(\mathcal{T}_Q^n)$will be. As a specific case when $P=Q$, $D(Q||P_X)=0$and the probability gets maximum.
+([here](#relative-entropy)) shows that the difference between $H(Q)$and $H(Q,P_X)$(i.e., the difference of empirical distribution and real distribution) determines the probability of a certain type. (Compared to the size of a type, which is only determined by the empirical distribution). We can intuitively cosnsider $D(Q||P_X)$as the "distance" between 2 distributions. The large the distance of $Q$and $P_X$is, the less $P_{X^n}(\mathcal{T}_Q^n)$will be. As a specific case when $P=Q$, $D(Q||P_X)=0$and the probability gets maximum.
 
 ### Strong AEP
 
@@ -714,7 +722,7 @@ $$
 
 \#
 
-* Note: From [here](#entr we know that the size of type has a $H(p) $exponential approximation. However, The gap between them tends to be infinite, as the probability are tend to 1 and 0 from the following relation.)
+* Note: From [here](#entr), we know that the size of type has a $H(p) $exponential approximation. However, The gap between them tends to be infinite, as the probability are tend to 1 and 0 from the following relation.
 
 **Proof:** First we give a lemma according to the continuity of $H(\cdot) $:
 
@@ -819,7 +827,9 @@ As $\lim_{n\to\infty}\delta_\epsilon=0 $, the probability of Strongly typical se
 **Proof:**
 for all types $\mathcal{T}_Q^n\subseteq \mathcal{T}_{[Q]_{\delta_{\epsilon}}}^{nC}$ , $\exists a \in \mathcal{X}, |Q(a)-P_X(a)|\geq \delta_{\epsilon}$. Due to the continuity and monotony of $f(p)=logp$, we have:
 
-* Note: ([here](taylor) follows from the definition of derivatives, and is not accurate. In fact, $(logP_X(a)-logQ(a))= \frac{d(logp)}{dp}|_{p=Q(a)}[P_X(a)-Q(a)]+o((P_X(a)-Q(a))^2)$is the Taylor formula with Peano remainder and the results should be $\delta_\epsilon + Q(a)o(\delta^2) $. Here we omit the $o(\delta^2) $, and we will configure $\delta $in ([here](make)) to make $\lim\limits_{n\to \infty}nQ(a)o(\delta^2)\neq \infty $}
+* Note: ([here](#taylor)) follows from the definition of derivatives, and is not accurate. In fact, $(logP_X(a)-logQ(a))= \frac{d(logp)}{dp}|_{p=Q(a)}[P_X(a)-Q(a)]+o((P_X(a)-Q(a))^2)$is the Taylor formula with Peano remainder and the results should be $\delta_\epsilon + Q(a)o(\delta^2) $. Here we omit the $o(\delta^2) $, and we will configure $\delta $in ([here](#make)) to make $\lim\limits_{n\to \infty}nQ(a)o(\delta^2)\neq \infty $}
+
+<span id="taylor"></span>
 
 $$
 \begin{align}
@@ -827,12 +837,14 @@ $$
 	&D(Q||p)=|H(p,Q)-H(Q)|\\
 	=& |\sum_{a\in \mathcal{X}}Q(a)(\log p(a)-\log Q(a))|\\
 	\geq  &Q(a)|\log p(a)-\log Q(a)|\\
-	=&Q(a)\frac{d(logp)}{dp}|_{p=Q(a)}|P_X(a)-Q(a)|<a id="taylor">8</a>\\
+	=&Q(a)\frac{d(logp)}{dp}|_{p=Q(a)}|P_X(a)-Q(a)|\tag{8}\\
 	\geq& Q(a)\frac{1}{Q(a)}\delta_\epsilon=\delta_\epsilon> 0
 	\end{align}
 $$
 
 Then we give the upper bound of atypical set:
+
+<span id="probability-bound"></span>
 
 $$
 \begin{align}
@@ -840,7 +852,7 @@ $$
 	&\frac{1}{n}logPr(X^n\in\mathcal{T}_{[Q]_{\delta_\epsilon}}^{nC})\\
 	=&\frac{1}{n}log\sum_{Q:\exists a\in \mathcal{X}, |Q(a)-p(a)|\geq\delta_\epsilon}|\mathcal{T}_Q^n|\\
 	\leq  & \frac{1}{n}log\binom{n+|\mathcal{X}|-1}{n}+\max_{Q:|Q(a)-p(a)|\leq\delta,\forall a\in \mathcal{X}}\frac{1}{n}logPr(X^n\in\mathcal{T}_{Q}^{n})\\
-	=&-D(Q||p)\leq -\delta_\epsilon, <a id="proaty">9</a>
+	=&-D(Q||p)\leq -\delta_\epsilon\tag{9}
 	\end{align}
 $$
 
@@ -872,10 +884,12 @@ and letting $\eta=\delta+\epsilon $.
 
 One to be noticed is that in order to get a proper $\epsilon$to make both $\epsilon$itself and $n\delta^2 $be sufficiently small and $n\delta_{\epsilon}$sufficiently large. For example,
 
+<span id="make"></span>
+
 $$
 \begin{align}
 
-\epsilon=n^p , \quad  p\in(-1,-\dfrac{1}{2}], <a id="make">10</a>
+\epsilon=n^p , \quad  p\in(-1,-\dfrac{1}{2}]\tag{10}
 \end{align}
 $$
 
@@ -895,7 +909,7 @@ $$
 
 \#
 
-and intuitively, the positive probability can only be valued in the typical set when $n\to \infty$, as ([here](proaty)) shows that :
+and intuitively, the positive probability can only be valued in the typical set when $n\to \infty$, as ([here](#probability-bound)) shows that:
 
 $$
 \begin{align}

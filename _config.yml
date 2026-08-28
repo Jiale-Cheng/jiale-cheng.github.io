@@ -23,9 +23,6 @@ author:
   facebook:
   github:         https://github.com/Jiale-Cheng
   linkedin:
-  # # If you're forking this site, make sure you delete this entry!
-  clustrmap:      yX6fKVAPwoN64YALu1NiouBF9fG5nA769GCuOGalMDg 
-  # If you're forking this site, make sure you delete this entry!
 
 
 # markdown
@@ -75,6 +72,8 @@ defaults:
 exclude:
  - LICENSE.md
  - README.md
+ - Gemfile
+ - Gemfile.lock
  - "*.cdf"
  - "*.tex"
  - "*.aux"
@@ -88,4 +87,9 @@ exclude:
  - "*.draft.md"
  - "*.source.*"
  - _posts/2018-06-06-Lie-group-and-Lie-algebra-cn/2018-06-06-Lie-group-and-Lie-algebra-cn_source.md
+ - _posts/2018-06-06-Lie-group-and-Lie-algebra-cn/2018-06-06-Lie-group-and-Lie-algebra-cn.pdf
+ - _posts/2018-06-06-Lie-group-and-Lie-algebra-cn/切空间.png
+ - _posts/2018-06-06-Lie-group-and-Lie-algebra-cn/流形.png
+ - _posts/2022-10-25-Typicality/2022-10-25-Typicality.pdf
  - _posts/2023-3-1-ZFC-Framework-of-Axioms/2023-3-1-ZFC-Framework-of-Axioms_tmp.html
+ - _posts/2023-3-1-ZFC-Framework-of-Axioms/2023-3-1-ZFC-Framework-of-Axioms.pdf
