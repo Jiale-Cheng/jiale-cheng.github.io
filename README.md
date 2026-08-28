@@ -13,7 +13,7 @@ The site includes:
 
 The site is built with Jekyll and deployed from the `main` branch through GitHub Pages. Site-wide information is stored in `_config.yml`; the homepage and academic profile are maintained in `index.html` and `about/index.md`.
 
-For a local preview, install the bundle and run:
+For a local preview, use Ruby 3.2.2 (recorded in `.ruby-version`), install the bundle, and run:
 
 ```sh
 bundle install

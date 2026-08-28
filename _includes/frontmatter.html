@@ -5,17 +5,19 @@
       </h1>
    </div>
    <div id="info">
+      {% if page.date or page.edit or page.status %}
       <div id="date">
+         {% if page.date %}
+         <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+         {% endif %}
          {% if page.edit %}
-         <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
          <p><code>Edited</code>:  &nbsp; {{ page.edit | date: '%B %d, %Y' }} </p>
-         {% else %}
-         <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
          {% endif %}
          {% if page.status %}
          <p><code>Status</code>:  &nbsp; {% include status-indicator.html status=page.status%} </p>
          {% endif %}
       </div>
+      {% endif %}
       {% if page.tags and page.tags != empty %}
       <div id="tag-list">
          <p><code> Tags </code>:  &nbsp; 
@@ -42,6 +44,8 @@
       <p><code>Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
    </div>
    {% endcomment %}
-   <div class="hint" style="font-size: 0.7rem;line-height: 1.2;color: #767676;">If equations, pictures, or diagrams do not render properly, refresh the page. If the problem persists, please <a href="{{ '/about/#contact' | relative_url }}" style="color: inherit">contact me</a>.</div>
+   {% if page.mathjax or page.mermaid %}
+   <div class="hint" style="font-size: 0.7rem;line-height: 1.2;color: #767676;">If equations or diagrams do not render properly, refresh the page. If the problem persists, please <a href="{{ '/about/#contact' | relative_url }}" style="color: inherit">contact me</a>.</div>
+   {% endif %}
    <hr>
 </div>
