@@ -456,7 +456,7 @@ sub,sup{
 @media screen and (max-width: 760px) {
   .home-planet-clock{
     top:5rem;
-    right:-.8rem;
+    right:1rem;
     width:clamp(9rem,42vw,11rem);
     opacity:.82
   }

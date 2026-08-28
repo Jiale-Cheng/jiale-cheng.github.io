@@ -70,8 +70,11 @@
         easing: "linear"
       }
     );
+    var minuteTicks = 0;
     timer = window.setInterval(function () {
       updateLabel(new Date());
+      minuteTicks += 1;
+      if (minuteTicks >= 60) syncClock();
     }, 60000);
   }
 
