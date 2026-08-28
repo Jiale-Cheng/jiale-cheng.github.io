@@ -1,22 +1,24 @@
 # Site settings
-title: Starting from NOW!
-description: Blog of Jiale Cheng
-baseurl: "" 
-url: "https://jiale-cheng.github.io" 
+title: Jiale Cheng
+description: Ph.D. candidate at the University of Michigan working on graph alignment and information theory.
+baseurl: ""
+url: "https://jiale-cheng.github.io"
+repository: Jiale-Cheng/jiale-cheng.github.io
+repository_branch: main
 
 # GitHub User settings
 username: Jiale Cheng
 github_username: jiale-cheng
-user_description: A Ph.D. candidate with interest in information theory, coding and mathematical background of ML with their applications to data privacy/security.
-user_title: PhD candidate
-email: jaylencheng@outlook.com
+user_description: Ph.D. candidate in Electrical and Computer Engineering at the University of Michigan, studying graph alignment, information theory, and their applications to networks and systems.
+user_title: Ph.D. candidate
+email: jlcheng@umich.edu
 
 # Blog Author settings
 author:
   name:           Jiale Cheng
   picture:        
-  email:          jlcheng@seu.edu.cn
-  description:    Interested in information theory, coding and mathematical background of ML with their applications to data privacy/security.
+  email:          jlcheng@umich.edu
+  description:    Researching graph alignment, information theory, and their applications to networks and systems.
   twitter:
   facebook:
   github:         https://github.com/Jiale-Cheng
@@ -29,10 +31,10 @@ author:
 # markdown
 markdown: kramdown
 
-future: true
+future: false
   
 kramdown:
- math_engine: katex
+ math_engine: mathjax
  footnote_nr: 1
  entity_output: as_char
  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
@@ -69,7 +71,6 @@ defaults:
       protected: false
       commentable: true
       rss: true
-      numbering: true
 
 exclude:
  - LICENSE.md
@@ -86,3 +87,5 @@ exclude:
  - "*.bk"
  - "*.draft.md"
  - "*.source.*"
+ - _posts/2018-06-06-Lie-group-and-Lie-algebra-cn/2018-06-06-Lie-group-and-Lie-algebra-cn_source.md
+ - _posts/2023-3-1-ZFC-Framework-of-Axioms/2023-3-1-ZFC-Framework-of-Axioms_tmp.html
