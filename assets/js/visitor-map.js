@@ -4,6 +4,8 @@
   var section = document.querySelector("[data-visitor-map]");
   if (!section) return;
 
+  section.setAttribute("aria-hidden", "true");
+
   function revealWhenReady() {
     var widget = section.querySelector(
       "#clustrmaps-widget, .clustrmaps-map, .clustrmaps-map-container, a[href*='clustrmaps.com'], canvas, iframe, svg"
