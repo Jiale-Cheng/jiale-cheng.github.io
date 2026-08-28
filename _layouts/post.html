@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-      <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-              tex2jax: {
-              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-              inlineMath: [['$','$']]
-              }
-          });
-      </script>
-  </head>
-     
-<head>
       {% include head.html %} 
       {% if page.mathjax %}			
       {% include markdown-enhancements/mathjax.html %}
@@ -53,7 +41,7 @@
                {% include frontmatter.html %}
                <div id="content-container" style="text-align:justify">
                         {% if page.type == "mdpdf" %}	
-                  <p>Due to github updates on markdown engine, my mathjax got scrambled. So I am providing the link to both the md source file as well as here in the <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/tree/master/_posts/{{ page.repopath }}" > PDF Version</a> </p>
+                  <p>This post is also available in a <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/blob/{{ site.repository_branch }}/_posts/{{ page.repopath }}">PDF version</a>, which preserves its original equation layout.</p>
                         {% else %}
                          {{ content }}	
                         {% endif %}                  

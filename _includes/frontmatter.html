@@ -16,22 +16,22 @@
          <p><code>Status</code>:  &nbsp; {% include status-indicator.html status=page.status%} </p>
          {% endif %}
       </div>
-      {% if site.tags != '' %}
+      {% if page.tags and page.tags != empty %}
       <div id="tag-list">
          <p><code> Tags </code>:  &nbsp; 
             {% for tag in page.tags %}
             {% capture tag_name %}{{ tag }}{% endcapture %}
-            <code><a href="{{site.url}}{{site.baseurl}}/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
+            <code><a href="{{ '/blog/tags' | relative_url }}#{{ tag_name | slugify }}">{{ tag_name }}</a></code>
             {% endfor %}
          </p>
       </div>
       {% endif %}	
-      {% if site.categories != '' %}
+      {% if page.categories and page.categories != empty %}
       <div id="category-list">
          <p><code> Categories </code>:  &nbsp;
             {% for category in page.categories %}
             {% capture category_name %}{{ category }}{% endcapture %}
-            <code><a href="{{site.url}}{{site.baseurl}}/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
+            <code><a href="{{ '/blog/categories' | relative_url }}#{{ category_name | slugify }}">{{ category_name }}</a></code>
             {% endfor %}
          </p>
       </div>
@@ -42,6 +42,6 @@
       <p><code>Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
    </div>
    {% endcomment %}
-   <div class="hint" style="font-size: 0.7rem;line-height: 0.7rem;color: #A9A9A9;"> Were equations, pictures or diagrams not properly rendered, please refresh the page. If the problem persists, you can <a href="{{site.url}}{{site.baseurl}}/about/#contact" style="color: inherit">contact me</a>. </div>
+   <div class="hint" style="font-size: 0.7rem;line-height: 1.2;color: #767676;">If equations, pictures, or diagrams do not render properly, refresh the page. If the problem persists, please <a href="{{ '/about/#contact' | relative_url }}" style="color: inherit">contact me</a>.</div>
    <hr>
 </div>
