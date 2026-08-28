@@ -211,28 +211,15 @@ sub,sup{
     transform:translate(-50%,-50%)
 }
 .header .site-title{
-    font-size:50px;
+    width:min(90vw,46rem);
+    margin:0;
+    font-size:clamp(1.85rem,3.2vw,3rem);
+    font-weight:600;
     display:block;
-    line-height:1;
+    line-height:1.15;
+    letter-spacing:-.02em;
+    text-wrap:balance;
     color:white
-}
-@media only screen and (min-width:550px){
-    .header .site-title{
-        margin:0;
-        font-size:100px
-    }
-}
-.header .site-description{
-    font-size:20px;
-    display:block;
-    line-height:1;
-    color:white;
-    margin-top:10px
-}
-@media only screen and (min-width:550px){
-    .header .site-description{
-        font-size:40px
-    }
 }
 .header-links{
     margin:10px
@@ -377,6 +364,25 @@ sub,sup{
 .home-links a:focus{
     color:#fff;
     background:#42b983
+}
+
+.home-analytics{
+    flex:1 0 100%;
+    box-sizing:border-box;
+    width:100%;
+    margin-top:1rem;
+    padding:2.5rem 0 0;
+    text-align:center;
+    border-top:1px solid #e2e8e5
+}
+
+.home-analytics h2{
+    margin:0 0 1.25rem
+}
+
+.home-analytics img,
+.home-analytics iframe{
+    max-width:100%
 }
 
 .research-list{

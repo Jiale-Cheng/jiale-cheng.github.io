@@ -14,6 +14,7 @@ edit: 2026-08-28
     <a href="{{ '/about/' | relative_url }}">About</a>
     <a href="{{ '/about/CV-of-Jiale-Cheng.pdf' | relative_url }}">CV</a>
     <a href="https://orcid.org/0000-0003-1379-4324" target="_blank" rel="noopener noreferrer">ORCID</a>
+    <a href="https://scholar.google.com/citations?user=YAsOVwwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
     <a href="https://github.com/Jiale-Cheng" target="_blank" rel="noopener noreferrer">GitHub</a>
   </p>
 </div>
@@ -42,3 +43,10 @@ edit: 2026-08-28
   </dl>
   <p><a href="{{ '/blog/' | relative_url }}">View all posts</a></p>
 </div>
+
+{% if site.author.clustrmap %}
+<section class="home-analytics" aria-labelledby="visitor-map-title" data-visitor-map hidden>
+  <h2 id="visitor-map-title">Visitor Map</h2>
+  {% include clustrmap.html style="js" %}
+</section>
+{% endif %}
