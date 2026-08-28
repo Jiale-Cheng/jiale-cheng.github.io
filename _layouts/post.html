@@ -65,9 +65,11 @@ layout: blog-shell
     {% endif %}
 
     {% if page.commentable and site.giscus.enabled %}
-      {% unless page.protected %}
-        {% include giscus.html %}
-      {% endunless %}
+      {% if site.giscus.category and site.giscus.category_id %}
+        {% unless page.protected %}
+          {% include giscus.html %}
+        {% endunless %}
+      {% endif %}
     {% endif %}
   </article>
 

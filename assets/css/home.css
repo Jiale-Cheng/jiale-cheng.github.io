@@ -313,6 +313,7 @@ sub,sup{
     text-align:left
 }
 .lower{
+    position:relative;
     text-align:left;
     font-size:1rem;
     display:flex;
@@ -374,6 +375,13 @@ sub,sup{
     padding:2.5rem 0 0;
     text-align:center;
     border-top:1px solid #e2e8e5
+}
+
+.home-analytics.is-pending{
+    position:absolute;
+    left:-10000px;
+    visibility:hidden;
+    pointer-events:none
 }
 
 .home-analytics h2{
