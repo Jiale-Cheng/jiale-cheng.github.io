@@ -1,0 +1,30 @@
+{% assign blog_nav_active = include.active %}
+{% if blog_nav_active == nil or blog_nav_active == '' %}
+  {% if page.url == '/' %}
+    {% assign blog_nav_active = 'home' %}
+  {% elsif page.url contains '/about/' %}
+    {% assign blog_nav_active = 'about' %}
+  {% elsif page.url contains '/blog/tags' %}
+    {% assign blog_nav_active = 'tags' %}
+  {% elsif page.layout == 'post' or page.url contains '/blog/' %}
+    {% assign blog_nav_active = 'posts' %}
+  {% endif %}
+{% endif %}
+
+<a class="blog-skip-link" href="#main-content">Skip to content</a>
+<nav class="blog-nav{% unless include.overlay == false %} blog-nav--overlay{% endunless %}" aria-label="Primary navigation">
+  <div class="blog-nav__inner">
+    <a class="blog-nav__brand" href="{{ '/blog/' | relative_url }}">Jiale's Blog</a>
+    <button class="blog-nav__toggle" type="button" aria-expanded="false" aria-controls="blog-nav-menu" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="blog-nav__menu" id="blog-nav-menu">
+      <a href="{{ '/' | relative_url }}"{% if blog_nav_active == 'home' %} class="is-active" aria-current="page"{% endif %}>HOME</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if blog_nav_active == 'posts' %} class="is-active" aria-current="page"{% endif %}>POSTS</a>
+      <a href="{{ '/about/' | relative_url }}"{% if blog_nav_active == 'about' %} class="is-active" aria-current="page"{% endif %}>ABOUT</a>
+      <a href="{{ '/blog/tags/' | relative_url }}"{% if blog_nav_active == 'tags' %} class="is-active" aria-current="page"{% endif %}>TAGS</a>
+    </div>
+  </div>
+</nav>
