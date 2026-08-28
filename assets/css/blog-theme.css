@@ -22,13 +22,19 @@ html.blog-theme {
   text-rendering: optimizeLegibility;
 }
 
-.blog-theme a {
+.blog-theme :where(a) {
   color: #247b92;
 }
 
-.blog-theme a:hover,
-.blog-theme a:focus {
+.blog-theme :where(a:hover),
+.blog-theme :where(a:focus) {
   color: #0085a1;
+}
+
+.blog-theme .blog-nav a,
+.blog-theme .blog-nav a:hover,
+.blog-theme .blog-nav a:focus {
+  color: inherit;
 }
 
 .blog-theme a:focus-visible,
@@ -325,14 +331,26 @@ html.blog-theme {
 
 .blog-article table,
 .blog-page__content table {
-  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 1.7rem 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.blog-table-scroll {
   width: 100%;
   max-width: 100%;
   margin: 1.7rem 0;
   overflow-x: auto;
-  border-spacing: 0;
-  border-collapse: collapse;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+}
+
+.blog-table-scroll table {
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
 }
 
 .blog-article th,
@@ -358,6 +376,15 @@ html.blog-theme {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.35rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-article .MathJax,
+.blog-page__content .MathJax {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
   -webkit-overflow-scrolling: touch;
 }
 
