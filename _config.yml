@@ -5,6 +5,10 @@ baseurl: ""
 url: "https://jiale-cheng.github.io"
 repository: Jiale-Cheng/jiale-cheng.github.io
 repository_branch: main
+blog_title: "Jiale's Blog"
+blog_tagline: Notes on mathematics, information theory, and network science.
+blog_page_header_image: /assets/images/blog-page-header.jpg
+blog_post_header_image: /assets/images/blog-post-header.jpg
 
 # GitHub User settings
 username: Jiale Cheng

@@ -1,65 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      {% include head.html %} 
-      {% if page.mathjax %}			
-      {% include markdown-enhancements/mathjax.html %}
+---
+layout: blog-shell
+---
+{% assign post_header_image = page.header_image %}
+{% if post_header_image == nil or post_header_image == '' %}
+  {% assign post_header_image = page['header-img'] %}
+{% endif %}
+{% if post_header_image == nil or post_header_image == '' %}
+  {% assign post_header_image = site.blog_post_header_image %}
+{% endif %}
+
+<header class="blog-hero blog-hero--post" style="--blog-hero-image: url('{{ post_header_image | relative_url }}');">
+  <div class="blog-hero__inner">
+    {% if page.tags and page.tags != empty %}
+    <div class="blog-hero__tags" aria-label="Post tags">
+      {% for tag in page.tags %}
+      <a href="{{ '/blog/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag | replace: '-', ' ' }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <span class="blog-hero__subtitle">{{ page.subtitle }}</span>
+    {% endif %}
+    <p class="blog-hero__meta">
+      <span>Posted by {{ page.author | default: site.author.name }} on {{ page.date | date: '%B %-d, %Y' }}</span>
+      {% if page.edit %}<span>&middot; Updated {{ page.edit | date: '%B %-d, %Y' }}</span>{% endif %}
+      {% if page.status %}{% include status-indicator.html status=page.status %}{% endif %}
+    </p>
+  </div>
+</header>
+
+<main id="main-content" class="blog-main blog-post-layout">
+  <article id="content-container" class="blog-article">
+    {% if page.toc %}
+    <details class="blog-toc-mobile">
+      <summary>CONTENTS</summary>
+      {% include toc.html html=content sanitize=true h_min=1 h_max=3 ordered=false %}
+    </details>
+    {% endif %}
+
+    {% if page.type == 'mdpdf' %}
+    <div class="blog-callout">
+      <p>This post is available as a <a href="https://github.com/{{ site.repository }}/blob/{{ site.repository_branch }}/_posts/{{ page.repopath }}">PDF preserving the original equation layout</a>.</p>
+    </div>
+    {% else %}
+    {{ content }}
+    {% endif %}
+
+    {% if page.previous.url or page.next.url %}
+    <nav class="blog-pagination" aria-label="Adjacent posts">
+      {% if page.previous.url %}
+      <a class="blog-pagination__previous" href="{{ page.previous.url | relative_url }}">
+        <span class="blog-pagination__label">Previous</span>
+        <span class="blog-pagination__title">{{ page.previous.title }}</span>
+      </a>
+      {% else %}<span></span>{% endif %}
+      {% if page.next.url %}
+      <a class="blog-pagination__next" href="{{ page.next.url | relative_url }}">
+        <span class="blog-pagination__label">Next</span>
+        <span class="blog-pagination__title">{{ page.next.title }}</span>
+      </a>
       {% endif %}
-      {% include theme-vue.html%}
-      <!-- change font -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
-      {% if page.numbering %}
-      <!-- link to counter.css -->
-      <link rel="stylesheet" href="{{ '/assets/css/counter.css' | relative_url }}">
-      {% endif %}
-      {% if page.commentable %}
-      <link rel="stylesheet" href="{{ '/assets/css/commentit.css' | relative_url }}">
-      {% endif %}
-      <!-- link to responsive post.css -->
-      <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
-      <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-   </head>
-   <body>
-      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-      <!-- this is side bar -->
-      <div class="sidebar" id="sidebar">
-         <nav class="sidebar-nav">
-            {% include navitem.html %}
-         </nav>
-         {% if page.toc %}
-         <div class="toc">
-            <div class='toc-container'>
-               {% include toc.html html=content %}
-            </div>
-         </div>
-         {% endif %}
-      </div>
-      <!-- Add all page content inside this div if you want the side nav to push page content to the right
-         (not used if you only want the sidenav to sit on top of the page -->
-      <div class="wrap">
-         <div class="content-container">
-            <div class="page">
-               {% include frontmatter.html %}
-               <div id="content-container">
-                        {% if page.type == "mdpdf" %}	
-                  <p>This post is also available in a <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/blob/{{ site.repository_branch }}/_posts/{{ page.repopath }}">PDF version</a>, which preserves its original equation layout.</p>
-                        {% else %}
-                         {{ content }}	
-                        {% endif %}                  
-               </div>
-               <!-- <div id="comment-session"> -->
-                  <!-- {% include commentit.html %} -->
-               <!-- </div> -->
-            </div>
-         </div>
-      </div>
-      <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation" title="Toggle navigation"></label>
-      {% if page.mermaid %}
-      {% include markdown-enhancements/mermaid.html %}
-      {% endif %}
-      {% if page.highlight %}
-      {% include markdown-enhancements/highlight.html %}
-      {% endif %}
-      {% include footer.html %} 
-   </body>
-</html>
+    </nav>
+    {% endif %}
+  </article>
+
+  {% if page.toc %}
+  <aside class="blog-toc" aria-label="Table of contents">
+    <h2>CONTENTS</h2>
+    {% include toc.html html=content sanitize=true h_min=1 h_max=3 ordered=false %}
+  </aside>
+  {% endif %}
+</main>
