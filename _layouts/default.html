@@ -6,12 +6,13 @@
       {% include markdown-enhancements/mathjax.html %}
       {% endif %} 
       {% include theme-vue.html%}
+      <link rel="stylesheet" href="{{ '/assets/css/topbar.css' | relative_url }}">
       <!-- change font -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet" async>
       <!--  -->
    </head>
-   {% include topnav.html active="home"%}
    <body>
+      {% include topnav.html active="home"%}
       <div id="main">
          <div class="page">
             {% include frontmatter.html %}
