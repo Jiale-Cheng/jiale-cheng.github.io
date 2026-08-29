@@ -223,6 +223,10 @@ sub,sup{
     clip-path:circle(47.1% at 50.09% 49.91%);
     filter:drop-shadow(0 1.1rem 1.8rem rgba(0,0,0,.28))
 }
+.home-planet-clock.is-moon .home-planet-clock__planet{
+    -webkit-clip-path:none;
+    clip-path:none
+}
 .home-planet-clock__orbit{
     position:absolute;
     inset:0;

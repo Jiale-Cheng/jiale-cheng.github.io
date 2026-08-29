@@ -16,7 +16,7 @@
       {% include blog-nav.html active='home' overlay=true %}
       <div id="particles-js">
          <div class="home-planet-clock" data-planet-clock role="img" aria-label="Mars with a rover">
-            <img class="home-planet-clock__planet" src="{{ '/about/Mars.png' | relative_url }}" width="553" height="553" alt="" aria-hidden="true">
+            <img class="home-planet-clock__planet" data-planet-image data-mars-src="{{ '/about/Mars.png' | relative_url }}" data-moon-src="{{ '/about/Moon.png' | relative_url }}" src="{{ '/about/Mars.png' | relative_url }}" width="553" height="553" alt="" aria-hidden="true">
             <div class="home-planet-clock__orbit" data-rover-orbit aria-hidden="true">
                <svg class="home-planet-clock__rover" viewBox="0 0 120 70" focusable="false" aria-hidden="true">
                   <path d="M13 49h8l7-20 26-4 9-16h22l11 19 14 5 5 16z" fill="#f7f8fa" stroke="#dce4e8" stroke-width="2" stroke-linejoin="round"/>

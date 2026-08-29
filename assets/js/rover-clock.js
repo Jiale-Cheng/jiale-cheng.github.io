@@ -3,6 +3,7 @@
 
   var clock = document.querySelector("[data-planet-clock]");
   var orbit = document.querySelector("[data-rover-orbit]");
+  var planet = document.querySelector("[data-planet-image]");
   if (!clock || !orbit) return;
 
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -22,10 +23,35 @@
     ) * 30;
   }
 
+  function isDaytime(date) {
+    var hour = date.getHours();
+    return hour >= 8 && hour < 20;
+  }
+
+  function updatePlanet(date) {
+    var daytime = isDaytime(date);
+    var planetName = daytime ? "Mars" : "Moon";
+
+    clock.classList.toggle("is-mars", daytime);
+    clock.classList.toggle("is-moon", !daytime);
+
+    if (planet) {
+      var source = daytime
+        ? planet.getAttribute("data-mars-src")
+        : planet.getAttribute("data-moon-src");
+      if (source && planet.getAttribute("src") !== source) {
+        planet.setAttribute("src", source);
+      }
+    }
+
+    return planetName;
+  }
+
   function updateLabel(date) {
+    var planetName = updatePlanet(date);
     clock.setAttribute(
       "aria-label",
-      "Mars rover clock: " + formatter.format(date) + " local time"
+      planetName + " rover clock: " + formatter.format(date) + " local time"
     );
   }
 
