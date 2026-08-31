@@ -2,9 +2,13 @@
 layout: displayindex
 title: Tags
 hero_title: TAGS
-description: Browse the archive by topic.
+description: Browse archived blog posts by tag.
 ---
 <div class="blog-index">
+  <nav class="blog-index__tools" aria-label="Alternative tag view">
+    <a href="{{ '/blog/tags-map/' | relative_url }}">View tags by Map</a>
+  </nav>
+
   {% assign tags = site.tags | sort %}
   <nav class="blog-tag-cloud" aria-label="Tag cloud">
     {% for tag in tags %}

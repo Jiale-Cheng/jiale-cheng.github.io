@@ -1,0 +1,51 @@
+---
+layout: tags-map
+title: Tags Map
+description: Explore connections between the topics in Jiale's archived blog posts.
+permalink: /blog/tags-map/
+---
+<main id="main-content" class="tag-map-page">
+  <div id="tag-map-stars" class="tag-map-stars" aria-hidden="true"></div>
+
+  <header class="tag-map-header">
+    <p class="tag-map-header__eyebrow">Explore the archive</p>
+    <h1>Tags Map</h1>
+    <a class="tag-map-header__back" href="{{ '/blog/tags/' | relative_url }}">View Tag List</a>
+  </header>
+
+  <section class="tag-map-graph" data-tag-map aria-labelledby="tag-map-heading">
+    <h2 class="visually-hidden" id="tag-map-heading">Interactive map of blog tags</h2>
+    <div class="tag-map-stage" data-tag-map-stage aria-describedby="tag-map-hint">
+      <div class="tag-map-edges" data-tag-map-edges></div>
+      <div class="tag-map-nodes" data-tag-map-nodes></div>
+      <p class="tag-map-empty" data-tag-map-empty hidden>No tagged posts are available yet.</p>
+
+      <aside class="tag-map-results" data-tag-map-results hidden aria-live="polite" aria-labelledby="tag-map-results-title">
+        <button class="tag-map-results__close" type="button" data-tag-map-close aria-label="Close results">&times;</button>
+        <p class="tag-map-results__type" data-tag-map-results-type></p>
+        <h2 id="tag-map-results-title" data-tag-map-results-title></h2>
+        <p class="tag-map-results__summary" data-tag-map-results-summary></p>
+        <ul class="tag-map-results__list" data-tag-map-results-list></ul>
+      </aside>
+    </div>
+    <p class="tag-map-hint" id="tag-map-hint">Select a tag or a numbered connection to explore its posts.</p>
+  </section>
+
+  <script id="tag-map-data" type="application/json">
+    [
+      {% assign first_tagged_post = true %}
+      {% for post in site.posts %}
+        {% if post.tags and post.tags != empty %}
+          {% unless first_tagged_post %},{% endunless %}
+          {
+            "title": {{ post.title | jsonify }},
+            "url": {{ post.url | relative_url | jsonify }},
+            "date": {{ post.date | date: '%Y-%m-%d' | jsonify }},
+            "tags": {{ post.tags | jsonify }}
+          }
+          {% assign first_tagged_post = false %}
+        {% endif %}
+      {% endfor %}
+    ]
+  </script>
+</main>
