@@ -235,18 +235,11 @@
   }
 
   function highlightNode(activeNode) {
-    var connectedNodeIds = Object.create(null);
-    connectedNodeIds[activeNode.id] = true;
     edges.forEach(function (edge) {
-      var connected = edge.source === activeNode || edge.target === activeNode;
-      edge.element.classList.toggle("is-muted", !connected);
-      if (connected) {
-        connectedNodeIds[edge.source.id] = true;
-        connectedNodeIds[edge.target.id] = true;
-      }
+      edge.element.classList.add("is-muted");
     });
     nodes.forEach(function (node) {
-      node.element.classList.toggle("is-muted", !connectedNodeIds[node.id]);
+      node.element.classList.toggle("is-muted", node !== activeNode);
     });
   }
 
