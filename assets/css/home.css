@@ -372,6 +372,66 @@ sub,sup{
     line-height:1.7;
 }
 
+.rover-fact{
+    margin-top:1.35rem;
+    color:#4f5c64
+}
+
+.rover-fact__button{
+    display:inline;
+    padding:0;
+    border:0;
+    color:inherit;
+    background:transparent;
+    font:inherit;
+    line-height:inherit;
+    text-align:left;
+    cursor:pointer
+}
+
+.rover-fact__mask{
+    display:inline-block;
+    min-width:9.5rem;
+    padding:0 .35rem;
+    color:#f7f7f7;
+    background:#16191c;
+    border-radius:2px;
+    font-size:.78em;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-align:center;
+    transition:background .2s ease,color .2s ease
+}
+
+.rover-fact__detail{
+    display:none
+}
+
+.rover-fact__button:hover .rover-fact__mask,
+.rover-fact__button:focus-visible .rover-fact__mask{
+    background:#2f8f6b
+}
+
+.rover-fact__button:focus-visible{
+    outline:2px solid #2f8f6b;
+    outline-offset:3px;
+    border-radius:2px
+}
+
+.rover-fact__button.is-revealed{
+    cursor:default
+}
+
+.rover-fact__button.is-revealed .rover-fact__mask{
+    display:none
+}
+
+.rover-fact__button.is-revealed .rover-fact__detail{
+    display:inline;
+    color:#263238;
+    font-weight:600
+}
+
 .eyebrow{
     margin:0 0 .35rem;
     color:#2f8f6b;
