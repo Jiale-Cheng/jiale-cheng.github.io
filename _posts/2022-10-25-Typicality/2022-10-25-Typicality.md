@@ -6,8 +6,8 @@ numbering: false
 type:
 repopath:
 mathjax: true
-categories: Basic-IT
-tags: Basic-IT
+categories: Info-Theory
+tags: [Info-Theory, AEP, Method-of-Types]
 keywords: Typical-set RV
 description: Notes on Typicality
 status: Archived

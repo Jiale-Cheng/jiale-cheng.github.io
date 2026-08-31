@@ -122,6 +122,7 @@ $$
 
 
 <span id="factorization-and-conditional-independence"></span>
+
 **Lemma.**
 
 For random variables $$X,Y,Z$$, $$X\perp Y\mid Z$$ iff there exists functions $$a:\mathcal{X}\times \mathcal{Y}\to [0,1]$$ and $$b:\mathcal{Y}\times \mathcal{Z}\to [0,1]$$ such that:
@@ -200,6 +201,8 @@ $$
 
 **Lemma.**
 
+<span id="conditional-independence-markov-chain"></span>
+
 $$X\perp Y\mid Z \iff X\to Y\to Z$$.
 
 
@@ -235,6 +238,7 @@ $$
 We now show that distributions with zero probability masses are very delicate in general such that a range of propositions holds for strictly positive probability are not valid at zero probability masses. Here we give an example, a property involving 4 RVs:
 
 <span id="intersection-axiom"></span>
+
 **Lemma.**
 
 (Intersection Axiom):<br>
@@ -269,9 +273,11 @@ p(x_1,x_2,x_3,x_4)=& \frac{p(x_1,x_2)p(x_2,x_3,x_4)}{p(x_2)}\label{Intersection 
 $$
 
 
-where a is from (\ref{Intersection Axiom1}). We know from (\ref{Intersection Axiom2}) that $$X_1\perp (X_3,X_4)\mid X_2$$.
+where a is from ($$\ref{Intersection Axiom1}$$). We know from ($$\ref{Intersection Axiom2}$$) that $$X_1\perp (X_3,X_4)\mid X_2$$.
 
-*Note: In the proof, the elimination law holds only when the probability masses are strictly positive.*
+
+**Note.** In the proof, the elimination law holds only when the probability masses are strictly positive.
+
 
 If $$\exists (x_1,x_2,x_3,x_4), p(x_1,x_2,x_3,x_4)=0$$, the intersection property is not valid anymore. We exemplify a case where $$X_1=Y, X_2=Z, X_3=X_4=(Y,Z)$$ with $$Y\perp Z$$, then $$X_1\perp X_4\mid (X_2,X_3)$$, $$X_1\perp X_3\mid (X_2,X_4)$$, but $$X_1\not \perp (X_3,X_4)\mid X_2$$.
 
@@ -310,6 +316,8 @@ From the above disscussion, we find that probability distributions with zero mas
 ##### Entropy
 
 Here we start with some axioms of discrete RV $$X$$ with finite alphabet $$\mathcal{X}$$. The entropy of the distribution of $$X$$ is, intuitively, the measure of information/uncertainty/randomness. First, we consider some basic axioms we desired for distributions of $$X$$. We start from uniform case.
+<span id="information-measure-axioms"></span>
+
 
 **Axiom (Axioms for measure the amount of information).**
 
@@ -327,7 +335,7 @@ $$f(r) =\log r$$
 
 **Proof.**
 
-Let $$\theta$$ be an arbitrary integer, then there exists inter $$k$$, s.t., $$\forall r\in \mathbb{N}_{+}$$, $$r^{k}\leq 2^{\theta}\leq r^{k + 1}$$. Then by Axiom 2.1, we have:
+Let $$\theta$$ be an arbitrary integer, then there exists inter $$k$$, s.t., $$\forall r\in \mathbb{N}_{+}$$, $$r^{k}\leq 2^{\theta}\leq r^{k + 1}$$. Then by the [information-measure axioms](#information-measure-axioms), we have:
 
 
 $$
@@ -447,6 +455,7 @@ $$
 Entropy has a good formula that can be defined in expectation sense.
 
 <span id="definition-of-entropy"></span>
+
 **Definition.**
 
 (Entropy defined in Expectation sense):<br>
@@ -476,11 +485,15 @@ H(X)=E[-\log p(X)]=-\sum_{x\in \mathcal{X}}p(x)\log p(x)
 $$
 
 
-We write $$H(X)$$ as $$H_{\alpha}(X)$$ when the base of the logarithms in (\ref{DefInformation}) and (\ref{DefEntropy}) are $$\alpha$$.
+We write $$H(X)$$ as $$H_{\alpha}(X)$$ when the base of the logarithms in ($$\ref{DefInformation}$$) and ($$\ref{DefEntropy}$$) are $$\alpha$$.
 
 
-*Note: We denote the numerical charactristic of a random variable $$X\sim p_X$$ as $$E[g(X)]=\sum_{x\in \mathcal{X}}g(x)p(x)$$ for any function $$g(x)$$.*
-*Note: We follow the convention that $$0\log 0= \lim\limits_{p\to 0^+} p\log p =\lim\limits_{p\to 0^+}(\dfrac{1}{p})/(-\dfrac{1}{p^2})=0$$. *
+**Note.** We denote the numerical charactristic of a random variable $$X\sim p_X$$ as $$E[g(X)]=\sum_{x\in \mathcal{X}}g(x)p(x)$$ for any function $$g(x)$$.
+
+
+**Note.** We follow the convention that $$0\log 0= \lim\limits_{p\to 0^+} p\log p =\lim\limits_{p\to 0^+}(\dfrac{1}{p})/(-\dfrac{1}{p^2})=0$$.
+
+
 We take the base of logarithm with $$2,e,3,10$$ to get the corresponding units of bit, nat, tet, det. In the context of source coding, the base is usually taken to be the size of the code alphabet.
 
 Entropy concerns only about  the distribution of variable(s) rather than the values of it. An alternative view is useful: $$i(A)$$ represents the amount of information needed to specify event $$A$$ and entropy gives the expected amount of uncertainty removed upon revealing the outcome of $$X$$.
@@ -488,6 +501,7 @@ Entropy concerns only about  the distribution of variable(s) rather than the val
 Entropy can also be naturally introduced by answering the question "What's the average length of the shortest description of the random variable? ", where we will give an answer that it is between $$H(X)$$ and $$H(X)+1$$ in Chapter 6. Here we give some properities:
 
 <span id="properties-of-entropy"></span>
+
 **Lemma.**
 
 (Properities of Entropy)<br>
@@ -538,6 +552,7 @@ We come to a scenario of multi-dimension variables. It is the same when talking 
 
 
 <span id="joint-entropy"></span>
+
 **Definition.**
 
 (Joint Entropy):<br>
@@ -569,6 +584,7 @@ $$
 conditional entropy describes the amount of information of one set of RVs when another set of RVs are given:
 
 <span id="conditional-entropy"></span>
+
 **Definition.**
 
 (Conditional Entropy):<br>
@@ -601,6 +617,7 @@ $$
 
 
 <span id="chain-rule-entropy"></span>
+
 **Theorem.**
 
 (Chain Rule for Entropy):<br>
@@ -633,7 +650,7 @@ H(X, Y)=&H(X)+H(Y\mid X).
 $$
 
 
-it is worth noticing that the 'E' shown in (\ref{ProofChainRule1}) is ambiguous to use $$P_{XY}$$ or $$P_X$$. In fact,
+it is worth noticing that the 'E' shown in ($$\ref{ProofChainRule1}$$) is ambiguous to use $$P_{XY}$$ or $$P_X$$. In fact,
 
 
 $$
@@ -644,7 +661,6 @@ E_{P_{XY}}[g(x)]=&\sum_{x\in \mathcal{X}}\sum_{y\in \mathcal{Y}}P_{XY}(x,y)g(x) 
 \end{align}
 $$
 
-.<br>
 On the other hand , if $$H(X_1,\cdots,X_N)=\sum_{n=1}^{N}H(X_i\mid X_1,\cdots, X_{i-1})$$, then
 
 
@@ -679,7 +695,9 @@ holds for every pair $$(X,Y)$$. We reclaim that only the distribution matters, s
 
 ##### Measure of Discrimination: Relative Entropy
 
-In this section, we assume RV $$X\in \mathcal{X}$$ has two distributions $$P,Q$$, and we need to give a measure to discriminate the distributions. A definition of distance between 2 distributions $$p$$ and $$q$$ is the first we need (One preliminaries to be recognized is that the distance shall take 0 iff $$p=q$$):*Note: In Information Theory, we always focus on the distribution, so two RV can be seen as equal as long as they are equal in probability.*
+In this section, we assume RV $$X\in \mathcal{X}$$ has two distributions $$P,Q$$, and we need to give a measure to discriminate the distributions. A definition of distance between 2 distributions $$p$$ and $$q$$ is the first we need (One preliminaries to be recognized is that the distance shall take 0 iff $$p=q$$):
+
+**Note.** In Information Theory, we always focus on the distribution, so two RV can be seen as equal as long as they are equal in probability.
 
 
 **Definition.**
@@ -691,7 +709,7 @@ The variational distance between probability distributions $$p$$ and $$q$$ defin
 $$
 \begin{align}
 
-V(p,q)=\sum_{x\in\mathcal{X}}\mid p(x)-q(x)\mid
+V(p,q)=\sum_{x\in\mathcal{X}}\lvert p(x)-q(x)\rvert
 
 \end{align}
 $$
@@ -711,7 +729,8 @@ $$V(\cdot,\cdot)$$ is a distance metric, i.e.,
 1. $$V(p,r)\leq V(p,q) + V(q,r)$$
 
 
-*Note: Using this metric, we can define the continuity of functionals on distribution.*
+**Note.** Using this metric, we can define the continuity of functionals on distribution.
+
 
 To give a measure on the discrimination of two distributions $$P,Q$$, we first give some desire for that measure.
 
@@ -757,6 +776,7 @@ This function is called the relative entropy with the following formal definitio
 
 
 <span id="relative-entropy"></span>
+
 **Definition.**
 
 (Relative Entropy, Kullback-Leibler Distance):<br>
@@ -774,7 +794,10 @@ $$
 
 where $$E_p$$ is the expectation w.r.t. $$p$$.
 
-*Note: The relative entropy is not a true metric of the "distance" between 2 distributions. The properties will be discussed in [Information inequalities](#information-inequalities). *We always define $$0log\dfrac{0}{q}=0$$ and $$plog\dfrac{p}{0}=\infty$$. i.e., if there exists $$x\in\mathcal{X}$$ with $$P(x)\geq 0$$ but $$Q(x) =0$$, then $$D(P\Vert Q)=\infty$$. With this convention,
+
+**Note.** The relative entropy is not a true metric of the "distance" between 2 distributions. The properties will be discussed in [Information inequalities](#information-inequalities).
+
+We always define $$0log\dfrac{0}{q}=0$$ and $$plog\dfrac{p}{0}=\infty$$. i.e., if there exists $$x\in\mathcal{X}$$ with $$P(x)\geq 0$$ but $$Q(x) =0$$, then $$D(P\Vert Q)=\infty$$. With this convention,
 
 
 $$
@@ -856,6 +879,7 @@ $$
 
 
 <span id="conditional-relative-entropy"></span>
+
 **Definition.**
 
 (Conditional Relative Entropy):<br>
@@ -879,6 +903,7 @@ $$
 Similarly, the relationship between the relative entropy of joint distributions and the conditional distributions goes for the chain rule of relative entropy:
 
 <span id="chain-rule-for-relative-entropy"></span>
+
 **Theorem.**
 
 (Chain Rule for Relative Entropy):<br>
@@ -928,6 +953,7 @@ when $$\rho = 0$$ we say $$X,Y$$ are uncorrelated. One deficient of $$\rho$$ is 
 
 
 <span id="mutual-information"></span>
+
 **Definition.**
 
 (Mutual Information):<br>
@@ -968,12 +994,14 @@ I(\mathbf{X};\mathbf{Y}\mid \mathbf{Z})=\sum_{\mathbf{x},\mathbf{y},\mathbf{z}}p
 $$
 
 
-*Note: Mutual information is a measure of how different is the joint distribution with its marginals.*
+**Note.** Mutual information is a measure of how different is the joint distribution with its marginals.
+
 
 We show that mutual information is non-negative,  symmetric, and upper bounded:
 
 
 <span id="properties-of-mutual-information"></span>
+
 **Lemma.**
 
 (Property of Mutual Information):
@@ -1000,11 +1028,12 @@ $$
 1. $$I(X;X)=H(X)$$
 
 
-*Note: Alternatively, Mutual information measures the amount of information that one set of random variable(s) contains about another set, or the reduction of entropy of one set of RVs by knowing another set of RVs.*
+**Note.** Alternatively, Mutual information measures the amount of information that one set of random variable(s) contains about another set, or the reduction of entropy of one set of RVs by knowing another set of RVs.
+
 
 **Proof.**
 
-Noticing that 1 is equivalent to the non-negativity of relative entropy, 3 can be derived from 2 and 4 can be derived from the definition of mutual information (\ref{DefMutualInformation}), we only prove 2. In fact,
+Noticing that 1 is equivalent to the non-negativity of relative entropy, 3 can be derived from 2 and 4 can be derived from the definition of mutual information ($$\ref{DefMutualInformation}$$), we only prove 2. In fact,
 
 
 $$
@@ -1038,14 +1067,15 @@ I(X;Y\mid Z)\stackrel{\triangle}{=}&\sum_{x\in\mathcal{X},y\in\mathcal{Y},z\in\m
 $$
 
 
-where (\ref{I to H2}) and (\ref{I to H3}) holds provided that conditional entropies are all finite.
+where ($$\ref{I to H2}$$) and ($$\ref{I to H3}$$) holds provided that conditional entropies are all finite.
 
 
-It is supposed to be noticed that all Shannon's information measures are finite if the RVs involved have finite alphabets. We will give the upper bound of entropy in ([uniform-distribution entropy bound](#uniform-distribution-maximizes-entropy)).
+It is supposed to be noticed that all Shannon's information measures are finite if the RVs involved have finite alphabets. We will give the upper bound of entropy in the [uniform-distribution entropy bound](#uniform-distribution-maximizes-entropy).
 
-According to the [definition of mutual information](#mutual-information) and chain rule for entropy [Chain rule for entropy](#chain-rule-entropy), we have the chain rule for mutual information
+According to the [definition of mutual information](#mutual-information) and the [chain rule for entropy](#chain-rule-entropy), we have the chain rule for mutual information
 
 <span id="chain-rule-information"></span>
+
 **Theorem.**
 
 (Chain Rule for Mutual Information):<br>
@@ -1077,7 +1107,8 @@ I(X_1,&\cdots , X_N; \mathbf{Y}\mid \mathbf{Z})\\
 $$
 
 
-*Note: From the above 3 chain rules [chain rule for entropy](#chain-rule-entropy), [chain rule for mutual information](#chain-rule-information) and [chain rule for relative entropy](#chain-rule-for-relative-entropy), we see that they all show the relationship between some numerical characteristics of joint distribution and side distribution. In essence, they all shows that $$p_{XY}=p_{X}p_{Y\mid X}$$. *
+**Note.** From the above 3 chain rules [chain rule for entropy](#chain-rule-entropy), [chain rule for mutual information](#chain-rule-information) and [chain rule for relative entropy](#chain-rule-for-relative-entropy), we see that they all show the relationship between some numerical characteristics of joint distribution and side distribution. In essence, they all shows that $$p_{XY}=p_{X}p_{Y\mid X}$$.
+
 
 We show that all Shannon's measures are special cases of conditional mutual information. Given $$\Phi$$ to be a degenerate variable which takes a constant value with probability 1. Then,
 
@@ -1113,8 +1144,10 @@ $$
 $$
 
 
-*Note: We alternatively note $$\lim\limits_{p'\to p}F(p')=F(\lim\limits_{p'\to p}p')=F(p)$$ for continuous functional $$F$$.*
-*Note: For variational distance, $$\mathcal{P}_{\mathcal{X}}$$ is a closed set, and therefore uniform continuous is equivalently satisfied.*
+**Note.** We alternatively note $$\lim\limits_{p'\to p}F(p')=F(\lim\limits_{p'\to p}p')=F(p)$$ for continuous functional $$F$$.
+
+
+**Note.** For variational distance, $$\mathcal{P}_{\mathcal{X}}$$ is a closed set, and therefore uniform continuous is equivalently satisfied.
 
 
 **Theorem.**
@@ -1157,7 +1190,7 @@ as function $$l$$ is continuous with $$a\in [0,1]$$, and
 $$
 \begin{align}
 
-0\leq \mid p(x)-q(x)\mid \leq \sum_{x\in\mathcal{X}}\mid p(x)-q(x)\mid  =V(p,q)
+0\leq \lvert p(x)-q(x)\rvert\leq \sum_{x\in\mathcal{X}}\lvert p(x)-q(x)\rvert =V(p,q)
 \end{align}
 $$
 
@@ -1182,7 +1215,7 @@ Now we proceed to prove the continuity of conditional mutual information $$I(X;Y
 $$
 \begin{align}
 
-\sum_{x,y}\mid p(x,y)-q(x,y)\mid =\sum_{x,y}\mid \sum_{z}(p(x,y,z)-q(x,y,z))\mid \leq\sum_{x,y,z}\mid p(x,y,z)-q(x,y,z)\mid
+\sum_{x,y}\lvert p(x,y)-q(x,y)\rvert=\sum_{x,y}\lvert \sum_{z}(p(x,y,z)-q(x,y,z))\rvert\leq\sum_{x,y,z}\lvert p(x,y,z)-q(x,y,z)\rvert
 
 \end{align}
 $$
@@ -1281,6 +1314,7 @@ equality holds iff $$a'_i=b'_i$$, or $$\forall i, \frac{a_i}{b_i}$$ is a constan
 
 
 <span id="pinskers-bound"></span>
+
 **Theorem.**
 
 (Pinsker's Bound):
@@ -1315,7 +1349,10 @@ $$
 
 with equality iff $$X\perp Y\mid Z$$.
 
-*Note: Notice from Lemma 2.3 we have $$(X\perp Y\mid Z)\iff X \to Y \to Z$$*.
+
+**Note.** Notice from the [conditional-independence characterization](#conditional-independence-markov-chain) that $$(X\perp Y\mid Z)\iff X \to Y \to Z$$
+
+.
 
 **Proof.**
 
@@ -1352,10 +1389,10 @@ which is the definition of $$X\perp Y\mid Z$$.
 - $$H(X)=0 \iff X$$ is deterministic.
 
 
-- $$H(X\mid Y)=0\iff$$ $$Y$$ is a function of $$X$$.
+- $$H(X\mid Y)=0\iff Y$$ is a function of $$X$$.
 
 
-- $$I(X;Y)=0 \iff$$ $$X$$ and $$Y$$ are independent.
+- $$I(X;Y)=0 \iff X$$ and $$Y$$ are independent.
 
 
 We refer to inequalities involving Shannon's information measures only as **information inequalities**. Likewise, for **information identities**:
@@ -1372,6 +1409,8 @@ $$
 
 
 so information inequality only envolves entropies (possibly with constant terms). We list some useful information inequalities in this section, and it will be systematically studied in the next several sections.
+
+<span id="conditioning-reduces-entropy"></span>
 
 
 **Lemma.**
@@ -1395,11 +1434,15 @@ with equality iff $$X$$ and $$Y$$ are independent.
 
 $$H(Y\mid X)=H(Y)-I(X;Y)\leq H(Y)$$. Equality condition: $$I(X;Y)=0$$.
 
-*Note: Similarly, $$H(Y\mid X,Z)\leq H(Y\mid Z)$$.*
-[Lemma \ref{Conditions Does Not Increase Entropy}] indicates that $$X$$ has side information on $$Y$$, by specifying $$X$$, the uncertainty about $$Y$$ cannot be increased on average upon receiveing side information.
+
+**Note.** Similarly, $$H(Y\mid X,Z)\leq H(Y\mid Z)$$.
+
+
+[Conditioning reduces entropy](#conditioning-reduces-entropy) indicates that $$X$$ has side information on $$Y$$, by specifying $$X$$, the uncertainty about $$Y$$ cannot be increased on average upon receiveing side information.
 
 
 <span id="independence-bound-for-entropy"></span>
+
 **Lemma.**
 
 (Independence Bound for Entropy):
@@ -1419,10 +1462,11 @@ with equality iff $$X_1,\cdots X_n$$ are mutually independent.
 
 **Proof.**
 
-This proof follows from [Lemma \ref{Conditions Does Not Increase Entropy}] and chain rule for entropy [Chain rule for entropy](#chain-rule-entropy). Equality is seen as the alternative definition of mutual independence.
+This proof follows from [Conditioning reduces entropy](#conditioning-reduces-entropy) and the [chain rule for entropy](#chain-rule-entropy). Equality is seen as the alternative definition of mutual independence.
 
 
 <span id="associative-law-of-mutual-information"></span>
+
 **Lemma.**
 
 (Associative Law of Mutual Information):
@@ -1442,7 +1486,7 @@ with equality iff $$X\to Y\to Z$$ forms a Markov chain.
 
 **Proof.**
 
-By chain rule for mutual information [Chain rule for mutual information](#chain-rule-information),
+By the [chain rule for mutual information](#chain-rule-information),
 
 
 $$
@@ -1503,7 +1547,7 @@ I(X;Z)=&I(X;Y,Z)-I(X;Y\mid Z)\leq I(X;Y,Z)\\
 $$
 
 
-another form of (\ref{Data Processing Inequality1}) is similarly proved. For (\ref{Data Processing Inequality2}), we have:
+another form of ($$\ref{Data Processing Inequality1}$$) is similarly proved. For ($$\ref{Data Processing Inequality2}$$), we have:
 
 
 $$
@@ -1515,10 +1559,10 @@ I(U;Y)\leq I(X;Y),\quad I(U,V)\leq I(U;Y)
 $$
 
 
-combining the 2 inequalities, we get (\ref{Data Processing Inequality2}).
+combining the 2 inequalities, we get ($$\ref{Data Processing Inequality2}$$).
 
 
-We claim that the inequalities in this section do not require $$\mathcal{X}$$ to be a finite set. Actually, the inequality can be derived directly from the corresponding definitions, regardless of $$I$$-to-$$H$$ equalities (\ref{I to H1}), (\ref{I to H2}) and (\ref{I to H3}).
+We claim that the inequalities in this section do not require $$\mathcal{X}$$ to be a finite set. Actually, the inequality can be derived directly from the corresponding definitions, regardless of $$I$$-to-$$H$$ equalities ($$\ref{I to H1}$$), ($$\ref{I to H2}$$) and ($$\ref{I to H3}$$).
 
 
 #### Measure Bounds and Fano's Inequality
@@ -1527,6 +1571,7 @@ We give an upper bound on Shannon's measures in terms of the size of the alphabe
 
 
 <span id="uniform-distribution-maximizes-entropy"></span>
+
 **Lemma.**
 
 (Uniform Distribution Maximizes Entropy):<br>
@@ -1553,7 +1598,7 @@ Let $$u:\mathcal{X}\to [0,1]$$ be a u.d. on$$\mathcal{X}$$, i.e. $$\forall x\in\
 $$
 \begin{align}
 
-\log\mid \mathcal{X}\mid -H(X)=&-\sum_{x\in \mathcal{S}_p}p(x)\log u(x)+\sum_{x\in \mathcal{S}_p}p(x)\log p(x)=D(p\Vert u)\geq 0
+\log\lvert \mathcal{X}\rvert-H(X)=&-\sum_{x\in \mathcal{S}_p}p(x)\log u(x)+\sum_{x\in \mathcal{S}_p}p(x)\log p(x)=D(p\Vert u)\geq 0
 
 \end{align}
 $$
@@ -1566,7 +1611,7 @@ By intermediate value theorem of $$H(p)$$, we can get:
 
 **Lemma.**
 
-The entropy of RV $$X$$ may take any value in $$[0,\log\mid \mathcal{X}\mid ]$$.
+The entropy of RV $$X$$ may take any value in $$[0,\log\lvert \mathcal{X}\rvert]$$.
 
 We take the base of the logarithm to be $$\lvert \mathcal{X}\rvert$$ and $$H_{\lvert \mathcal{X}\rvert}(X)\in [0,1]$$. We call it **Normalized Entropy**, which is a measure of the unevenness of RVs.
 
@@ -1594,7 +1639,8 @@ $$
 which does not converge.
 
 
-*Note: We will discuss the entropy of RV with accountable alphabets with its relation to the truncation.*
+**Note.** We will discuss the entropy of RV with accountable alphabets with its relation to the truncation.
+
 
 Let $$X$$ be a DRV with known distribution $$p_{X}$$, known as **prior distribution**, and $$\hat{X}$$ be the estimate of RV $$X$$, and the probability of error is denoted by $$P_e=Pr\{\hat{X}\neq X\}$$. We reclaim that when $$P_e$$ is small, $$X=\hat{X}$$ with probability close to 1. Intuitively, $$H(\hat{X}\mid X)\to 0$$ are equivalent. It is tighter than $$X$$ and $$\hat{X}$$ have nearly the same distribution, or $$D(p_{X}\Vert p_{\hat{X}})\to 0$$. We give the upper bound on conditional entropy with $$P_e$$:
 
@@ -1615,7 +1661,9 @@ $$
 
 where $$h_b$$ is the binary entropy function.
 
-*Note: (\ref{Fano's Inequality}) do not require $$\mathcal{X}$$ to be a finite set.*
+
+**Note.** ($$\ref{Fano's Inequality}$$) do not require $$\mathcal{X}$$ to be a finite set.
+
 
 **Proof.**
 
@@ -1651,12 +1699,12 @@ H(X\mid \hat{X})=&H(X\mid \hat{X})+H(Y\mid X,\hat{X})=H(X,Y\mid \hat{X})\\
 $$
 
 
-where the inequalities are from (\ref{Conditions Does Not Increase Entropy}) and that $$p_Y(1)=P_e$$.
+where the inequalities are from ($$\ref{Conditions Does Not Increase Entropy}$$) and that $$p_Y(1)=P_e$$.
 
 
 For $$P_{e}\sim Ber(p)$$, $$h_{b}(P_{e})$$ has a general lower bound $$h_{b}(P_{e})\geq 4p(1 - p)$$.
 
-We discuss the implications of Fano's inequality. When $$\mathcal{X}$$ is finite, the $$P_e=0$$ implies $$H(X\mid \hat{X})=0$$, which. However, when $$\mathcal{X}$$ is infinite and $$\lim\limits_{n\to \infty}P_e\log \mid \mathcal{X}\mid \neq 0$$, $$H(X\mid \hat{X})$$ may be at random large.
+We discuss the implications of Fano's inequality. When $$\mathcal{X}$$ is finite, the $$P_e=0$$ implies $$H(X\mid \hat{X})=0$$, which. However, when $$\mathcal{X}$$ is infinite and $$\lim\limits_{n\to \infty}P_e\log \lvert \mathcal{X}\rvert\neq 0$$, $$H(X\mid \hat{X})$$ may be at random large.
 
 For estimators $$X\stackrel{P_{Y\mid X}}{\to}Y\stackrel{g(Y)}{\to}\hat{X}$$. By Fano's inequality,
 
@@ -1807,7 +1855,7 @@ The motivation here is that we expect $$H(X_{n}) = h(X) + d\log n + o(n)$$.
 
 **Example.**
 
-(When $$X$$ is a DRV): $$X_{n} = X$$ $$\forall n$$. Then $$d = 0$$, $$h(X) = H(X)$$.
+(When $$X$$ is a DRV): $$X_{n} = X \forall n$$. Then $$d = 0$$, $$h(X) = H(X)$$.
 
 
 **Example.**
@@ -1927,7 +1975,7 @@ f(x) = - \mathbb{E}[\log f(X)]= \frac{1}{2}\log(2\pi) + \frac{1}{2}\mathbb{E}[X^
 $$
 
 
-and for a non-standard RV $$Y = aX + c$$, $$h(Y) = h(X) + \log\mid a\mid $$. Therefore, for $$Y\sim \mathcal{N}(\mu,\sigma ^{2})$$, $$h(Y) = \frac{1}{2} \log_{2}(2\pi e\sigma ^{2})$$.
+and for a non-standard RV $$Y = aX + c$$, $$h(Y) = h(X) + \log\lvert a\rvert$$. Therefore, for $$Y\sim \mathcal{N}(\mu,\sigma ^{2})$$, $$h(Y) = \frac{1}{2} \log_{2}(2\pi e\sigma ^{2})$$.
 
 
 **Lemma.**
@@ -2012,7 +2060,7 @@ $$
 
 then $$h(X)\leq \frac{1}{2}\log(2\pi e Var(X))$$.
 
-Equality holds when $$D(f\Vert g)= 0$$, or, $$f = g$$ $$\mathbb{P}\circ X^{-1}$$- a.e.
+Equality holds when $$D(f\Vert g)= 0$$, or, $$f = g \mathbb{P}\circ X^{-1}$$- a.e.
 
 
 **Theorem (Source coding in CRV).**
@@ -2151,7 +2199,7 @@ C(P) = \frac{1}{2}\log (1 + \frac{P}{N})
 $$
 
 
-*Note: We call $$\frac{P}{N}$$ the SNR of the system.*
+**Note.** We call $$\frac{P}{N}$$ the SNR of the system.
 
 
 **Proof.**

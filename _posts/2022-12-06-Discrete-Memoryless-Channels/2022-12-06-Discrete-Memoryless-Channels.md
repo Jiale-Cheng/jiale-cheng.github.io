@@ -249,7 +249,7 @@ A rate $$R$$ is said to be achievable for a $$DMC$$ is $$\forall \epsilon>0$$, $
 
 (*Note:* by the definition of $$R$$, the meaning is the information transmitted per channel use, where we call the single-letter characterization.)
 
-<span id="channeltheo"></span>
+<span id="channel-coding-theorem"></span>
 **Theorem (Channel Coding Theorem).**
 
 The capacity for any DMC $$P_{Y\vert X}$$ is
@@ -282,7 +282,7 @@ more constructively,
 1. Achievability: $$C_{I}$$ is achievable, or, for any input distribution $$X$$, there exists a $$(n,M)$$- DMC code s.t. $$\forall \epsilon>0$$, there exists $$N(\epsilon)$$ s.t. $$\forall n\geq N(\epsilon)$$, $$\frac{\log M}{n}> I(X;Y) - \epsilon$$ and $$P_{m}< \epsilon$$.
 1. Converse: Any rate that larger than $$C_{I}$$ is not achievable, i.e., for all $$(n,M)$$- DMC code  $$\forall \epsilon > 0$$, $$\exists N(\epsilon)$$ s.t. $$\forall n\geq N(\epsilon)$$, $$P_{e}< \epsilon$$, then $$\frac{\log M}{n}< C + \epsilon$$
 
-## Proof of Theorem the Channel Coding Theorem: Converse
+## Proof of the Channel Coding Theorem: Converse
 
 In converse, suppose $$R$$ is achievable, we prove $$R\leq C$$ for all $$(n,M)$$ code:
 
@@ -314,7 +314,7 @@ By letting the inequality be equality, we can analysis what a good channel will 
 1. The second inequality: Fano's inequality.
 1. The third inequality: The output of a DMC channel, tough input $$X^{n}$$ seems not be memoryable, will be memoryless.
 
-## Proof of Theorem the Channel Coding Theorem: Achievability
+## Proof of the Channel Coding Theorem: Achievability
 
 ### One-shot Channel Coding: use the channel only once
 
