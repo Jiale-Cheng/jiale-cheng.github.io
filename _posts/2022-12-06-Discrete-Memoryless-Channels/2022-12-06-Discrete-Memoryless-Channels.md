@@ -196,7 +196,7 @@ $$
 $$
 \begin{align}
 
-Y=\alpha(X,Z)=\begin{cases}X,\quad & Z=0\\mathrm{e},\quad& Z=1 \end{cases},\quad Z\sim Ber(\eta)
+Y=\alpha(X,Z)=\begin{cases}X,\quad & Z=0\\e,\quad& Z=1 \end{cases},\quad Z\sim Ber(\eta)
 
 \end{align}
 $$
@@ -515,7 +515,7 @@ P_{X_{i}\vert X_{(i - 1)},,Y_{(i - 1)},W} = \mathbb{I}_{\{X_{i} = f_{i}(W,Y_{(i 
 \end{align}
 $$
 
-(*Note:* It is worth noticing that the Assump2. do not mean any Markov Chain assumption, {true?, since $$X_{i}$$ is related  to $$X_{(i - 1)}$$, but only through $$Y_{(i - 1)}$$} )
+(*Note:* It is worth noticing that the Assump2. do not mean any Markov Chain assumption, true?, since $$X_{i}$$ is related  to $$X_{(i - 1)}$$, but only through $$Y_{(i - 1)}$$ )
 
 with these assumption, we can characterize the PMF:
 

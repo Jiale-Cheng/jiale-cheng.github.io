@@ -14,7 +14,7 @@ status: Archived
 ---
 In zero-error data compression, we proved that the infimum of the expected codeword length is equal to the entropy. We now explore entropy through the asymptotic behavior of i.i.d. sequences, known as the **Asymptotic Equipartition Property** (AEP).
 
-Consider a discrete random sequence $X_k$, $k\geq 1$, taking values in a finite alphabet $\mathcal{X}$ with distribution $p_X$. The variables are i.i.d., i.e.,
+Consider a discrete random sequence $$X_k$$, $$k\geq 1$$, taking values in a finite alphabet $$\mathcal{X}$$ with distribution $$p_X$$. The variables are i.i.d., i.e.,
 
 $$
 \begin{align}
@@ -26,7 +26,7 @@ $$
 
 <span id="equality"></span>
 
-Here $p_X: \mathcal{X}\to [0,1]$ denotes the distribution of $X$, and the final equality states that every $X_i$ has the same distribution. In the following relations, we use $P_X$ to denote the distribution of any $X_i$ rather than that of $X^n$.
+Here $$p_X: \mathcal{X}\to [0,1]$$ denotes the distribution of $$X$$, and the final equality states that every $$X_i$$ has the same distribution. In the following relations, we use $$P_X$$ to denote the distribution of any $$X_i$$ rather than that of $$X^n$$.
 
 Throughout, logarithms are base 2 unless stated otherwise.
 
@@ -36,9 +36,9 @@ There are several senses in which two random variables (RVs) can be considered e
 
 **Definition 1:**
   (Equivalence of RVs):<br>
-Let $X$ and $Y$ be two RVs. We say that they are:
+Let $$X$$ and $$Y$$ be two RVs. We say that they are:
 
-* equal in distribution (denoted $X\stackrel{d}{=}Y$) iff they have the same CDF:
+* equal in distribution (denoted $$X\stackrel{d}{=}Y$$) iff they have the same CDF:
 
 $$
 \begin{align}
@@ -47,34 +47,34 @@ $$
 \end{align}
 $$
 
-* equal almost surely (denoted $X\stackrel{a.s.}{=}Y$) iff $Pr\{X\neq Y\}=0$.
-* equal iff $X(\omega)=Y(\omega),\quad \forall \omega\in\Omega$.
+* equal almost surely (denoted $$X\stackrel{a.s.}{=}Y$$) iff $$Pr\{X\neq Y\}=0$$.
+* equal iff $$X(\omega)=Y(\omega),\quad \forall \omega\in\Omega$$.
 
 
 
-* Note: For practical purpose, the measure spaces of $X$ and $Y$ are rarely explicitly characterized, so real equality is the least useful while the notion of almost sure equality is as strong as the actual equality.
+* Note: For practical purpose, the measure spaces of $$X$$ and $$Y$$ are rarely explicitly characterized, so real equality is the least useful while the notion of almost sure equality is as strong as the actual equality.
 
-**Lemma 1:** Let $X$ and $Y$ be RVs.<br>
-  1. $M_X(t)=M_Y(t),\forall t\in \mathbb{R}$, then $X\stackrel{d}{=}Y$.<br>
-  2. $X\stackrel{a.s.}{=}Y\iff d_{\infty}(X;Y)\stackrel{\Delta}{=} \text{ess }\sup_{\omega}\vert{}X(\omega)-Y(\omega)\vert{}=0$.
+**Lemma 1:** Let $$X$$ and $$Y$$ be RVs.<br>
+  1. $$M_X(t)=M_Y(t),\forall t\in \mathbb{R}$$, then $$X\stackrel{d}{=}Y$$.<br>
+  2. $$X\stackrel{a.s.}{=}Y\iff d_{\infty}(X;Y)\stackrel{\Delta}{=} \text{ess }\sup_{\omega}\vert{}X(\omega)-Y(\omega)\vert{}=0$$.
 
 
-Convergence of RVs describes when a sequence of random variables, such as $\{X_n\}_{n\in\mathbb{N}_+}$, settles into a stable asymptotic pattern.
+Convergence of RVs describes when a sequence of random variables, such as $$\{X_n\}_{n\in\mathbb{N}_+}$$, settles into a stable asymptotic pattern.
 
 **Definition 2:**
 	(Convergence in Distribution):<br>
-A sequence $X_1,X_2,\cdots$ of RVs converges in distribution, or weakly, to an RV $X$, denoted $X_n\stackrel{d}{\to}X$ or $X_n \Rightarrow X$, if and only if $\lim\limits_{n\to\infty} F_{X_n}(x)=F_X(x)$ for every continuity point $x$ of $F_X$.
+A sequence $$X_1,X_2,\cdots$$ of RVs converges in distribution, or weakly, to an RV $$X$$, denoted $$X_n\stackrel{d}{\to}X$$ or $$X_n \Rightarrow X$$, if and only if $$\lim\limits_{n\to\infty} F_{X_n}(x)=F_X(x)$$ for every continuity point $$x$$ of $$F_X$$.
 
 The constraints on continuous points are essential. Here is a counterexample:
 
 **Example 1:**
-Consider $\{X_n\}_{n\in\mathbb{N}_+}$ with $X_n\sim U([0,1/n])$. Then the CDF converges to that of the degenerate RV $X=0$. The apparent contradiction that $F_X(0)=1$ while $F_{X_n}(0)=0$ for every $n$ illustrates that convergence need not hold at a discontinuity point of $F_X$.
+Consider $$\{X_n\}_{n\in\mathbb{N}_+}$$ with $$X_n\sim U([0,1/n])$$. Then the CDF converges to that of the degenerate RV $$X=0$$. The apparent contradiction that $$F_X(0)=1$$ while $$F_{X_n}(0)=0$$ for every $$n$$ illustrates that convergence need not hold at a discontinuity point of $$F_X$$.
 
 
 Weak convergence does not describe independence or correlation relations. Here are some related lemmas:
 
 **Lemma 2:**
-	(Scheffé's lemma): Let $f_n$ be a sequence of integrable functions on a measure space $(X,\Sigma,\mu)$ that converges a.e. to another integrable function $f$. Then:
+	(Scheffé's lemma): Let $$f_n$$ be a sequence of integrable functions on a measure space $$(X,\Sigma,\mu)$$ that converges a.e. to another integrable function $$f$$. Then:
 
 $$
 \begin{align}
@@ -86,16 +86,16 @@ $$
 Thus, a.e. pointwise convergence of the densities implies convergence in distribution.
 
 
-* Note: The counterpart is not true. Consider $f_{X_n}(x)=(1-\cos(2n\pi x) )I_{[0,1]}(x)$ where $I_A$ is the indicator function of $A$. Then $X_n\stackrel{d}{\to}X\sim U([0,1])$ while the PDF shows no convergence.
+* Note: The counterpart is not true. Consider $$f_{X_n}(x)=(1-\cos(2n\pi x) )I_{[0,1]}(x)$$ where $$I_A$$ is the indicator function of $$A$$. Then $$X_n\stackrel{d}{\to}X\sim U([0,1])$$ while the PDF shows no convergence.
 
 **Lemma 3:**
 	(Levy's continuity theorem):<br>
-	The sequence $\{X_n\}$ converges in distribution to $X$ iff the sequence of corresponding characteristic functions $\{\phi_n\}$ converges pointwise to the characteristic function $\phi$ of $X$.
+	The sequence $$\{X_n\}$$ converges in distribution to $$X$$ iff the sequence of corresponding characteristic functions $$\{\phi_n\}$$ converges pointwise to the characteristic function $$\phi$$ of $$X$$.
 
 
 **Definition 3:**
 	(Convergence in Probability):<br>
-	A sequence $X_1,X_2,\cdots$ of RVs is said to converge in probability to a RV $X$, denoted $X_n\stackrel{p}{\to}X$ iff
+	A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge in probability to a RV $$X$$, denoted $$X_n\stackrel{p}{\to}X$$ iff
 
 $$
 \begin{align}
@@ -106,30 +106,30 @@ $$
 
 
 
-* Note: for metric space, it is $\forall \delta>0,\quad \lim\limits_{n\to\infty} Pr\{d(X_n-X)>\delta\}=0$.
+* Note: for metric space, it is $$\forall \delta>0,\quad \lim\limits_{n\to\infty} Pr\{d(X_n-X)>\delta\}=0$$.
 
 **Lemma 4:**
 	The following 3 interpreters of convergence in probability is equivalent:
 
-* $X_n\stackrel{p}{\to}X$
-* $\forall\epsilon>0,\exists N\in\mathbb{N}_+,\forall n\geq N,\forall\delta>0, Pr\{\vert{}X_n-X\vert{}>\delta\}<\epsilon$.
-* $\forall\epsilon>0,\exists N\in\mathbb{N}_+,\forall n\geq N, Pr\{\vert{}X_n-X\vert{}>\epsilon\}<\epsilon$.
+* $$X_n\stackrel{p}{\to}X$$
+* $$\forall\epsilon>0,\exists N\in\mathbb{N}_+,\forall n\geq N,\forall\delta>0, Pr\{\vert{}X_n-X\vert{}>\delta\}<\epsilon$$.
+* $$\forall\epsilon>0,\exists N\in\mathbb{N}_+,\forall n\geq N, Pr\{\vert{}X_n-X\vert{}>\epsilon\}<\epsilon$$.
 
 
 
 **Proof:**
-$1\iff 2$ by the definition of limitation, $2\to 3$ by letting $\delta=\epsilon$. We prove $3\to 2$. To prove 2 holds $\forall\delta>0$, we have the following 3 cases:
+$$1\iff 2$$ by the definition of limitation, $$2\to 3$$ by letting $$\delta=\epsilon$$. We prove $$3\to 2$$. To prove 2 holds $$\forall\delta>0$$, we have the following 3 cases:
 
-* $\delta=\epsilon$. From 3 we get 2 immediately.
-* $\delta<\epsilon$. As $\delta>0$, by 3 $\exists N\in\mathbb{N}_+,\forall n\geq N, Pr\{\vert{}X_n-X\vert{}>\delta\}<\delta<\epsilon$.
-* $\delta>\epsilon$. Then $\exists N\in\mathbb{N}_+,\forall n\geq N, Pr\{\vert{}X_n-X\vert{}>\delta\}<Pr\{\vert{}X_n-X\vert{}>\epsilon\}<\epsilon$.
+* $$\delta=\epsilon$$. From 3 we get 2 immediately.
+* $$\delta<\epsilon$$. As $$\delta>0$$, by 3 $$\exists N\in\mathbb{N}_+,\forall n\geq N, Pr\{\vert{}X_n-X\vert{}>\delta\}<\delta<\epsilon$$.
+* $$\delta>\epsilon$$. Then $$\exists N\in\mathbb{N}_+,\forall n\geq N, Pr\{\vert{}X_n-X\vert{}>\delta\}<Pr\{\vert{}X_n-X\vert{}>\epsilon\}<\epsilon$$.
 
-So $2\iff 3$.
+So $$2\iff 3$$.
 
 
 **Definition 4:**
 	(Convergence Almost Everywhere):<br>
-	A sequence $X_1,X_2,\cdots$ of RVs is said to converge almost everywhere, or converges with probability 1 to a RV $X$, denoted $X_n\stackrel{a.s.}{\to}X$ iff
+	A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge almost everywhere, or converges with probability 1 to a RV $$X$$, denoted $$X_n\stackrel{a.s.}{\to}X$$ iff
 
 $$
 \begin{align}
@@ -151,7 +151,7 @@ $$
 
 **Definition 5:**
 	(Convergence Everywhere):<br>
-	A sequence $X_1,X_2,\cdots$ of RVs is said to converge everywhere, or pointwise, to an RV $X$, denoted $X_n\to X$, if and only if
+	A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge everywhere, or pointwise, to an RV $$X$$, denoted $$X_n\to X$$, if and only if
 
 $$
 \begin{align}
@@ -173,7 +173,7 @@ $$
 
 **Definition 6:**
 	(Convergence in Mean):<br>
-	Let $r\geq 1$, a sequence $X_1,X_2,\cdots$ of RVs is said to converge in the $r$-th mean, or in the $L^r$-norm to a RV $X$, denoted $X_n\stackrel{L^r}{\to} X$ iff the $r$-th absolute moments $E[\vert{}X_n\vert{}^r]$, and $E[\vert{}X\vert{}^r]$ exists, and
+	Let $$r\geq 1$$, a sequence $$X_1,X_2,\cdots$$ of RVs is said to converge in the $$r$$-th mean, or in the $$L^r$$-norm to a RV $$X$$, denoted $$X_n\stackrel{L^r}{\to} X$$ iff the $$r$$-th absolute moments $$E[\vert{}X_n\vert{}^r]$$, and $$E[\vert{}X\vert{}^r]$$ exists, and
 
 $$
 \begin{align}
@@ -190,17 +190,17 @@ $$
 
 * Convergence in probability implies convergence in distribution, but convergence in distribution implies convergence in probability when the limiting random variable X is a constant.
 * Almost sure convergence implies convergence in probability, but convergence in probability does not imply almost sure convergence.
-* By Markov's inequality $Pr\{X\geq a\}\leq \frac{E[X]}{a}$, convergence in the $r$-th mean, for $r \geq 1$, implies convergence in probability.
-* if $r > s \geq 1$, convergence in $r$-th mean implies convergence in $s$-th mean.
+* By Markov's inequality $$Pr\{X\geq a\}\leq \frac{E[X]}{a}$$, convergence in the $$r$$-th mean, for $$r \geq 1$$, implies convergence in probability.
+* if $$r > s \geq 1$$, convergence in $$r$$-th mean implies convergence in $$s$$-th mean.
 * Sure convergence of a random variable implies all the other kinds of convergence stated above.
 
 
 
 ## Law of Large Numbers
 
-We review the definition of LLN, performance of large times of experiments that the average tends to the expected value (when it exists).* Note: The average of trials may not converge in some cases because of heavy tails, such as Cauchy distribution (where it has no expectation) and Pareto distribution when $\alpha<1$ (where it has infinite expectation). We mainly talk about i.i.d. Lebesgue integrable RV sequence $\{X_k\}_{k\in\mathbb{N}}$ generated by $X$, where $E[X]=\mu$, $Var(X)=\sigma^2$
+We review the definition of LLN, performance of large times of experiments that the average tends to the expected value (when it exists).* Note: The average of trials may not converge in some cases because of heavy tails, such as Cauchy distribution (where it has no expectation) and Pareto distribution when $$\alpha<1$$ (where it has infinite expectation). We mainly talk about i.i.d. Lebesgue integrable RV sequence $$\{X_k\}_{k\in\mathbb{N}}$$ generated by $$X$$, where $$E[X]=\mu$$, $$Var(X)=\sigma^2$$
 
-* Note: Lebesgue integrability of $X_k$ means that the expected value $E[X_k]$ exists according to Lebesgue integration and is finite. It does not mean that the associated probability measure is absolutely continuous w.r.t. Lebesgue measure.
+* Note: Lebesgue integrability of $$X_k$$ means that the expected value $$E[X_k]$$ exists according to Lebesgue integration and is finite. It does not mean that the associated probability measure is absolutely continuous w.r.t. Lebesgue measure.
 
 **Theorem 1:**
 	(Khinchin's weak LLN): The sample average converges in probability towards the expected value
@@ -214,10 +214,10 @@ $$
 
 
 
-Actually, finite variance is not necessary though it may simplify the related proof. Large or infinite variance may make the convergence slower but LLN also holds. The convergence of $\bar{X}$ to a degenerate RV requires $Var(\bar{X})=\sigma^2/n$ to converge to 0, which may be true even if $\sigma^2\to\infty$. In Chebyshev's weak LLN, we release the restriction of i.i.d. sequence and finite variance:
+Actually, finite variance is not necessary though it may simplify the related proof. Large or infinite variance may make the convergence slower but LLN also holds. The convergence of $$\bar{X}$$ to a degenerate RV requires $$Var(\bar{X})=\sigma^2/n$$ to converge to 0, which may be true even if $$\sigma^2\to\infty$$. In Chebyshev's weak LLN, we release the restriction of i.i.d. sequence and finite variance:
 
 **Theorem 2:**
-	(Chebyshev's weak LLN): For independent Lebesgue integrable RV sequence $\{X_k\}_{k\in\mathbb{N}}$ with equal expected value $\mu$, if $\lim_{n\to\infty}Var(\bar{X}_n)=0$, then:
+	(Chebyshev's weak LLN): For independent Lebesgue integrable RV sequence $$\{X_k\}_{k\in\mathbb{N}}$$ with equal expected value $$\mu$$, if $$\lim_{n\to\infty}Var(\bar{X}_n)=0$$, then:
 
 $$
 \begin{align}
@@ -230,7 +230,7 @@ $$
 * Remark: the weak LLN may hold even when the expectation does not exist.
 
 **Example 2:**
-	Let $\{X_k\}_{k\in\mathbb{N}}$ be an independent zero-mean Gaussian RV sequence with $Var(X_k)=\frac{2n}{\log (n+1)}$, which is not bounded.
+	Let $$\{X_k\}_{k\in\mathbb{N}}$$ be an independent zero-mean Gaussian RV sequence with $$Var(X_k)=\frac{2n}{\log (n+1)}$$, which is not bounded.
 
 $$
 \begin{align}
@@ -245,8 +245,8 @@ which satisfies the weak LLN.
 **Theorem 3:**
 	(Kolmogorov's strong LLN):
 
-* $\bar{X}_n\stackrel{a.s.}{\to}\mu,\quad n\to\infty$
-* when $\{X_k\}_{k\in\mathbb{N}}$ are not i.i.d, then $\bar{X}_n-E[\bar{X}_n]\stackrel{a.s.}{\to}$, provided that $\sum_{k=1}^{\infty}\frac{1}{k^2}Var(X_k)<\infty$ and $\forall k\in\mathbb{N}, X_k$ has finite second moment.
+* $$\bar{X}_n\stackrel{a.s.}{\to}\mu,\quad n\to\infty$$
+* when $$\{X_k\}_{k\in\mathbb{N}}$$ are not i.i.d, then $$\bar{X}_n-E[\bar{X}_n]\stackrel{a.s.}{\to}$$, provided that $$\sum_{k=1}^{\infty}\frac{1}{k^2}Var(X_k)<\infty$$ and $$\forall k\in\mathbb{N}, X_k$$ has finite second moment.
 
 
 
@@ -255,14 +255,14 @@ which satisfies the weak LLN.
 
 The differences between the weak law and the strong law are in that:
 
-* The weak law states that for a specified large  n , the average $\bar{X}_{n}$ is likely to be near $\mu$. Thus, it leaves open the possibility that $\left\vert{}\bar{X}_{n}-\mu\right\vert{}>\epsilon$ happens an infinite number of times, although at infrequent intervals. (Not necessarily $\left\vert{}\bar{X}_{n}-\mu\right\vert{} \neq 0$ for all $n$).
-* The strong law shows that this almost surely will not occur. In particular, it implies that with probability 1, we have that for any $\epsilon>0$ the inequality $\left\vert{}\bar{X}_{n}-\mu\right\vert{}<\epsilon$ holds for all large enough $n$.
+* The weak law states that for a specified large  n , the average $$\bar{X}_{n}$$ is likely to be near $$\mu$$. Thus, it leaves open the possibility that $$\left\vert{}\bar{X}_{n}-\mu\right\vert{}>\epsilon$$ happens an infinite number of times, although at infrequent intervals. (Not necessarily $$\left\vert{}\bar{X}_{n}-\mu\right\vert{} \neq 0$$ for all $$n$$).
+* The strong law shows that this almost surely will not occur. In particular, it implies that with probability 1, we have that for any $$\epsilon>0$$ the inequality $$\left\vert{}\bar{X}_{n}-\mu\right\vert{}<\epsilon$$ holds for all large enough $$n$$.
 
 The strong law does not hold in the following cases, but the weak law does.
 
 **Example 3:**
 
-* Let $X$ be an exponentially distributed random variable with parameter 1 . The random variable $\sin X e^{X} X^{-1}$ has no expected value according to Lebesgue integration, but using conditional convergence and interpreting the integral as a Dirichlet integral, which is an improper Riemann integral, we can say:
+* Let $$X$$ be an exponentially distributed random variable with parameter 1 . The random variable $$\sin X e^{X} X^{-1}$$ has no expected value according to Lebesgue integration, but using conditional convergence and interpreting the integral as a Dirichlet integral, which is an improper Riemann integral, we can say:
 
 $$
 \begin{align}
@@ -271,7 +271,7 @@ $$
 \end{align}
 $$
 
-* Let $x$ be geometric distribution with probability $p=1/2$. The random variable $2^{X}(-1)^{X} X^{-1}$ does not have an expected value in the conventional sense because the infinite series is not absolutely convergent, but using conditional convergence, we can say:
+* Let $$x$$ be geometric distribution with probability $$p=1/2$$. The random variable $$2^{X}(-1)^{X} X^{-1}$$ does not have an expected value in the conventional sense because the infinite series is not absolutely convergent, but using conditional convergence, we can say:
 
 $$
 \begin{align}
@@ -295,14 +295,14 @@ $$
 then it has no expected value, but the weak law is true.
 
 
-For sequence of i.i.d. functions of RV: $\{f(X_k,\theta)\}_{k\in \mathbb{N}}$ with parameter $\theta\in\Theta$, by the strong LLN we know that for fixed $\theta$, the sample mean converges to $E[f(X,\theta)]$. This is known as the pointwise convergence in $\theta$.  To make the convergence happens uniformly in $\theta$, we have the **Uniform** LLN.
+For sequence of i.i.d. functions of RV: $$\{f(X_k,\theta)\}_{k\in \mathbb{N}}$$ with parameter $$\theta\in\Theta$$, by the strong LLN we know that for fixed $$\theta$$, the sample mean converges to $$E[f(X,\theta)]$$. This is known as the pointwise convergence in $$\theta$$.  To make the convergence happens uniformly in $$\theta$$, we have the **Uniform** LLN.
 
 **Theorem 4:**
-	(Uniform LLN): For i.i.d. functions of RVs $\{f(X_k,\theta)\}_{k\in \mathbb{N}}$ with parameter $\theta\in\Theta$, where $E[f(X,\theta)]$ exists for all $\theta$, if:
+	(Uniform LLN): For i.i.d. functions of RVs $$\{f(X_k,\theta)\}_{k\in \mathbb{N}}$$ with parameter $$\theta\in\Theta$$, where $$E[f(X,\theta)]$$ exists for all $$\theta$$, if:
 
-* $\Theta$ is compact
-* $f(x, \theta)$ is continuous at each $\theta \in \Theta$ for almost all $x\in\mathcal{X}$, and measurable function of $x$ at each $\theta$
-* there exists a dominating function $d(x)$ such that $E[d(X)]<\infty$, and
+* $$\Theta$$ is compact
+* $$f(x, \theta)$$ is continuous at each $$\theta \in \Theta$$ for almost all $$x\in\mathcal{X}$$, and measurable function of $$x$$ at each $$\theta$$
+* there exists a dominating function $$d(x)$$ such that $$E[d(X)]<\infty$$, and
 
 $$
 \begin{align}
@@ -311,7 +311,7 @@ $$
 \end{align}
 $$
 
-Then $E[f(X, \theta)]$ is continuous in $\theta$, and
+Then $$E[f(X, \theta)]$$ is continuous in $$\theta$$, and
 
 $$
 \begin{align}
@@ -326,7 +326,7 @@ This result is useful to derive consistency of a large class of estimators known
 Moreover, an intuitive notion of probability as a long-run relative frequency leads us to the Borel LLN:
 
 **Theorem 5:**(Borel LLN):
-	If an experiment $(\Omega,\mathcal{B},\mathbf{P})$ is repeated a large number of times independently and under identical conditions, then
+	If an experiment $$(\Omega,\mathcal{B},\mathbf{P})$$ is repeated a large number of times independently and under identical conditions, then
 
 $$
 \begin{align}
@@ -350,7 +350,7 @@ $$
 
 
 **Lemma 7:**
-	(Markov's Inequality): Let $X$ be a non-negative RV, then
+	(Markov's Inequality): Let $$X$$ be a non-negative RV, then
 
 $$
 \begin{align}
@@ -361,7 +361,7 @@ $$
 
 
 
-An intuition to Markov's Inequality is that $E[X]=Pr\{X<a\}E[X\vert{}X<a]+Pr\{X\geq a\}E[X\vert{}X\geq a]$. So when $E[X\vert{}X<a]\geq 0$ where $X>0$, for any possible distribution $p_X$, the value $E[X\vert{}X\geq a]\geq a$. Thus $E[X]\geq Pr\{X\geq a\}E[X\vert{}X\geq a]\geq Pr\{X\geq a\}a$.
+An intuition to Markov's Inequality is that $$E[X]=Pr\{X<a\}E[X\vert{}X<a]+Pr\{X\geq a\}E[X\vert{}X\geq a]$$. So when $$E[X\vert{}X<a]\geq 0$$ where $$X>0$$, for any possible distribution $$p_X$$, the value $$E[X\vert{}X\geq a]\geq a$$. Thus $$E[X]\geq Pr\{X\geq a\}E[X\vert{}X\geq a]\geq Pr\{X\geq a\}a$$.
 
 ## Weak AEP
 
@@ -377,20 +377,20 @@ $$
 \end{align}
 $$
 
-or equivalently, let $\mathcal{W}_{[X]_\epsilon}^n\stackrel{\Delta}{=}\{x^n\in \mathcal{X}^n: \vert{}-\frac{\log p(x^n)}{n}-H(X)\vert{}\leq \epsilon\}$, then
+or equivalently, let $$\mathcal{W}_{[X]_\epsilon}^n\stackrel{\Delta}{=}\{x^n\in \mathcal{X}^n: \vert{}-\frac{\log p(x^n)}{n}-H(X)\vert{}\leq \epsilon\}$$, then
 
-* $\forall x^n\in \mathcal{W}_{[X]_\epsilon}^n,\quad 2^{-n(H(X)+\epsilon)}\leq p(x^n)\leq 2^{-n(H(X)-\epsilon)}$;
-* $\forall \epsilon>0,\exists N\in\mathbb{N}_+,\forall n>N, Pr\{X^n\in \mathcal{W}_{[X]_\epsilon}^n\}>1-\epsilon$.
-* $\forall \epsilon>0,\exists N\in\mathbb{N}_+,\forall n>N, (1-\epsilon)2^{n(H(X)-\epsilon)}\leq \vert{}\mathcal{W}_{[X]_\epsilon}^n\vert{}\leq 2^{n(H(X)+\epsilon)}.$
+* $$\forall x^n\in \mathcal{W}_{[X]_\epsilon}^n,\quad 2^{-n(H(X)+\epsilon)}\leq p(x^n)\leq 2^{-n(H(X)-\epsilon)}$$;
+* $$\forall \epsilon>0,\exists N\in\mathbb{N}_+,\forall n>N, Pr\{X^n\in \mathcal{W}_{[X]_\epsilon}^n\}>1-\epsilon$$.
+* $$\forall \epsilon>0,\exists N\in\mathbb{N}_+,\forall n>N, (1-\epsilon)2^{n(H(X)-\epsilon)}\leq \vert{}\mathcal{W}_{[X]_\epsilon}^n\vert{}\leq 2^{n(H(X)+\epsilon)}.$$
 
-We call the set $\mathcal{W}_{[X]_\epsilon}^n$ the weakly typical set, $x^n\in \mathcal{W}_{[X]_\epsilon}^n$ a weakly typical sequence, and $-\frac{\log p(x^n)}{n}$ the empirical entropy of the sequence $x^n$.
+We call the set $$\mathcal{W}_{[X]_\epsilon}^n$$ the weakly typical set, $$x^n\in \mathcal{W}_{[X]_\epsilon}^n$$ a weakly typical sequence, and $$-\frac{\log p(x^n)}{n}$$ the empirical entropy of the sequence $$x^n$$.
 
 
 **Proof:**
-	By the weak law of large numbers for i.i.d. sources, $n\to\infty, -\frac{1}{n}\log p(X^n)=-\frac{1}{n}\sum_{i=1}^{n}\log p(X_i)\stackrel{p}{\to}-E[\log p(X)]=H(X)$.
+	By the weak law of large numbers for i.i.d. sources, $$n\to\infty, -\frac{1}{n}\log p(X^n)=-\frac{1}{n}\sum_{i=1}^{n}\log p(X_i)\stackrel{p}{\to}-E[\log p(X)]=H(X)$$.
 
 
-The weak AEP shows that a small set (compared with $\mathcal{X}^n$, $\mathcal{W}_{[X]_\epsilon}^n$ is exponentially small) contains almost all the probability mass and is nearly uniform. Thus, for a random sequence from $\mathcal{X}^n$, the probability is close to $\frac{1}{\vert{}\mathcal{W}_{[X]_\epsilon}^n\vert{}}$ with high probability.
+The weak AEP shows that a small set (compared with $$\mathcal{X}^n$$, $$\mathcal{W}_{[X]_\epsilon}^n$$ is exponentially small) contains almost all the probability mass and is nearly uniform. Thus, for a random sequence from $$\mathcal{X}^n$$, the probability is close to $$\frac{1}{\vert{}\mathcal{W}_{[X]_\epsilon}^n\vert{}}$$ with high probability.
 
 * Note: A weakly typical sequence need not be a most likely sequence; a weakly typical set need not contain the most likely sequences in order to carry probability approaching 1.
 
@@ -398,7 +398,7 @@ The weak AEP shows that a small set (compared with $\mathcal{X}^n$, $\mathcal{W}
 
 **Theorem 7:**
 	(Cramer theorem):<br>
-	Let $\{X_k\}_{k\in\mathbb{N}}$ be a sequence of i.i.d. RVs with finite logarithmic moment-generating function $\Lambda(t)=\log E[e^{tX}]<\infty$. Then the Legendre transform of $\Lambda$ satisfies:
+	Let $$\{X_k\}_{k\in\mathbb{N}}$$ be a sequence of i.i.d. RVs with finite logarithmic moment-generating function $$\Lambda(t)=\log E[e^{tX}]<\infty$$. Then the Legendre transform of $$\Lambda$$ satisfies:
 
 $$
 \begin{align}
@@ -409,11 +409,11 @@ $$
 
 
 
-* Note: This intuitively states that the probability of a large deviation from mean decays exponentially with number of samples $n$.
+* Note: This intuitively states that the probability of a large deviation from mean decays exponentially with number of samples $$n$$.
 
 **Theorem 8:**
 	(SMB Theorem):<br>
-	Let $\{X_n\}$ be a stationary ergodic process defined on a probability space $(\Omega,\mathcal{B}, \mathbf{P})$, then the weak AEP for $\{X_n\}$ shows that
+	Let $$\{X_n\}$$ be a stationary ergodic process defined on a probability space $$(\Omega,\mathcal{B}, \mathbf{P})$$, then the weak AEP for $$\{X_n\}$$ shows that
 
 $$
 \begin{align}
@@ -422,13 +422,13 @@ $$
 	\end{align}
 $$
 
-where $H$ is the entropy rate.
+where $$H$$ is the entropy rate.
 
 
 The assumptions of stationarity/ergodicity/identical of RV is not necessary for the AEP to hold. An intuitive idea is that a form that LLN holds may be applied to weak AEP.
 
 **Theorem 9:**
-	For independent source $\{X_k\}_{k\in\mathbb{N}}$ with bounded $Var(\log p(X_i))$, then the weak AEP holds:
+	For independent source $$\{X_k\}_{k\in\mathbb{N}}$$ with bounded $$Var(\log p(X_i))$$, then the weak AEP holds:
 
 $$
 \begin{align}
@@ -447,7 +447,7 @@ We introduce a new kind of AEP, which is related to Borel's LLN. The following r
 
 **Definition 7:**
 	(Empirical Distribution):<br>
-	For a given random sequence $x^n\in \mathcal{X}^n$, The number of appearances of $a$ in the sequence:
+	For a given random sequence $$x^n\in \mathcal{X}^n$$, The number of appearances of $$a$$ in the sequence:
 
 $$
 \begin{align}
@@ -456,7 +456,7 @@ $$
 	\end{align}
 $$
 
-where $\delta_{a,b}$ is the Kronecker symbol and equals $1$ only if $a=b$. We denote:
+where $$\delta_{a,b}$$ is the Kronecker symbol and equals $$1$$ only if $$a=b$$. We denote:
 
 $$
 \begin{align}
@@ -467,10 +467,10 @@ $$
 
 <span id="empirical"></span>
 
-as the empirical distribution of any given $x^n$, and from ([here](#empirical)), empirical distribution $Q$ can also be seen as the frequency $P_{x^n}$.
+as the empirical distribution of any given $$x^n$$, and from ([here](#empirical)), empirical distribution $$Q$$ can also be seen as the frequency $$P_{x^n}$$.
 
 
-For i.i.d. sequence $X^n$ with distribution $p_X$, and empirical distribution $P_{x^n}$ in a specific $x^n\in\mathcal{X}^n$, we calculate the $Pr(X^n=x^n)$.
+For i.i.d. sequence $$X^n$$ with distribution $$p_X$$, and empirical distribution $$P_{x^n}$$ in a specific $$x^n\in\mathcal{X}^n$$, we calculate the $$Pr(X^n=x^n)$$.
 
 <span id="cross-entropy"></span>
 
@@ -485,11 +485,11 @@ $$
 \end{align}
 $$
 
-This indicates that the probability of a random sequence depends only on the distribution of each random variable $X$ and the frequency of the value $x^n$. As with the definition of empirical entropy in the weak AEP, we define the cross entropy:
+This indicates that the probability of a random sequence depends only on the distribution of each random variable $$X$$ and the frequency of the value $$x^n$$. As with the definition of empirical entropy in the weak AEP, we define the cross entropy:
 
 **Definition 8:**
 	(Cross Entropy):<br>
-	We define the cross entropy in an i.i.d. trial with $n$ implements of RV $X$ as:
+	We define the cross entropy in an i.i.d. trial with $$n$$ implements of RV $$X$$ as:
 
 <span id="def-cross-entropy"></span>
 
@@ -511,11 +511,11 @@ Pr(X^n=x^n)=q^{-nH(Q,P_X)}
 \end{align}
 $$
 
-It is easy to see that if the frequencies of $a\in\mathcal{X}$ agree for different $x^n$, then the probabilities of those points under $X^n$ agree. This partitions the sample space $\mathcal{X}^n$ into sets with a common empirical distribution, within each of which sequences are uniformly distributed. The partition is determined by $Q:\mathcal{X}\to \frac{[n]}{n}$. For a formal definition,
+It is easy to see that if the frequencies of $$a\in\mathcal{X}$$ agree for different $$x^n$$, then the probabilities of those points under $$X^n$$ agree. This partitions the sample space $$\mathcal{X}^n$$ into sets with a common empirical distribution, within each of which sequences are uniformly distributed. The partition is determined by $$Q:\mathcal{X}\to \frac{[n]}{n}$$. For a formal definition,
 
 **Definition 9:**
 	(type):<br>
-	For an i.i.d. trial of $n$ samples of RV $X$ over a finite alphabet $\mathcal{X}$, the type with respect to empirical distribution $Q$ is defined by:
+	For an i.i.d. trial of $$n$$ samples of RV $$X$$ over a finite alphabet $$\mathcal{X}$$, the type with respect to empirical distribution $$Q$$ is defined by:
 
 $$
 \begin{align}
@@ -524,7 +524,7 @@ $$
 	\end{align}
 $$
 
-Thus, every type $\mathcal{T}_Q^n \subseteq \mathcal{X}^n$ is a set of sequences with the same probability.
+Thus, every type $$\mathcal{T}_Q^n \subseteq \mathcal{X}^n$$ is a set of sequences with the same probability.
 
 By combinatorial reasoning, the number of types is the number of possible empirical distributions:
 
@@ -535,20 +535,20 @@ $$
 \end{align}
 $$
 
-which is a polynomial in $n$.
+which is a polynomial in $$n$$.
 
-* Note: Counting types is equivalent to counting ways to assign counts to $\vert{}\mathcal{X}\vert{}$ labels across $n$ draws.
+* Note: Counting types is equivalent to counting ways to assign counts to $$\vert{}\mathcal{X}\vert{}$$ labels across $$n$$ draws.
 
 **Definition 10:**
 	(Rate of a Quantity):<br>
-	For any quantity $M$ which is exponentially large or exponentially small, we call the $\frac{1}{n}\log M$ the rate of $M$, where the $\log$ takes base of a convenient integer.
+	For any quantity $$M$$ which is exponentially large or exponentially small, we call the $$\frac{1}{n}\log M$$ the rate of $$M$$, where the $$\log$$ takes base of a convenient integer.
 
 
 ### Size of a Type
 
 **Lemma 8:**
 	(Size of a Type):<br>
-	For $n$ i.i.d. experiments over the implement of $X\in\mathcal{X}$, the size of any type satisfies:
+	For $$n$$ i.i.d. experiments over the implement of $$X\in\mathcal{X}$$, the size of any type satisfies:
 
 $$
 \begin{align}
@@ -557,7 +557,7 @@ $$
 	\end{align}
 $$
 
-As the size of type only depends on the empirical distribution $Q=P_{x^n}$, this theorem introduces a natural constant for any given distribution $Q$:
+As the size of type only depends on the empirical distribution $$Q=P_{x^n}$$, this theorem introduces a natural constant for any given distribution $$Q$$:
 
 $$
 \begin{align}
@@ -604,10 +604,10 @@ $$
 
 
 
-It is worth noting that $\frac{1}{n}\log\vert{}\mathcal{T}_Q^n\vert{}\sim H(Q)$ is an exponential approximation, which allows a polynomial-factor deviation in the size.
+It is worth noting that $$\frac{1}{n}\log\vert{}\mathcal{T}_Q^n\vert{}\sim H(Q)$$ is an exponential approximation, which allows a polynomial-factor deviation in the size.
 
-* Note: For any polynomial $P(x)\in \mathbb{R}[x]$, $\lim\limits_{n\to \infty}\dfrac{e^x}{P(x)}=0$.
-Specifically, for $\mathcal{T}_Q^n$ with $Q$ happens to be the distribution of $X$, i.e., $Q=P_X$,
+* Note: For any polynomial $$P(x)\in \mathbb{R}[x]$$, $$\lim\limits_{n\to \infty}\dfrac{e^x}{P(x)}=0$$.
+Specifically, for $$\mathcal{T}_Q^n$$ with $$Q$$ happens to be the distribution of $$X$$, i.e., $$Q=P_X$$,
 
 $$
 \begin{align}
@@ -616,7 +616,7 @@ $$
 \end{align}
 $$
 
-and by [here](#def-cross-entropy), $\forall x^n\in \mathcal{T}_Q^n, P_{X^n}(x^n)=Q^n(x^n)=q^{-nH(Q)}$. So, we get the two-side bounds of the size of types: * Note: In fact we can choose any possible $P_X$ as the number of types are independent with $p_X$.  We choose $P_X=Q$ to get a proper lower bound, as the probability will be maximum when $p_X=Q$
+and by [here](#def-cross-entropy), $$\forall x^n\in \mathcal{T}_Q^n, P_{X^n}(x^n)=Q^n(x^n)=q^{-nH(Q)}$$. So, we get the two-side bounds of the size of types: * Note: In fact we can choose any possible $$P_X$$ as the number of types are independent with $$p_X$$.  We choose $$P_X=Q$$ to get a proper lower bound, as the probability will be maximum when $$p_X=Q$$
 
 <span id="specsize"></span>
 
@@ -630,7 +630,7 @@ $$
 ### Probability of a type
 
 **Lemma 9:**
-(Probability of a type):<br> For $n$ i.i.d. implements of RV $X\sim p$, when $n\to\infty$,
+(Probability of a type):<br> For $$n$$ i.i.d. implements of RV $$X\sim p$$, when $$n\to\infty$$,
 
 $$
 \begin{align}
@@ -639,7 +639,7 @@ $$
 	\end{align}
 $$
 
-As the probability of type depends on the empirical distribution $Q=P_{x^n}$ and real distribution $p$, this theorem introduces a natural constant for any given distribution $Q$ and $p$:
+As the probability of type depends on the empirical distribution $$Q=P_{x^n}$$ and real distribution $$p$$, this theorem introduces a natural constant for any given distribution $$Q$$ and $$p$$:
 
 $$
 \begin{align}
@@ -652,7 +652,7 @@ which can be an alternative definition of Kullback-Liebler Divergence (or relati
 
 
 **Proof:**
-We can calculate the probability of a given type $\mathcal{T}_Q^n$ by multiplying the probability of any point in the type (as the points are uniformly distributed) by the size of the type, as given in ([here](#def-cross-entropy)) and ([here](#entr)):
+We can calculate the probability of a given type $$\mathcal{T}_Q^n$$ by multiplying the probability of any point in the type (as the points are uniformly distributed) by the size of the type, as given in ([here](#def-cross-entropy)) and ([here](#entr)):
 
 $$
 \begin{align}
@@ -677,17 +677,17 @@ $$
 
 
 
-([here](#relative-entropy)) shows that the difference between $H(Q)$ and $H(Q,P_X)$, i.e. the difference between the empirical and true distributions, determines the probability of a given type. In contrast, the size of a type is determined only by its empirical distribution. We can interpret $D(Q\vert{}\vert{}P_X)$ as a distance between two distributions: the larger the distance between $Q$ and $P_X$, the smaller $P_{X^n}(\mathcal{T}_Q^n)$ becomes. In the special case $P=Q$, $D(Q\vert{}\vert{}P_X)=0$ and the probability is maximal.
+([here](#relative-entropy)) shows that the difference between $$H(Q)$$ and $$H(Q,P_X)$$, i.e. the difference between the empirical and true distributions, determines the probability of a given type. In contrast, the size of a type is determined only by its empirical distribution. We can interpret $$D(Q\vert{}\vert{}P_X)$$ as a distance between two distributions: the larger the distance between $$Q$$ and $$P_X$$, the smaller $$P_{X^n}(\mathcal{T}_Q^n)$$ becomes. In the special case $$P=Q$$, $$D(Q\vert{}\vert{}P_X)=0$$ and the probability is maximal.
 
 ### Strong AEP
 
-Although it seems that when $P=Q$, $\frac{1}{n}logP_{X^n}(\mathcal{T}_Q^n)\sim 0$, however, $P_{X^n}(\mathcal{T}_Q^n)\sim1$ is not correct as the former approximation is in a exponential sense. In fact, when $n\to \infty$, the number of types "near" $P_X$, say, $\exists a\in \mathcal{X}, \vert{}Q(a)-P_X(a)\vert{}\leq \delta$, is no less than $[2n\delta]$ with nearly (the difference will be bounded in the following statement) the same probability, so the probability of type $P_{X^n}(\mathcal{T}_{P_X}^n)\sim 1/2n\delta\to 0, \quad n\to \infty$. So we  do not care any possibility of any *certain type* but a  *range of types*. In this section we show that the possibility concentrates exactly around the maximum type $\mathcal{T}_{P_X}^n$.
+Although it seems that when $$P=Q$$, $$\frac{1}{n}logP_{X^n}(\mathcal{T}_Q^n)\sim 0$$, however, $$P_{X^n}(\mathcal{T}_Q^n)\sim1$$ is not correct as the former approximation is in a exponential sense. In fact, when $$n\to \infty$$, the number of types "near" $$P_X$$, say, $$\exists a\in \mathcal{X}, \vert{}Q(a)-P_X(a)\vert{}\leq \delta$$, is no less than $$[2n\delta]$$ with nearly (the difference will be bounded in the following statement) the same probability, so the probability of type $$P_{X^n}(\mathcal{T}_{P_X}^n)\sim 1/2n\delta\to 0, \quad n\to \infty$$. So we  do not care any possibility of any *certain type* but a  *range of types*. In this section we show that the possibility concentrates exactly around the maximum type $$\mathcal{T}_{P_X}^n$$.
 
-* Note: If only $a\in \mathcal{X}$ changes, $Q(a)=\dfrac{N(a\vert{}x^n)}{n}\to N(a\vert{}x^n)=nQ(a)\in [ n(P_X(a)-\delta),  n(P_X(a)+\delta) ]$, so basically there are no less than $[2n\delta]$ different $N(a\vert{}x^n)$, and thus $[2n\delta]$ different types.
+* Note: If only $$a\in \mathcal{X}$$ changes, $$Q(a)=\dfrac{N(a\vert{}x^n)}{n}\to N(a\vert{}x^n)=nQ(a)\in [ n(P_X(a)-\delta),  n(P_X(a)+\delta) ]$$, so basically there are no less than $$[2n\delta]$$ different $$N(a\vert{}x^n)$$, and thus $$[2n\delta]$$ different types.
 
 **Definition 11:**
 	(Strongly Typical Set):
-	Let $X\sim p$ be a RV defined on a finite alphabet $\mathcal{X}$. We define the the union of all "near maximum" types as the *Strongly Typical Set*:
+	Let $$X\sim p$$ be a RV defined on a finite alphabet $$\mathcal{X}$$. We define the the union of all "near maximum" types as the *Strongly Typical Set*:
 
 $$
 \begin{align}
@@ -706,7 +706,7 @@ $$
 	\end{align}
 $$
 
-by letting $\delta'=\sqrt{\vert{}\mathcal{X}\vert{}}\delta$. The completement of strongly typical set is called the strongly atypical set, denoted by $\mathcal{T}_{[X]_\delta}^{nC}=\mathcal{X}^n-\mathcal{T}_{[X]_\delta}^n$ ($T_{[X]_\delta}^{nC}=\mathcal{X}^n-T_{[X]_\delta}^n$ resp.). For $x^n\in\mathcal{X}^n$, if $\exists x_i\in \mathcal{X}, \vert{}Q(x_i)-p(x_i)\vert{}\geq\delta$, then $x^n\in\mathcal{T}_{[X]_\delta}^{nC}$.
+by letting $$\delta'=\sqrt{\vert{}\mathcal{X}\vert{}}\delta$$. The completement of strongly typical set is called the strongly atypical set, denoted by $$\mathcal{T}_{[X]_\delta}^{nC}=\mathcal{X}^n-\mathcal{T}_{[X]_\delta}^n$$ ($$T_{[X]_\delta}^{nC}=\mathcal{X}^n-T_{[X]_\delta}^n$$ resp.). For $$x^n\in\mathcal{X}^n$$, if $$\exists x_i\in \mathcal{X}, \vert{}Q(x_i)-p(x_i)\vert{}\geq\delta$$, then $$x^n\in\mathcal{T}_{[X]_\delta}^{nC}$$.
 
 
 The strong AEP are acknowledged with 3 lemmas, analogous to the weak AEP:
@@ -723,9 +723,9 @@ $$
 
 
 
-* Note: From [here](#entr), we know that the size of type has a $H(p)$ exponential approximation. However, The gap between them tends to be infinite, as the probability are tend to 1 and 0 from the following relation.
+* Note: From [here](#entr), we know that the size of type has a $$H(p)$$ exponential approximation. However, The gap between them tends to be infinite, as the probability are tend to 1 and 0 from the following relation.
 
-**Proof:** First we give a lemma according to the continuity of $H(\cdot)$:
+**Proof:** First we give a lemma according to the continuity of $$H(\cdot)$$:
 
 **Lemma 10:**
 due to the uniform continuity of entropy function
@@ -737,7 +737,7 @@ $$
 		\end{align}
 $$
 
-we can find $\delta_{\epsilon}$ to make $\vert{}H(Q)-H(p)\vert{}\leq \epsilon$, i,.e.,
+we can find $$\delta_{\epsilon}$$ to make $$\vert{}H(Q)-H(p)\vert{}\leq \epsilon$$, i,.e.,
 
 $$
 \begin{align}
@@ -748,7 +748,7 @@ $$
 
 
 
-We pick* Note: Attention that we pick $\delta$ from $\epsilon$ but not $\epsilon$ from $\delta$. This $\delta$ has a linear form of $\epsilon$, so they have the same convergence when $n\to\infty$.
+We pick* Note: Attention that we pick $$\delta$$ from $$\epsilon$$ but not $$\epsilon$$ from $$\delta$$. This $$\delta$$ has a linear form of $$\epsilon$$, so they have the same convergence when $$n\to\infty$$.
 
 $$
 \begin{align}
@@ -757,7 +757,7 @@ $$
 	\end{align}
 $$
 
-and $H(Q)$ is bounded by:
+and $$H(Q)$$ is bounded by:
 
 $$
 \begin{align}
@@ -822,13 +822,13 @@ $$
 	\end{align}
 $$
 
-As $\lim_{n\to\infty}\delta_\epsilon=0$, the probability of Strongly typical set tends to 1.
+As $$\lim_{n\to\infty}\delta_\epsilon=0$$, the probability of Strongly typical set tends to 1.
 
 
 **Proof:**
-for all types $\mathcal{T}_Q^n\subseteq \mathcal{T}_{[Q]_{\delta_{\epsilon}}}^{nC}$, $\exists a \in \mathcal{X}, \vert{}Q(a)-P_X(a)\vert{}\geq \delta_{\epsilon}$. Due to the continuity and monotony of $f(p)=logp$, we have:
+for all types $$\mathcal{T}_Q^n\subseteq \mathcal{T}_{[Q]_{\delta_{\epsilon}}}^{nC}$$, $$\exists a \in \mathcal{X}, \vert{}Q(a)-P_X(a)\vert{}\geq \delta_{\epsilon}$$. Due to the continuity and monotony of $$f(p)=logp$$, we have:
 
-* Note: ([here](#taylor)) follows from the definition of derivatives, and is not accurate. In fact, $(logP_X(a)-logQ(a))= \frac{d(logp)}{dp}\vert{}_{p=Q(a)}[P_X(a)-Q(a)]+o((P_X(a)-Q(a))^2)$ is the Taylor formula with Peano remainder and the results should be $\delta_\epsilon + Q(a)o(\delta^2)$. Here we omit the $o(\delta^2)$, and we will configure $\delta$ in ([here](#make)) to make $\lim\limits_{n\to \infty}nQ(a)o(\delta^2)\neq \infty$
+* Note: ([here](#taylor)) follows from the definition of derivatives, and is not accurate. In fact, $$(logP_X(a)-logQ(a))= \frac{d(logp)}{dp}\vert{}_{p=Q(a)}[P_X(a)-Q(a)]+o((P_X(a)-Q(a))^2)$$ is the Taylor formula with Peano remainder and the results should be $$\delta_\epsilon + Q(a)o(\delta^2)$$. Here we omit the $$o(\delta^2)$$, and we will configure $$\delta$$ in ([here](#make)) to make $$\lim\limits_{n\to \infty}nQ(a)o(\delta^2)\neq \infty$$
 
 <span id="taylor"></span>
 
@@ -880,10 +880,10 @@ $$
 	\end{align}
 $$
 
-and letting $\eta=\delta+\epsilon$.
+and letting $$\eta=\delta+\epsilon$$.
 
 
-One to be noticed is that in order to get a proper $\epsilon$ to make both $\epsilon$ itself and $n\delta^2$ be sufficiently small and $n\delta_{\epsilon}$ sufficiently large. For example,
+One to be noticed is that in order to get a proper $$\epsilon$$ to make both $$\epsilon$$ itself and $$n\delta^2$$ be sufficiently small and $$n\delta_{\epsilon}$$ sufficiently large. For example,
 
 <span id="make"></span>
 
@@ -899,7 +899,7 @@ is a proper setting.
 ### Substantial Set
 
 **Definition 12:**
-	(Substantial Set):<br>A set $\mathcal{A}\in \mathcal{X}^n$ is called a substantial set iff
+	(Substantial Set):<br>A set $$\mathcal{A}\in \mathcal{X}^n$$ is called a substantial set iff
 
 $$
 \begin{align}
@@ -910,7 +910,7 @@ $$
 
 
 
-and intuitively, the positive probability can only be valued in the typical set when $n\to \infty$, as ([here](#probability-bound)) shows that:
+and intuitively, the positive probability can only be valued in the typical set when $$n\to \infty$$, as ([here](#probability-bound)) shows that:
 
 $$
 \begin{align}
@@ -919,7 +919,7 @@ Pr(X^n\in\mathcal{T}_{[Q]_{\delta_\epsilon}}^{nC})\to 0,\quad n\to \infty
 \end{align}
 $$
 
-To show this, we first calculate the probability of  intersection of $\mathcal{A}$ and typical set:
+To show this, we first calculate the probability of  intersection of $$\mathcal{A}$$ and typical set:
 
 $$
 \begin{align}
@@ -931,7 +931,7 @@ $$
 \end{align}
 $$
 
-so the probability is almost entirely concentrated in the typical set. We can calculate a lower bound of $\mathcal{A}$ using the fact that the distribution in a typical set is uniform:
+so the probability is almost entirely concentrated in the typical set. We can calculate a lower bound of $$\mathcal{A}$$ using the fact that the distribution in a typical set is uniform:
 
 $$
 \begin{align}
@@ -949,9 +949,9 @@ So any non-zero part of strongly typical set has the same exponential approximat
 Strong typicality is stronger in the sense that it implies weak typicality.
 
 **Theorem 13:**
-$\forall \delta>0, \exists \eta>0$, s.t. $\mathcal{T}_{[X]_\delta}^{n}\subseteq \mathcal{W}_{[X]_\eta}^{n}$
+$$\forall \delta>0, \exists \eta>0$$, s.t. $$\mathcal{T}_{[X]_\delta}^{n}\subseteq \mathcal{W}_{[X]_\eta}^{n}$$
 
-The converse is not true. A counter example is that for $X\sim p=(1/2,1/4,1/4)$, when $x^n$ is a weakly typical sequence, then we need:
+The converse is not true. A counter example is that for $$X\sim p=(1/2,1/4,1/4)$$, when $$x^n$$ is a weakly typical sequence, then we need:
 
 $$
 \begin{align}
@@ -960,18 +960,18 @@ $$
 \end{align}
 $$
 
-By letting $q(0)=q(1)=0.5$ and $q(2)=0$, the sequence (without a realization of $p(2)$) is weakly typical, but not strongly typical.
+By letting $$q(0)=q(1)=0.5$$ and $$q(2)=0$$, the sequence (without a realization of $$p(2)$$) is weakly typical, but not strongly typical.
 
 Stronger as the strong typicality is, it can only be used for RV under finite alphabets while the weak one corresponds to the weak LLN. Unless specified, we always use the term "typicality" to denote the strong typicality.
 
 ## Joint Typicality
 
-We now consider a bivariate distribution with two RVs $X\in\mathcal{X}$ and $Y\in\mathcal{Y}$, which produces the i.i.d. information source $\{X_k,Y_k\}_{k\in\mathbb{N}}$.
+We now consider a bivariate distribution with two RVs $$X\in\mathcal{X}$$ and $$Y\in\mathcal{Y}$$, which produces the i.i.d. information source $$\{X_k,Y_k\}_{k\in\mathbb{N}}$$.
 
 ### Properties of Jointly Typical Set
 
 **Definition 13:**
-	(Jointly typical set): Let $\{X_k,Y_k\}_{k\in\mathbb{N}}$ be an i.i.d. information source with two RVs $X\in\mathcal{X}$ and $Y\in \mathcal{Y}$ over finite alphabets. The jointly typical set $\mathcal{T}_{[XY]_\delta}^n$ is
+	(Jointly typical set): Let $$\{X_k,Y_k\}_{k\in\mathbb{N}}$$ be an i.i.d. information source with two RVs $$X\in\mathcal{X}$$ and $$Y\in \mathcal{Y}$$ over finite alphabets. The jointly typical set $$\mathcal{T}_{[XY]_\delta}^n$$ is
 
 $$
 \begin{align}
@@ -981,7 +981,7 @@ $$
 	\end{align}
 $$
 
-$\forall (x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n$ is called jointly typical.
+$$\forall (x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n$$ is called jointly typical.
 
 
 **Theorem 14:** (Properties of Jointly Typical Set):
@@ -994,12 +994,12 @@ $$
 		\end{align}
 $$
 
-* (Preservation): Let $Y=f(X)$, then $x^n=(x_1,\cdots,x_n)\in\mathcal{T}_{[X]_\delta}^n$ implies $(f(x_1),\cdots,f(x_n))\in\mathcal{T}_{[Y]_\delta}^n$
+* (Preservation): Let $$Y=f(X)$$, then $$x^n=(x_1,\cdots,x_n)\in\mathcal{T}_{[X]_\delta}^n$$ implies $$(f(x_1),\cdots,f(x_n))\in\mathcal{T}_{[Y]_\delta}^n$$
 
 
 
 **Proof:**
-The consistency of JT set can be proved by noticing $N(x;x^n)=\sum_{y\in\mathcal{Y}}N(x,y;x^n,y^n)$
+The consistency of JT set can be proved by noticing $$N(x;x^n)=\sum_{y\in\mathcal{Y}}N(x,y;x^n,y^n)$$
 
 $$
 \begin{align}
@@ -1008,9 +1008,9 @@ $$
 	\end{align}
 $$
 
-So $\forall (x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n$, then $x^n\in\mathcal{T}_{[X]_\delta}^n$. Similarly, $\forall (x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n \to y^n\in\mathcal{T}_{[Y]_\delta}^n$.
+So $$\forall (x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n$$, then $$x^n\in\mathcal{T}_{[X]_\delta}^n$$. Similarly, $$\forall (x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n \to y^n\in\mathcal{T}_{[Y]_\delta}^n$$.
 
-For preservation, we notice that $N(y, (f(x_1),\cdots,f(x_n)))=\sum_{x\in f^{-1}[y]}N(x;x^n)$.
+For preservation, we notice that $$N(y, (f(x_1),\cdots,f(x_n)))=\sum_{x\in f^{-1}[y]}N(x;x^n)$$.
 
 $$
 \begin{align}
@@ -1020,13 +1020,13 @@ $$
 	\end{align}
 $$
 
-Therefore, $y^n=(f(x_1),\cdots,f(x_n))\in\mathcal{T}_{[Y]_{\delta^\prime}}^n$.
+Therefore, $$y^n=(f(x_1),\cdots,f(x_n))\in\mathcal{T}_{[Y]_{\delta^\prime}}^n$$.
 
 
 ### Joint AEP
 
 **Definition 14:**
-Let $(X^n,Y^n)=((X_1,Y_1),\cdots,(X_n,Y_n))$ be i.i.d. sequence with generic RV $(X,Y)$, then there exists $\epsilon,\eta>0$ s.t. $\epsilon,\eta\to 0$ as $\delta\to 0$, and
+Let $$(X^n,Y^n)=((X_1,Y_1),\cdots,(X_n,Y_n))$$ be i.i.d. sequence with generic RV $$(X,Y)$$, then there exists $$\epsilon,\eta>0$$ s.t. $$\epsilon,\eta\to 0$$ as $$\delta\to 0$$, and
 
 $$
 \begin{align}
@@ -1045,11 +1045,11 @@ $$
 
 ## Conditional Typicality
 
-From the JAEP, we know that when $n\to\infty$, $\frac{1}{n}\log\vert{}\mathcal{T}_{[XY]_\delta}^n\vert{}\to H(X,Y)$ and $\frac{1}{n}\log\vert{}\mathcal{T}_{[X]_\delta}^n\vert{}\to H(X)$, and that $(X^n,Y^n)$ (resp. $X^n$) is uniformly distributed in $\mathcal{T}_{[XY]_\delta}^n$ (resp. $\mathcal{T}_{[X]_\delta}^n$). Then for each $x^n\in\mathcal{T}_{[X]_\delta}^n$, the number of typical sequence $(x^n,y^n)$ are exponentially the same, each with $\frac{1}{n}\log \frac{\vert{}\mathcal{T}_{[XY]_\delta}^n\vert{}}{\vert{}\mathcal{T}_{[X]_\delta}^n\vert{}}\to H(Y\vert{}X)$. Thus we can define the typicality of $y^n$ conditioning on a given $x^n\in \mathcal{T}_{[X]_\delta}^n$.
+From the JAEP, we know that when $$n\to\infty$$, $$\frac{1}{n}\log\vert{}\mathcal{T}_{[XY]_\delta}^n\vert{}\to H(X,Y)$$ and $$\frac{1}{n}\log\vert{}\mathcal{T}_{[X]_\delta}^n\vert{}\to H(X)$$, and that $$(X^n,Y^n)$$ (resp. $$X^n$$) is uniformly distributed in $$\mathcal{T}_{[XY]_\delta}^n$$ (resp. $$\mathcal{T}_{[X]_\delta}^n$$). Then for each $$x^n\in\mathcal{T}_{[X]_\delta}^n$$, the number of typical sequence $$(x^n,y^n)$$ are exponentially the same, each with $$\frac{1}{n}\log \frac{\vert{}\mathcal{T}_{[XY]_\delta}^n\vert{}}{\vert{}\mathcal{T}_{[X]_\delta}^n\vert{}}\to H(Y\vert{}X)$$. Thus we can define the typicality of $$y^n$$ conditioning on a given $$x^n\in \mathcal{T}_{[X]_\delta}^n$$.
 
 **Definition 15:**
 	(Conditional Typical Set):<br>
-For any $x^n\in\mathcal{T}_{[X]_\delta}^n$, the sequence $y^n\in \mathcal{T}_{[Y]_\delta}^n$ which makes $(x^n,y^n)$ jointly typical are called the typical sequence conditioning on $x^n$, i.e.
+For any $$x^n\in\mathcal{T}_{[X]_\delta}^n$$, the sequence $$y^n\in \mathcal{T}_{[Y]_\delta}^n$$ which makes $$(x^n,y^n)$$ jointly typical are called the typical sequence conditioning on $$x^n$$, i.e.
 
 $$
 \begin{align}
@@ -1058,7 +1058,7 @@ $$
 	\end{align}
 $$
 
-The $\mathcal{T}_{[Y\vert{}X]_\delta}^n(x^n)$ is called the typical set of $Y$ conditioning on $x^n$.
+The $$\mathcal{T}_{[Y\vert{}X]_\delta}^n(x^n)$$ is called the typical set of $$Y$$ conditioning on $$x^n$$.
 
 
 **Theorem 15:**
@@ -1075,7 +1075,7 @@ $$
 
 
 **Proof:**
-$\forall x^n\in\mathcal{T}_{[X]_\delta}^n$, we have
+$$\forall x^n\in\mathcal{T}_{[X]_\delta}^n$$, we have
 
 $$
 \begin{align}
@@ -1095,7 +1095,7 @@ $$
 	\end{align}
 $$
 
-Actually, for every $(x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n$ with empirical distribution $K$, the size of the type with $K$ is:
+Actually, for every $$(x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n$$ with empirical distribution $$K$$, the size of the type with $$K$$ is:
 
 $$
 \begin{align}
@@ -1104,7 +1104,7 @@ $$
 	\end{align}
 $$
 
-for fixed $x^n\in \mathcal{T}_{[X]_\delta}^n$, the size reduces to:
+for fixed $$x^n\in \mathcal{T}_{[X]_\delta}^n$$, the size reduces to:
 
 $$
 \begin{align}
@@ -1113,7 +1113,7 @@ $$
 	\end{align}
 $$
 
-which can be a lower bound of the $\vert{}\mathcal{T}_{[XY]_\delta}^n(x^n)\vert{}$. i.e.,
+which can be a lower bound of the $$\vert{}\mathcal{T}_{[XY]_\delta}^n(x^n)\vert{}$$. i.e.,
 
 $$
 \begin{align}
@@ -1142,12 +1142,12 @@ $$
 	\end{align}
 $$
 
-and (b), (c) are from the AEP and JAEP, $\lim\limits_{n\to\infty}\eta(n,\delta)=0$. Thus the bounds are proved.
+and (b), (c) are from the AEP and JAEP, $$\lim\limits_{n\to\infty}\eta(n,\delta)=0$$. Thus the bounds are proved.
 
 
-* Note: (c)'s bound should be changed into $(p(x,y)+\delta+\frac{1}{n})$ when $\exists x,y ,\quad p(x,y)=1$ because in this case $\log(p(x,y)+\delta+\frac{1}{n})$ is positive. The results are the same.
+* Note: (c)'s bound should be changed into $$(p(x,y)+\delta+\frac{1}{n})$$ when $$\exists x,y ,\quad p(x,y)=1$$ because in this case $$\log(p(x,y)+\delta+\frac{1}{n})$$ is positive. The results are the same.
 
-The CAEP shows that the rate of size of $\vert{}\mathcal{T}_{[XY]_\delta}^n(x^n)\vert{}$ approximates $H(Y\vert{}X)$ regardless of $x^n\in\mathcal{T}_{[X]_\delta}^n$. As a corollary, we show that such typical $x^n$ that makes $\frac{1}{n}\vert{}\mathcal{T}_{[Y\vert{}X]_\delta^n}(x^n)\vert{}\to H(Y\vert{}X)$ grows with $n$ at almost the same rate as the number of typical $x^n\in\mathcal{T}_{[X]_\delta}^n$
+The CAEP shows that the rate of size of $$\vert{}\mathcal{T}_{[XY]_\delta}^n(x^n)\vert{}$$ approximates $$H(Y\vert{}X)$$ regardless of $$x^n\in\mathcal{T}_{[X]_\delta}^n$$. As a corollary, we show that such typical $$x^n$$ that makes $$\frac{1}{n}\vert{}\mathcal{T}_{[Y\vert{}X]_\delta^n}(x^n)\vert{}\to H(Y\vert{}X)$$ grows with $$n$$ at almost the same rate as the number of typical $$x^n\in\mathcal{T}_{[X]_\delta}^n$$
 
 **Lemma 11:**
 	Let
@@ -1171,7 +1171,7 @@ $$
 
 
 
-* Note: From this lemma, we can make confusion on the $\mathcal{S}_{[X]_\delta}^n$ and $\mathcal{T}_{[X]_\delta}^n$ as they have the same asymptotic property in exponential sense.
+* Note: From this lemma, we can make confusion on the $$\mathcal{S}_{[X]_\delta}^n$$ and $$\mathcal{T}_{[X]_\delta}^n$$ as they have the same asymptotic property in exponential sense.
   **Proof:**
   The proof is omitted.
 
@@ -1182,7 +1182,7 @@ $$
 The typicality gives us an asymptotic perspective on the meaning of Shannon's measures. Correspondingly, it is highly related to the Basic inequalities.
 
 **Example 4:**
-	Consider three RVs $X$, $Y$, and $Z$.
+	Consider three RVs $$X$$, $$Y$$, and $$Z$$.
 
 $$
 \begin{align}
@@ -1206,4 +1206,4 @@ A customized idea is summarized as:
 * Define the conditional Joint typical set;
 * Give the including relation of the typical sets;
 * Use AEP to transform the including relation of sets to the inequality relation of rates;
-* Take the limit as $n$ tends to infinity to obtain the corresponding Shannon inequalities.
+* Take the limit as $$n$$ tends to infinity to obtain the corresponding Shannon inequalities.
