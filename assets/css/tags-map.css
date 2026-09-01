@@ -372,6 +372,7 @@ html.tags-map-theme,
 
 .tag-map-edge:hover .tag-map-edge__line,
 .tag-map-edge:focus-visible .tag-map-edge__line,
+.tag-map-edge.is-focus .tag-map-edge__line,
 .tag-map-edge.is-selected .tag-map-edge__line {
   background: #a8f4df;
   box-shadow: 0 0 1rem rgba(141, 232, 208, 0.62);
