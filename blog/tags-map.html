@@ -32,6 +32,20 @@ permalink: /blog/tags-map/
         <datalist id="tag-map-search-options" data-tag-map-search-options></datalist>
         <button class="tag-map-control-button tag-map-search__submit" type="submit">Find tag</button>
       </form>
+      <details class="tag-map-categories" data-tag-map-categories>
+        <summary>
+          <span>Categories</span>
+          <span class="tag-map-categories__summary" data-tag-map-category-summary>All</span>
+        </summary>
+        <fieldset class="tag-map-categories__panel">
+          <legend class="visually-hidden">Filter the tags map by category</legend>
+          <p class="tag-map-categories__help">Select one or more. No selection shows all posts.</p>
+          <div class="tag-map-categories__options" data-tag-map-category-options></div>
+          <button class="tag-map-categories__clear" type="button" data-tag-map-category-clear>
+            Clear selection
+          </button>
+        </fieldset>
+      </details>
       <button class="tag-map-control-button tag-map-control-button--secondary" type="button" data-tag-map-reset>
         Reset layout
       </button>
@@ -66,6 +80,7 @@ permalink: /blog/tags-map/
             "title": {{ post.title | jsonify }},
             "url": {{ post.url | relative_url | jsonify }},
             "date": {{ post.date | date: '%Y-%m-%d' | jsonify }},
+            "categories": {{ post.categories | jsonify }},
             "tags": {{ post.tags | jsonify }}
           }
           {% assign first_tagged_post = false %}
