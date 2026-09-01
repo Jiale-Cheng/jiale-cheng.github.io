@@ -23,7 +23,9 @@ A noisy channel is often seen to describe a randomly distorted mode in transmiss
 
 ## Definition of DMC
 
-**Definition.**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.1</span>.</p>
+
 
 (Discrete Channel):<br>
 Let $$\mathcal{X},\mathcal{Y}$$ be discrete alphabets and $$p(y\vert x)$$ be the transition matrix from $$\mathcal{X}$$ to $$\mathcal{Y}$$. We call $$p(y\vert x)$$ be a discrete channel with input $$X\in\mathcal{X}$$ and output $$Y\in\mathcal{Y}$$ s.t. $$p_{XY}(x,y)=p_X(x)p(y\vert x)$$.
@@ -53,14 +55,22 @@ $$
 
 by defining $$Pr\{\alpha(x,Z)=y\}=p(y\vert x)$$ we show that $$Y=\alpha(X,Z)$$ is a discrete channel.
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.2</span>.</p>
+
 
 (Alternative Definition of Discrete Channel):<br>
 Let $$\mathcal{X},\mathcal{Y},\mathcal{Z}$$ be discrete alphabets and $$\alpha:\mathcal{X}\times\mathcal{Z}\to\mathcal{Y}$$. We call $$(\alpha,Z)$$ be a discrete channel with input $$X\in\mathcal{X}$$ and output $$Y\in\mathcal{Y}$$ iff $$Z\in \mathcal{Z}$$ is independent from $$X$$, and that $$Y$$ can be calculated by $$Y=\alpha(X,Z)$$.
 
 By the above relation, we have:
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-1-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 1.1</span>.</p>
+
 
 (Equivalence of DC definitions):<br>
 The discrete channel $$p(y\vert x)$$ and $$(\alpha,Z)$$ defined on the same alphabets $$\mathcal{X},\mathcal{Y}$$ are called equivalent iff
@@ -75,7 +85,11 @@ $$
 
 When the input from the channel $$p(y\vert x)$$ is a sequence, the interference of previous inputs may affect the current transmission. An ideal model is to ignore the interference (*Note:* For alternative perspective, the noises of DMC in different time indices are independent.), in which we consider "memoryless".
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.3</span>.</p>
+
 
 (Discrete Memoryless Channel, DMC):<br>
 A discrete channel is called memoryless iff $$\forall n\geq 1$$, the input sequence $$X_{[n]}$$ and output sequence $$Y_{[n]}$$ satisfies:
@@ -90,7 +104,11 @@ $$
 
 (*Note:* "Discrete" here means not only that the alphabets are discrete values, but that the sequences arrive in discrete-time instantaneously.)
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-1-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 1.2</span>.</p>
+
 
 Let $$p(y\vert x)$$ be a DC, for any $$i\geq1$$, let $$T_{i^-}$$ be the RVs generated before $$X_i$$. Then the following is equivalent:
 
@@ -98,7 +116,11 @@ Let $$p(y\vert x)$$ be a DC, for any $$i\geq1$$, let $$T_{i^-}$$ be the RVs gene
 1. $$T_{i^-}\to X_i\to Y_i$$ forms a Markov chain,
 1. the DC $$(\alpha, Z)$$ at all time indices $$i\in\mathbb{N}$$ forms a sequence of replicates of generic DC $$(\alpha, Z)$$, with $$Z_i$$ independent from $$(X_i,T_{i^-})$$ and $$Y_i=\alpha(X_i,Z_i)$$
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 - $$1\to2$$. By the definition of DMC,
 
@@ -147,7 +169,11 @@ where (1) is from $$(X_n,Z_n)$$ independent from $$T_{n^-}=(Y_{[n-1]},X_{[n-1]})
 
 For DMC $$(c,Z)$$, we can control the distribution of $$X$$ to get a related distribution of $$Y = c(X,Z)$$. One nature property of the DMC is, to what extent, the $$X,Y$$ could be dependent through the channel. The following definition quantify this value.
 
-**Definition (Capacity of DMC).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-4" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.4</span> <span class="math-statement__title">(Capacity of DMC)</span>.</p>
+
 
 $$
 \begin{align}
@@ -157,7 +183,11 @@ C_{I} = \max_{X\sim p(\cdot)}I(X;Y)
 \end{align}
 $$
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-1-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 1.1</span>.</p>
+
 
 (Typical Channels):<br>
 1. For any DMC $$X\to Y$$,
@@ -213,11 +243,15 @@ C=&\max_{p(x)}I(X;Y)=\max_{p(x)}(H(Y)-H(Y\vert X))=\max_{p(x)}(H(Y)-H(Z))\\
 \end{align}
 $$
 
+</div>
+
 ## Problem Statement
 
 We start with define the channel coding process.
 
-**Definition (Channel Code).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.1</span> <span class="math-statement__title">(Channel Code)</span>.</p>
+
 
 A $$(n,M)$$ channel code for DMC $$P_{Y\vert X}$$ is defined with an encoder $$f$$ and decoder $$g$$ s.t.
 
@@ -236,7 +270,11 @@ In real channel coding, we do not know the prior probability of $$W$$, since eve
 
 Our goal is to transmit as many messages as possible per channel use, i.e., for a $$(f,g)$$, if there is $$r$$ messages perfectly decoded by $$g$$ with one $$\mathcal{X}$$ to $$\mathcal{Y}$$ channel, then $$r$$ shows the capability of that channel.
 
-**Definition (Probability of error and Rate).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.2</span> <span class="math-statement__title">(Probability of error and Rate)</span>.</p>
+
 
 Let $$P_{e}(w) = P(\hat{W} \neq w\vert W = w)$$, then we define two kinds of probability of error:
 
@@ -250,7 +288,11 @@ A rate $$R$$ is said to be achievable for a $$DMC$$ is $$\forall \epsilon>0$$, $
 (*Note:* by the definition of $$R$$, the meaning is the information transmitted per channel use, where we call the single-letter characterization.)
 
 <span id="channel-coding-theorem"></span>
-**Theorem (Channel Coding Theorem).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.1</span> <span class="math-statement__title">(Channel Coding Theorem)</span>.</p>
+
 
 The capacity for any DMC $$P_{Y\vert X}$$ is
 
@@ -264,7 +306,11 @@ $$
 
 i.e., $$R$$ is achievable iff $$R\leq C$$.
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 We can simplify it like:
 
@@ -281,6 +327,8 @@ more constructively,
 
 1. Achievability: $$C_{I}$$ is achievable, or, for any input distribution $$X$$, there exists a $$(n,M)$$- DMC code s.t. $$\forall \epsilon>0$$, there exists $$N(\epsilon)$$ s.t. $$\forall n\geq N(\epsilon)$$, $$\frac{\log M}{n}> I(X;Y) - \epsilon$$ and $$P_{m}< \epsilon$$.
 1. Converse: Any rate that larger than $$C_{I}$$ is not achievable, i.e., for all $$(n,M)$$- DMC code  $$\forall \epsilon > 0$$, $$\exists N(\epsilon)$$ s.t. $$\forall n\geq N(\epsilon)$$, $$P_{e}< \epsilon$$, then $$\frac{\log M}{n}< C + \epsilon$$
+
+</div>
 
 ## Proof of the Channel Coding Theorem: Converse
 
@@ -345,7 +393,9 @@ g(y) = error \quad\text{ o.w. }
 \end{align}
 $$
 
-**Example.**
+<div class="math-statement math-statement--example" data-statement="example" id="example-4-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 4.1</span>.</p>
+
 
 Let $$M = 3$$, message $$W = i$$ is sent. Let $$E_{j}$$ is the event that $$(x(j),y)\in A$$. We draw a Venn diagram of $$E_{[3]}$$. Then
 
@@ -431,13 +481,17 @@ $$
 
 the achievability will give $$P_{e}\to 0$$, i.e., $$I(X;Y)$$ is achievable.
 
+</div>
+
 ### Examples of one-shot
 
 ## General Description of Channel
 
 Feedback is common in the real-life transmission, like media transmission
 
-**Definition (Generalized Definition of Channel).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.1</span> <span class="math-statement__title">(Generalized Definition of Channel)</span>.</p>
+
 
 A channel is characterized by a sequence of conditional distributions:
 
@@ -449,7 +503,11 @@ P_{Y_{1}\vert X_{1}}, P_{Y_{2}\vert X_{1}X_{2}Y(1)}\cdots P_{Y_{k}\vert X_{(k)}Y
 \end{align}
 $$
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 5.1</span>.</p>
+
 
 $$Y_{n} = \sum_{i = 0}^{K}\alpha_{i}x_{n - i} + \sum_{j = 1}^{L}\beta_{j}X_{n - j} + Z$$, is called a ARMA channel, where the first part is the FIR or $$MA(K - 1)$$ part, while the second is called the IIR, or $$AR(L)$$ part.
 
@@ -459,7 +517,11 @@ the nature question:
 
 2: Channel (the nature): memory v.s. memoriless
 
-**Definition (Encoder in general channel).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.2</span> <span class="math-statement__title">(Encoder in general channel)</span>.</p>
+
 
 An encoder  with (full) feedback with parameter $$(n,M)$$ is a sequence of functions for $$i = 1,2,\cdots n$$
 
@@ -481,7 +543,11 @@ f_{i}: (W,Y_{(i - 1)},,X_{(i - 1)})\mapsto X_{i}
 \end{align}
 $$
 
-**Definition (Timeline).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.3</span> <span class="math-statement__title">(Timeline)</span>.</p>
+
 
 $$
 \begin{align}
@@ -493,7 +559,11 @@ $$
 
 where for full feedback in memorable channels, any RV here are determined/ with post-probability with all previous RVs.
 
-**Axiom (Channel's Assumption).**
+</div>
+
+<div class="math-statement math-statement--axiom" data-statement="axiom" id="axiom-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Axiom 5.1</span> <span class="math-statement__title">(Channel&#39;s Assumption)</span>.</p>
+
 
 1. 	Channels do not look at $$W$$, i.e.
 
@@ -519,7 +589,11 @@ $$
 
 with these assumption, we can characterize the PMF:
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 5.1</span>.</p>
+
 
 $$
 \begin{align}
@@ -531,7 +605,11 @@ $$
 \end{align}
 $$
 
-**Definition (No-Feedback Condition).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-4" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.4</span> <span class="math-statement__title">(No-Feedback Condition)</span>.</p>
+
 
 An encoder has no feedback if
 
@@ -553,7 +631,11 @@ P_{X_{i}\vert X_{(i - 1)},W,Y_{(i - 1)}} = \mathbb{I}_{\{X_{i} = f_{i}(W)\}}
 \end{align}
 $$
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-5-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 5.2</span>.</p>
+
 
 No feedback condition is equivalent to (simple condition)
 
@@ -565,7 +647,11 @@ Y_{(i - 1)}\to X_{(i - 1)}\to X_{i}
 \end{align}
 $$
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 We aim to compute the encoder $$P_{X_{n}\vert X_{(n - 1)}Y_{(n - 1)}}$$ to look if the encoder use feedback.
 
@@ -604,7 +690,11 @@ $$
 
 therefore, $$Y^{n - 1}\to X^{n - 1}\to X_{i}$$ is not true.
 
-**Definition (Causality Condition).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-5" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.5</span> <span class="math-statement__title">(Causality Condition)</span>.</p>
+
 
 the channel is causal if the channel generate $$Y_{i}$$ without looking on future inputs $$X_{(i + 1:n)}$$:
 
@@ -628,11 +718,19 @@ $$
 
 Channel causality and encoder feedback has
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-5-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 5.3</span>.</p>
+
 
 Causality condition is equivalent to no-feedback condition.
 
-**Definition (Memoriless Condition).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-6" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.6</span> <span class="math-statement__title">(Memoriless Condition)</span>.</p>
+
 
 A channel is said to be memoriless if
 
@@ -644,7 +742,11 @@ $$
 \end{align}
 $$
 
-**Lemma (DMC Channel).**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-5-4" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 5.4</span> <span class="math-statement__title">(DMC Channel)</span>.</p>
+
 
 A DMC channel is a memoryless channel with discrete space $$\mathcal{X},\mathcal{Y}$$, without feedback, then we have
 
@@ -656,7 +758,11 @@ P_{Y_{(n)}\vert X_{(n)}} =\prod_{i\in(n)} P_{Y_{i}\vert X_{i}}
 \end{align}
 $$
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 $$
 \begin{align}
@@ -674,7 +780,11 @@ where
 b: no-feedback condition (causality), or simple condition<br>
 c: memoryless condition.
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-5-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 5.2</span>.</p>
+
 
 Consider 2 channels  with $$Y_{(n)} = X_{(n)} + Z_{(n),1}$$ and $$Y_{(n)} = X_{(n)} + Z_{(n),2}$$, where $$X\sim Ber(\frac{1}{2})$$, $$Z_{i}\sim Ber(p_{i})$$, $$Z_{1},Z_{2},X$$ independent.
 
@@ -694,7 +804,11 @@ $$
 
 they do not satisfy the DMC condition because the encoder uses feedback, introducing non-causality.
 
-**Definition (Stationary DMC).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-7" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.7</span> <span class="math-statement__title">(Stationary DMC)</span>.</p>
+
 
 A DMC is stationary if
 
@@ -708,7 +822,11 @@ $$
 
 so the problem formulation for the DMC channel is actually discrete, memoryless, stationery channel without feedback. We give the problem same as the previous sections
 
-**Definition ($$(n,M)$$ DMC code).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-8" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.8</span> <span class="math-statement__title">($$(n,M)$$ DMC code)</span>.</p>
+
 
 A coding system $$(n,M)$$ for a MDC $$P_{Y\vert X}$$ is a pair of mapping $$(f,g)$$:
 
@@ -738,7 +856,11 @@ where in $$(a)$$ we assume $$W\sim \mathcal{U}([M])$$
 
 This problem is like a $$M$$-ary Hypothesis testing, where the encoder chooses $$M$$ sequences in $$\mathcal{X}^{n}$$, and decoder is to find $$M$$ decision region.
 
-**Definition (Channel Code with (1-depth) feedback).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-9" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.9</span> <span class="math-statement__title">(Channel Code with (1-depth) feedback)</span>.</p>
+
 
 A $$(n,M)$$ channel code with MA(1) feedback for DMC $$P_{Y\vert X}$$ is defined with an encoder $$f$$ and decoder $$g$$ s.t.
 
@@ -752,5 +874,7 @@ g:\mathcal{Y}^{n}\to [M], \text{ or }& g: Y^{n}\mapsto \hat{W}
 $$
 
 where $$n$$ is called the block length, $$\{f(w)\}_{w\in[M]}$$ is called codewords, $$M$$ is called number of codewords, RV $$W\sim \mathcal{U}([M])$$ is called message. If $$Y_{(n)}$$ is generated with $$X_{(n)}$$ via a DMC, the code is called a DMC code.
+
+</div>
 
 ### Polynomial-time: Polar Code

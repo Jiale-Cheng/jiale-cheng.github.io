@@ -8,6 +8,9 @@
     {% if page.numbering %}
     <link rel="stylesheet" href="{{ '/assets/css/counter.css' | relative_url }}">
     {% endif %}
+    {% if page.statements %}
+    <link rel="stylesheet" href="{{ '/assets/css/statements.css' | relative_url }}">
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/site-nav.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/blog-theme.css' | relative_url }}">
     {% if page.layout == 'searchpage' %}
@@ -24,6 +27,9 @@
     {% include markdown-enhancements/highlight.html %}
     {% endif %}
     {% include footer.html %}
+    {% if page.statements %}
+    <script src="{{ '/assets/js/statements.js' | relative_url }}"></script>
+    {% endif %}
     <script src="{{ '/assets/js/blog-content.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/blog-nav.js' | relative_url }}"></script>
   </body>

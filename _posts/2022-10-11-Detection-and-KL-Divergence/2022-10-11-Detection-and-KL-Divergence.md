@@ -22,12 +22,18 @@ In data compression, consider $$X_{[n]}\stackrel{i.i.d}{\sim}Ber(p)$$, then they
 
 Suppose one  wants to detect whether two of the scenarios is true: ($$H_{1}$$): $$X\sim P_{0}$$, or ($$H_{2}$$): $$X\sim P_{1}$$. One observe $$x^{n}$$ generated i.i.d. with $$X$$. A detector is a function $$f: \mathcal{X}^{n}\to \{0,1\}$$
 
-**Definition (Decision Region).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.1</span> <span class="math-statement__title">(Decision Region)</span>.</p>
+
 
 If $$x_{(n)}\in A_{n}$$ then detect $$X\sim P_{0}$$, or not present<br>
 If $$x_{(n)}\in A_{n}^{c}$$ then detect $$X\sim P_{1}$$, or present. $$A_{n}$$ is called rejection region.
 
-**Definition (2 kinds of errors).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.2</span> <span class="math-statement__title">(2 kinds of errors)</span>.</p>
+
 
 $$
 \begin{align}
@@ -39,7 +45,11 @@ $$
 One key question is to minimize $$\beta$$ s.t. $$\alpha \leq \epsilon$$ (fixed), and how to design the optimal decision region. This is called a non-Bayes estimation.
 (*Note:* Bayes estimation is when the prior probability of parameters to be estimated is known.)
 
-**Theorem (Neyman Pearson Theorem).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-1-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 1.1</span> <span class="math-statement__title">(Neyman Pearson Theorem)</span>.</p>
+
 
 Let $$T>0$$, $$A_{n}(T)$$ is the decosion region with LRT with threshold $$T$$, i.e.,
 
@@ -54,7 +64,11 @@ Let $$\alpha ^{\star}(T) = P_{0}(A_{n}^{C}(T))$$, and $$\beta ^{\star}(T) = P_{1
 (*Note:* We call $$A_{n}(T)$$ the NP region.)
 (*Note:* This works for any finite $$n$$.)
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 ![Performance of Neyman-Pearson detection as false-alarm and mis-detection probabilities vary with the threshold]({{ '/assets/images/blog/detection-kl/NPD.png' | relative_url }})
 *Performance of NP Detection as FA and MD with $$T$$*
@@ -87,15 +101,23 @@ $$
 
 which is a Lipshitz condition saying that $$\alpha \leq \alpha ^{\star}\Rightarrow \beta \leq \beta ^{\star}$$.
 
+</div>
+
 ## Asymptotic NP Detector
 
-**Definition (Asymptotic NP Detection).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.1</span> <span class="math-statement__title">(Asymptotic NP Detection)</span>.</p>
+
 
 A decision region with parameters $$n$$, i.e., $$A_{n}\subseteq \mathcal{X}^{n}$$. A non-negative $$D\geq 0$$ is said to be achievable if $$\forall \epsilon>0$$, there exists a detector $$\{f_{n}\}_{n\in\mathbb{N}}$$ and $$N(\epsilon)$$ s.t. $$\forall n\geq N(\epsilon)$$, $$\alpha_{n} = P_{0}(A_{n}^{C})<\epsilon$$, and $$\frac{\log \beta_{n}}{n}\leq - D + \epsilon$$.
 
 (*Note:* Alternatively, $$D$$ is said to be achievable if $$\forall \epsilon>0$$, there exists a sequence of detector $$\{f_{n}\}$$ s.t. $$\alpha_{n}\to 0$$ and $$-\frac{\log \beta_{n}}{n}\to D$$) .
 
-**Definition (Capacity).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.2</span> <span class="math-statement__title">(Capacity)</span>.</p>
+
 
 $$
 \begin{align}
@@ -103,7 +125,11 @@ D^{\star} = \sup \{D: D\text{ is achievable}\}
 \end{align}
 $$
 
-**Theorem (Capacity of NP Detection with zero FA, Stein's Lemma).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.1</span> <span class="math-statement__title">(Capacity of NP Detection with zero FA, Stein&#39;s Lemma)</span>.</p>
+
 
 $$
 \begin{align}
@@ -111,7 +137,11 @@ D^{\star} = D(P_{0}\Vert P_{1})
 \end{align}
 $$
 
-**Definition (Functional Typical).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.3</span> <span class="math-statement__title">(Functional Typical)</span>.</p>
+
 
 Let $$f:\mathcal{X}\to [1:n]$$, and $$D(X) = \mathbb{E}[f(X)]$$. For a sequence $$x^{n}$$ generated from $$n$$ i.i.d. RV $$X_{i}\sim X$$, $$x^{n}$$ is said to be $$f$$-typical iff
 
@@ -121,10 +151,16 @@ x^{n}\in \mathcal{T}_{f,\epsilon}^{n}\iff \left\vert  \frac{\sum_{n} f(x)}{n} - 
 \end{align}
 $$
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.1</span>.</p>
+
 
 1. $$f(x) =- \log p(x)$$, then it becomes the Week typical set.<br>
 2. $$f(x) = \log \frac{P(x)}{Q(x)}$$, then the set becomes the relative typical set $$\mathcal{T}_{\epsilon}^{n}(P_{1}\Vert P_{2})$$
+
+</div>
 
 ## Bayes Hypothesis Testing
 
@@ -138,7 +174,9 @@ $$
 
 An important observation is that the boundary of $$A_{n}$$, i.e., the region to make $$H_{1}$$, is with type.
 
-**Theorem (Sanov's Theorem).**
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-3-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 3.1</span> <span class="math-statement__title">(Sanov&#39;s Theorem)</span>.</p>
+
 
 Let $$X_{(n)}$$ be $$n$$ i.i.d. DRV. $$E$$ be a collection of all types in of $$x^{n}$$. We have
 
@@ -274,6 +312,8 @@ $$
 
 so,
 
+</div>
+
 ## $$P_{e}$$ and Total Variation
 
 For distribution $$P,Q$$, $$TV = \frac{1}{2}\Vert P - Q\Vert $$.
@@ -297,7 +337,9 @@ TV(P_{0},P_{1}) =& \frac{1}{2}\sum_{x^{n}\in A_{n}}\vert P_{1}(x^{n}) - P_{0}(x^
 \end{align}
 $$
 
-**Theorem (Tensorization).**
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-4-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 4.1</span> <span class="math-statement__title">(Tensorization)</span>.</p>
+
 
 1. N-P Testing Rate:
 
@@ -329,11 +371,15 @@ $$
 \end{align}
 $$
 
+</div>
+
 ## Bayes Estimation Theory
 
 Let $$X_{(n)}$$ be i.i.d. observation with PMF $$P_{X;\theta}$$ with unknown parameter $$\theta$$. The objective is to estimate $$\theta$$ as a function of $$x^{n}$$ as $$\hat{\theta} = T(X_{(n)})$$. We call $$\hat{\theta}$$ the estimation and $$T$$ the estimator.
 
-**Definition (Performance of Estimator).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.1</span> <span class="math-statement__title">(Performance of Estimator)</span>.</p>
+
 
 We say $$T$$ or $$\hat{\theta}$$ is
 
@@ -343,7 +389,11 @@ We say $$T$$ or $$\hat{\theta}$$ is
 
 Any estimator which is unbiased and has minimal variance is called Min variance Unbiased Estimator (MVUE).
 
-**Theorem (Cramer-Rao Bound).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 5.1</span> <span class="math-statement__title">(Cramer-Rao Bound)</span>.</p>
+
 
 Any unbiased estimator $$T:\mathcal{X}^{n}\to \Theta$$ has bound
 
@@ -363,7 +413,11 @@ $$
 
 (*Note:* Larger Fisher Information, the smaller the minimum variance will be, the better the MVUE performs.)
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 $$
 \begin{align}
@@ -390,7 +444,11 @@ $$
 \end{align}
 $$
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 5.1</span>.</p>
+
 
 Let i.i.d. $$X_{(n)}\sim Ber(\theta)$$. Testing the performance of $$T(X_{(n)}) = \bar{X} = \frac{1}{n}\sum X_{(n)}$$.
 
@@ -407,3 +465,4 @@ J(\theta) = Var\left[ \frac{ \partial }{ \partial \theta }\log P_{X;\theta}(X) \
 $$
 
 This estimation is best because $$\frac{1}{nJ(\theta)} = \frac{\theta(1 - \theta)}{n}$$.
+</div>

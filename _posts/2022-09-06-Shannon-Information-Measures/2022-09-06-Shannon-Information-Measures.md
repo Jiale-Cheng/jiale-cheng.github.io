@@ -64,7 +64,9 @@ $$
 We will later see that probability distributions with 0 probability masses are very delicate, and they need to be handled with great care.
 
 
-**Definition.**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.1</span>.</p>
+
 
 Two random variables $$X$$ and $$Y$$ are independent, denoted by $$X\perp Y$$ iff
 
@@ -87,12 +89,20 @@ For more than 2 variables, they are the same:
 - Pairwise Independence: $$\forall i,j\in [n], i\neq j, X_i, X_j$$ are independence.
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.1</span>.</p>
+
 
 Mutual independence implies pairwise independence but the converse is not true.
 
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.2</span>.</p>
+
 
 (Conditional Independent):<br>
 For random variables $$X,Y,Z$$, we say $$X$$ is independent of $$Z$$ conditioning on $$Y$$ (denoted by $$X\perp Y\mid Z$$) iff
@@ -123,7 +133,11 @@ $$
 
 <span id="factorization-and-conditional-independence"></span>
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.2</span>.</p>
+
 
 For random variables $$X,Y,Z$$, $$X\perp Y\mid Z$$ iff there exists functions $$a:\mathcal{X}\times \mathcal{Y}\to [0,1]$$ and $$b:\mathcal{Y}\times \mathcal{Z}\to [0,1]$$ such that:
 
@@ -137,7 +151,11 @@ p(x,y,z)=a(x,y)b(y,z) ,\quad \forall x\in \mathcal{X},y\in\mathcal{Y},z\in \math
 $$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 we only need to proof the 'if' part as the other side follows immediately from the definition.
 Assume:
@@ -170,7 +188,11 @@ $$
 For $$p(y)=0$$, we have $$0\leq p(x,y,z)\leq p(y)=0$$, hence $$X\perp Y\mid Z$$.
 
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.3</span>.</p>
+
 
 (Markov Chain):<br>
 For $$n\geq 3$$, ramdom variables $$X_1, \cdots X_n$$ forms a  Markov chain denoted by $$X_1\to X_2\to \cdots\to X_n$$ iff:
@@ -199,14 +221,22 @@ p(x_1,x_2)p(x_3\mid x_2)\cdots p(x_n\mid x_{n-1}), &\quad p(x_2)p(x_3)\cdots p(x
 $$
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.3</span>.</p>
+
 
 <span id="conditional-independence-markov-chain"></span>
 
 $$X\perp Y\mid Z \iff X\to Y\to Z$$.
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-4" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.4</span>.</p>
+
 
 Let $$X_1,\cdots X_n$$ be random variables, then the following propositions are equivalent:
 
@@ -239,7 +269,11 @@ We now show that distributions with zero probability masses are very delicate in
 
 <span id="intersection-axiom"></span>
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-5" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.5</span>.</p>
+
 
 (Intersection Axiom):<br>
 Let $$X_1,X_2,X_3,X_4$$ be 4 RVs such that $$p(x_1,x_2,x_3,x_4)>0$$ holds for all $$x_1,x_2,x_3,x_4$$. Then:
@@ -254,7 +288,11 @@ $$
 $$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 By the definition of conditional independent, we have:
 
@@ -310,6 +348,8 @@ which indicates $$X_1\perp (X_3,x_4)\mid X_2$$. A counter-example constructed ab
 From the above disscussion, we find that probability distributions with zero masses are somewhat weird. For strictly positive distributions, the conditional independence is often related to factorization problem of distribution function, seen in [Factorization criterion for conditional independence](#factorization-and-conditional-independence).
 
 
+</div>
+
 #### Shannon's Information Measures
 
 
@@ -319,7 +359,9 @@ Here we start with some axioms of discrete RV $$X$$ with finite alphabet $$\math
 <span id="information-measure-axioms"></span>
 
 
-**Axiom (Axioms for measure the amount of information).**
+<div class="math-statement math-statement--axiom" data-statement="axiom" id="axiom-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Axiom 2.1</span> <span class="math-statement__title">(Axioms for measure the amount of information)</span>.</p>
+
 
 
 1. (Monotonicity): Let $$X\sim U(\mathcal{X})$$ with $$\lvert \mathcal{X}\rvert= r$$, the measure of uncertainty $$H(\frac{1}{r}\mathbf{1}_{r}) =f(r)$$ is monotonously increasing with $$r$$.
@@ -328,12 +370,20 @@ Here we start with some axioms of discrete RV $$X$$ with finite alphabet $$\math
 1. (Additivity): $$X,Y$$ be uniform DRV with $$\lvert \mathcal{X}\rvert= r$$, $$\lvert \mathcal{Y}\rvert= l$$, then$$f(rl) = f(r) + f(l)$$.
 
 
-**Theorem (Structure of $$f(r)$$).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-6" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.6</span> <span class="math-statement__title">(Structure of $$f(r)$$)</span>.</p>
+
 
 $$f(r) =\log r$$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 Let $$\theta$$ be an arbitrary integer, then there exists inter $$k$$, s.t., $$\forall r\in \mathbb{N}_{+}$$, $$r^{k}\leq 2^{\theta}\leq r^{k + 1}$$. Then by the [information-measure axioms](#information-measure-axioms), we have:
 
@@ -375,7 +425,11 @@ $$
 The constant do not affect when we want to take a measure on $$X$$. So we always treat $$f(2) = 1$$ and $$f(r) =\log r$$
 
 
-**Axiom (Grouping/Fietition Axiom for non-uniform DRV $$X$$ with finite alphabet).**
+</div>
+
+<div class="math-statement math-statement--axiom" data-statement="axiom" id="axiom-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Axiom 2.2</span> <span class="math-statement__title">(Grouping/Fietition Axiom for non-uniform DRV $$X$$ with finite alphabet)</span>.</p>
+
 
 For $$X$$ is non-uniform with distribution $$\{p_{0}\cdots p_{r - 1}\}$$, and for any $$A\subseteq [0:r - 1]$$, the one-hot/indicator mapping (many-to-one) $$m(i)$$ which maps $$A$$ to $$0$$, while $$[0:r - 1] /A$$ to $$1$$, we have
 
@@ -395,7 +449,11 @@ where $$\alpha_{0} = \sum_{i\in A}p_{i}$$. $$\alpha_{1} = \sum_{i\in [0:r - 1] /
 As the $$H$$ is only the function of distribution, i.e., $$H$$ is invariable with permutation of distributions, we can take a trivial $$A =[0:k - 1]$$ for some $$k\in[r - 1]$$ w.l.o.g.
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.1</span>.</p>
+
 
 1. $$\mathbf{p} =[\frac{1}{2},\frac{1}{4},\frac{1}{4}]$$. Take $$k = 1$$, then $$\alpha_{0} = \frac{1}{2}$$, $$\alpha_{1} = \frac{1}{2}$$. $$H(\frac{1}{2},\frac{1}{4},\frac{1}{4}) = H(\frac{1}{2},\frac{1}{2}) + \frac{1}{2}H(1) + \frac{1}{2}H(\frac{1}{2},\frac{1}{2}) = \frac{3}{2}$$.<br>
 2. Bernoulli $$X\sim Ber(p)$$ for $$p\in \mathbb{Q}$$. $$\mathbf{p} =(p,1 - p) =(\frac{\alpha}{\beta}, \frac{\beta - \alpha}{\beta})$$. We create a uniform DRV $$\mathbf{p}_{Y} = U(\mathcal{Y})$$ where $$\lvert \mathcal{Y}\rvert= \beta$$. Let $$k = \alpha$$, then for $$Y$$, we apply the grouping axiom
@@ -411,17 +469,29 @@ H(p,1 - p)=& -p\log p -(1 - p)\log (1 - p)
 $$
 
 
-**Axiom (Continuity).**
+</div>
+
+<div class="math-statement math-statement--axiom" data-statement="axiom" id="axiom-2-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Axiom 2.3</span> <span class="math-statement__title">(Continuity)</span>.</p>
+
 
 If $$\mathbf{p} =(p,1 - p)$$, then $$g(p) =H(\mathbf{p})$$ is a continuous function of $$p$$
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.2</span>.</p>
+
 
 Bernoulli $$X\sim Ber(p)$$. For $$\forall p\in [0,1]$$, we can find a sequence of rational numbers $$p_{(\mathbb{N}_{+})}$$ s.t. $$\lim\limits_{n \to \infty}p_{n} = p$$, and we have $$H(p,1 - p) =\lim\limits_{n \to \infty}g(p_{n}).$$
 
 
-**Theorem (Shannon Entropy).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-7" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.7</span> <span class="math-statement__title">(Shannon Entropy)</span>.</p>
+
 
 If $$X\sim \mathbf{p} = p_{(0:r - 1)}$$, then
 
@@ -435,7 +505,11 @@ H(X) = H(\mathbf{p}) =- \sum_{i = 0}^{r - 1}p_{i}\log p_{i}
 $$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 The proof is done by induction of $$r$$. When $$r = 1,2$$ the results holds. Then we assume $$r - 2$$ holds. Then for $$r - 1$$ case,
 
@@ -456,7 +530,11 @@ Entropy has a good formula that can be defined in expectation sense.
 
 <span id="definition-of-entropy"></span>
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-4" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.4</span>.</p>
+
 
 (Entropy defined in Expectation sense):<br>
 Consider a discrete probability space $$(\mathcal{X}, \mathcal{P}(\mathcal{X}), P)$$ <br>
@@ -502,7 +580,11 @@ Entropy can also be naturally introduced by answering the question "What's the a
 
 <span id="properties-of-entropy"></span>
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-8" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.8</span>.</p>
+
 
 (Properities of Entropy)<br>
 1. For mutually independent events $$A_1,\cdots, A_N$$:
@@ -521,7 +603,11 @@ $$
 3.  $$H_b(X)=(\log_ba)H_a(X)$$.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 1. for mutually independent events, we have:
 
@@ -553,7 +639,11 @@ We come to a scenario of multi-dimension variables. It is the same when talking 
 
 <span id="joint-entropy"></span>
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-5" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.5</span>.</p>
+
 
 (Joint Entropy):<br>
 1. the joint entropy of a sequence of discrete random variables $$\mathbf{X}= (X_1,\cdots,X_N)$$ with a joint distribution $$p_{\mathbf{X}}: \mathcal{X}_1\times\cdots \times \mathcal{X}_N\to [0,1]$$ is:
@@ -585,7 +675,11 @@ conditional entropy describes the amount of information of one set of RVs when a
 
 <span id="conditional-entropy"></span>
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-6" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.6</span>.</p>
+
 
 (Conditional Entropy):<br>
 1. the conditional entropy of $$\mathbf{X}=(X_1,\cdots,X_N)$$ given $$\mathbf{Y}=(Y_1,\cdots,Y_M)$$ is:
@@ -618,7 +712,11 @@ $$
 
 <span id="chain-rule-entropy"></span>
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-9" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.9</span>.</p>
+
 
 (Chain Rule for Entropy):<br>
 
@@ -633,7 +731,11 @@ H(X_1,\cdots,X_N)=&\sum_{n=1}^{N}H(X_i\mid X_1,\cdots, X_{i-1})
 $$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 We use induction to prove. On the one hand, for random variable pairs $$(X,Y)$$, we have:
 
@@ -693,6 +795,8 @@ $$
 holds for every pair $$(X,Y)$$. We reclaim that only the distribution matters, so $$H$$ can be seen as a functional of distributions.
 
 
+</div>
+
 ##### Measure of Discrimination: Relative Entropy
 
 In this section, we assume RV $$X\in \mathcal{X}$$ has two distributions $$P,Q$$, and we need to give a measure to discriminate the distributions. A definition of distance between 2 distributions $$p$$ and $$q$$ is the first we need (One preliminaries to be recognized is that the distance shall take 0 iff $$p=q$$):
@@ -700,7 +804,9 @@ In this section, we assume RV $$X\in \mathcal{X}$$ has two distributions $$P,Q$$
 **Note.** In Information Theory, we always focus on the distribution, so two RV can be seen as equal as long as they are equal in probability.
 
 
-**Definition.**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-7" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.7</span>.</p>
+
 
 (variational distance):<br>
 The variational distance between probability distributions $$p$$ and $$q$$ defined on a common alphabet $$\mathcal{X}$$ is the $$\mathcal{L}^1$$ distance:
@@ -715,7 +821,11 @@ V(p,q)=\sum_{x\in\mathcal{X}}\lvert p(x)-q(x)\rvert
 $$
 
 
-**Lemma (Metric Properties of Variational Distance).**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-10" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.10</span> <span class="math-statement__title">(Metric Properties of Variational Distance)</span>.</p>
+
 
 $$V(\cdot,\cdot)$$ is a distance metric, i.e.,
 
@@ -734,7 +844,12 @@ $$V(\cdot,\cdot)$$ is a distance metric, i.e.,
 
 To give a measure on the discrimination of two distributions $$P,Q$$, we first give some desire for that measure.
 
-**Axiom (Axioms for Measure of Distributions Distance).** For a DRV $$X$$ on a finite alphabet $$\mathcal{X}$$ and two distribution $$P = p_{(0:r -1)},Q = q_{(0:r - 1)}$$, our measure on the discrimination of $$P$$ and $$Q$$, denoted by $$D(P\Vert Q)$$, must have the following constraints:
+</div>
+
+<div class="math-statement math-statement--axiom" data-statement="axiom" id="axiom-2-4" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Axiom 2.4</span> <span class="math-statement__title">(Axioms for Measure of Distributions Distance)</span>.</p>
+
+For a DRV $$X$$ on a finite alphabet $$\mathcal{X}$$ and two distribution $$P = p_{(0:r -1)},Q = q_{(0:r - 1)}$$, our measure on the discrimination of $$P$$ and $$Q$$, denoted by $$D(P\Vert Q)$$, must have the following constraints:
 
 
 1. Invariance: $$D$$ is invariant under a one-to-one transformation
@@ -758,7 +873,11 @@ D(p_{(0:r + 1)}\Vert q_{0:r - 1}) =& D((p_{0} + p_{1}, p_{(2:r - 1)})\Vert (q_{0
 $$
 
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-11" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.11</span>.</p>
+
 
 Basic on the axioms, there is a unique function (up to scaling) $$D\left( p_{(0:r - 1)}\Vert q_{(0:r - 1)} \right)$$ s.t.
 
@@ -777,7 +896,11 @@ This function is called the relative entropy with the following formal definitio
 
 <span id="relative-entropy"></span>
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-8" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.8</span>.</p>
+
 
 (Relative Entropy, Kullback-Leibler Distance):<br>
 Let $$X$$ be (a) random variable(s), $$p$$ is the distribution of $$X$$ and $$q$$ are the estimation distribution of $$X$$, then the relative entropy (or Kullback-Leibler Distance, or information divergence, divergence) between $$p$$ and $$q$$ is:
@@ -812,7 +935,11 @@ $$
 Sometimes, to avoid $$\infty$$ terms, we require $$p_{i} = 0$$ if $$q_{i} = 0$$, i.e., $$p$$ is absolutely continuous w.r.t. $$Q$$, denoted by $$(P<<Q)$$.
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-12" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.12</span>.</p>
+
 
 (Jensen's Inequality):
 Let $$f$$ be a convex function, then for $$X$$ with any distribution,
@@ -830,7 +957,11 @@ $$
 if $$f$$ is strictly convex, the equality holds iff $$X = a$$ w.p. $$1$$.
 
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-13" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.13</span>.</p>
+
 
 (Properties of divergence):
 
@@ -844,7 +975,11 @@ if $$f$$ is strictly convex, the equality holds iff $$X = a$$ w.p. $$1$$.
 - (Does not satisfy Triangle inequality):
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 1. Proof for the **Non-negative.** If $$q(x)=0$$ for $$x\in\mathcal{S}_p$$, $$D(p\Vert q)=\infty$$ and true. So we only assume that $$\forall x\in \mathcal{S}_p, q(x)>0$$, i.e., $$\mathcal{S}_p\subseteq \mathcal{S}_q$$. We have
 
@@ -864,7 +999,11 @@ $$
 the inequality is from Jensen's Inequality.
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.3</span>.</p>
+
 
 If $$Q$$ is uniform (to maximum entropy on given alphabet), $$D(P\Vert Q) =\log r - H(X) = H(Q) - H(P)\geq 0$$ w.e.iff $$P$$ is uniform. I.e., we have a natural bound for $$H(X)$$:
 
@@ -880,7 +1019,11 @@ $$
 
 <span id="conditional-relative-entropy"></span>
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-9" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.9</span>.</p>
+
 
 (Conditional Relative Entropy):<br>
 1. Let $$X,Y$$ be a pair of variables with joint distribution $$p_{XY}$$ and empirical distribution $$q_{X,Y}$$. The relative entropy of $$X$$ condition $$Y$$ is defined as:
@@ -904,7 +1047,11 @@ Similarly, the relationship between the relative entropy of joint distributions 
 
 <span id="chain-rule-for-relative-entropy"></span>
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-14" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.14</span>.</p>
+
 
 (Chain Rule for Relative Entropy):<br>
 
@@ -918,7 +1065,11 @@ D(p_{XY}\Vert q_{XY})=D(p_Y\Vert q_Y)+D(p_{X\mid Y}\Vert q_{X\mid Y})
 $$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 
 $$
@@ -933,6 +1084,8 @@ D(&p_{XY}\Vert q_{XY})\\
 \end{align}
 $$
 
+
+</div>
 
 ##### Measure of Dependency: Mutual Information
 
@@ -954,7 +1107,9 @@ when $$\rho = 0$$ we say $$X,Y$$ are uncorrelated. One deficient of $$\rho$$ is 
 
 <span id="mutual-information"></span>
 
-**Definition.**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-10" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.10</span>.</p>
+
 
 (Mutual Information):<br>
 1. Let $$X,Y$$ be 2 random variables. The mutual information between $$X$$ and $$Y$$ is defined as the relative entropy between the joint distribution $$p_{XY}$$ and the product of edge distributions $$p_Xp_Y$$ :
@@ -1002,7 +1157,11 @@ We show that mutual information is non-negative,  symmetric, and upper bounded:
 
 <span id="properties-of-mutual-information"></span>
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-15" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.15</span>.</p>
+
 
 (Property of Mutual Information):
 
@@ -1031,7 +1190,11 @@ $$
 **Note.** Alternatively, Mutual information measures the amount of information that one set of random variable(s) contains about another set, or the reduction of entropy of one set of RVs by knowing another set of RVs.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 Noticing that 1 is equivalent to the non-negativity of relative entropy, 3 can be derived from 2 and 4 can be derived from the definition of mutual information ($$\ref{DefMutualInformation}$$), we only prove 2. In fact,
 
@@ -1050,7 +1213,11 @@ $$
 
 For conditional mutual information, we have:
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-16" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.16</span>.</p>
+
 
 
 $$
@@ -1076,7 +1243,11 @@ According to the [definition of mutual information](#mutual-information) and the
 
 <span id="chain-rule-information"></span>
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-17" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.17</span>.</p>
+
 
 (Chain Rule for Mutual Information):<br>
 
@@ -1090,7 +1261,11 @@ I(X_1,\cdots , X_N; \mathbf{Y}\mid \mathbf{Z})=\sum_{n=1}^{N}I(X_n;\mathbf{Y}\mi
 $$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 We get the proof by [definition of mutual information](#mutual-information) and [chain rule for entropy](#chain-rule-entropy) that:
 
@@ -1125,12 +1300,16 @@ $$
 and notice that conditional mutual information is a special form of conditional relative entropy, we often pay our concentration to the properties of relative entropy.
 
 
+</div>
+
 #### Continuity of Shannon's Measures under Finite Alphabets
 
 
 Using variation distance metric, we can define the continuous property on the Variation distance sense. We define the continuity of functional $$H:\mathcal{P}_{\mathcal{X}}\to \mathbb{R}_+$$ in variational distance, where $$\mathcal{P}_{\mathcal{X}}$$ is the set of all possible distributions on a finite alphabet $$\mathcal{X}$$.
 
-**Definition.**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-11" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.11</span>.</p>
+
 
 We say the functional $$F:\mathcal{P}_{\mathcal{X}}\to \mathbb{R}$$ to be continuous at distribution $$p\in \mathcal{P}_{\mathcal{X}}$$ iff $$\forall \epsilon >0,\exists \delta >0$$ such that
 
@@ -1150,12 +1329,20 @@ $$
 **Note.** For variational distance, $$\mathcal{P}_{\mathcal{X}}$$ is a closed set, and therefore uniform continuous is equivalently satisfied.
 
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-18" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.18</span>.</p>
+
 
 All Shannon's information measures are continuous functionals w.r.t. convergence in variational distance under finite and fixed alphabets.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 We first prove that the entropy function $$H:\mathcal{P}_{\mathcal{X}}\to \mathbb{R}^*$$:
 
@@ -1253,7 +1440,11 @@ So $$I_{X;Y\mid Z}(p_{XYZ})$$ is a continuous functional of $$p_{XYZ}$$.
 
 In analytics, $$\mathcal{L}^1$$ distance is equivalent to $$\mathcal{L}^2$$ distance, so we have a similar conclusion that:
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-19" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.19</span>.</p>
+
 
 All Shannon's information measures are continuous functionals w.r.t. convergence in Euclidean distance under finite and fixed alphabets.
 
@@ -1261,12 +1452,16 @@ All Shannon's information measures are continuous functionals w.r.t. convergence
 Is is worthy of attention that this continuity of Shannon's measures are delicate: specified distance, fixed and finite alphabets are indispensable.  red{We show that for not fixed alphabets, Shannon's information measures are everywhere discontinuous.}
 
 
+</div>
+
 #### Information Inequalities
 
 We introduces some mathematical results first.
 
 
-**Lemma.**
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-20" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.20</span>.</p>
+
 
 (Log-sum Inequality):<br>
 $$\forall a_1,a_2\cdots >0, b_1,b_2\cdots \geq 0$$ such that $$\sum_{i}a_i<\infty, \sum_i b_i< \infty$$
@@ -1284,7 +1479,11 @@ $$
 with the convention that $$\frac{a_i}{0}=\infty$$. Equality takes iff $$\forall i, \frac{a_i}{b_i}$$ is a constant.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 Let
 
@@ -1315,7 +1514,11 @@ equality holds iff $$a'_i=b'_i$$, or $$\forall i, \frac{a_i}{b_i}$$ is a constan
 
 <span id="pinskers-bound"></span>
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-21" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.21</span>.</p>
+
 
 (Pinsker's Bound):
 
@@ -1332,7 +1535,11 @@ $$
 This bound links the 2 distance above, showing that if $$D(p\Vert q)$$ or $$D(q\Vert p)$$ is small, then so is $$V(p,q)$$. The convergence in divergence is a stronger notion of convergence than in variational distance.
 
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-22" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.22</span>.</p>
+
 
 (Strong Additivity):<br>
 All Shannon's information measures are nonnegative, i.e., for RVS $$X,Y,Z$$,
@@ -1354,7 +1561,11 @@ with equality iff $$X\perp Y\mid Z$$.
 
 .
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 It can be easily proved by
 
@@ -1383,7 +1594,11 @@ $$
 which is the definition of $$X\perp Y\mid Z$$.
 
 
-**Lemma.** (Equality Conditions of Shannon's Measures):
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-23" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.23</span> <span class="math-statement__title">(Equality Conditions of Shannon&#39;s Measures)</span>.</p>
+
 
 
 - $$H(X)=0 \iff X$$ is deterministic.
@@ -1413,7 +1628,11 @@ so information inequality only envolves entropies (possibly with constant terms)
 <span id="conditioning-reduces-entropy"></span>
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-24" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.24</span>.</p>
+
 
 (Conditions Does Not Increase Entropy):
 
@@ -1430,7 +1649,11 @@ $$
 with equality iff $$X$$ and $$Y$$ are independent.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 $$H(Y\mid X)=H(Y)-I(X;Y)\leq H(Y)$$. Equality condition: $$I(X;Y)=0$$.
 
@@ -1443,7 +1666,11 @@ $$H(Y\mid X)=H(Y)-I(X;Y)\leq H(Y)$$. Equality condition: $$I(X;Y)=0$$.
 
 <span id="independence-bound-for-entropy"></span>
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-25" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.25</span>.</p>
+
 
 (Independence Bound for Entropy):
 
@@ -1460,14 +1687,22 @@ $$
 with equality iff $$X_1,\cdots X_n$$ are mutually independent.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 This proof follows from [Conditioning reduces entropy](#conditioning-reduces-entropy) and the [chain rule for entropy](#chain-rule-entropy). Equality is seen as the alternative definition of mutual independence.
 
 
 <span id="associative-law-of-mutual-information"></span>
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-26" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.26</span>.</p>
+
 
 (Associative Law of Mutual Information):
 
@@ -1484,7 +1719,11 @@ $$
 with equality iff $$X\to Y\to Z$$ forms a Markov chain.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 By the [chain rule for mutual information](#chain-rule-information),
 
@@ -1501,7 +1740,11 @@ $$
 with equality iff $$I(X;Z\mid Y)=0$$, or $$X\to Y\to Z$$ forms a Markov chain.
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-27" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.27</span>.</p>
+
 
 (Data Processing Inequality):
 
@@ -1532,7 +1775,11 @@ I(U;V)\leq I(X;Y)\label{Data Processing Inequality2}
 $$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 $$X\to Y\to Z\iff X\perp Y\mid Z\iff I(X;Z\mid Y)=0$$. then
 
@@ -1565,6 +1812,8 @@ combining the 2 inequalities, we get ($$\ref{Data Processing Inequality2}$$).
 We claim that the inequalities in this section do not require $$\mathcal{X}$$ to be a finite set. Actually, the inequality can be derived directly from the corresponding definitions, regardless of $$I$$-to-$$H$$ equalities ($$\ref{I to H1}$$), ($$\ref{I to H2}$$) and ($$\ref{I to H3}$$).
 
 
+</div>
+
 #### Measure Bounds and Fano's Inequality
 
 We give an upper bound on Shannon's measures in terms of the size of the alphabet.
@@ -1572,7 +1821,9 @@ We give an upper bound on Shannon's measures in terms of the size of the alphabe
 
 <span id="uniform-distribution-maximizes-entropy"></span>
 
-**Lemma.**
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-28" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.28</span>.</p>
+
 
 (Uniform Distribution Maximizes Entropy):<br>
 For RV $$X$$
@@ -1590,7 +1841,11 @@ $$
 This upper bound is tight iff $$X$$ is u.d. on $$\mathcal{X}$$.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 Let $$u:\mathcal{X}\to [0,1]$$ be a u.d. on$$\mathcal{X}$$, i.e. $$\forall x\in\mathcal{X}, u(x)=\frac{1}{\lvert \mathcal{X}\rvert}$$. Then we have:
 
@@ -1609,7 +1864,11 @@ Equality holds iff $$D(p\Vert u)= 0$$, which is equivalent to $$p=u$$.
 
 By intermediate value theorem of $$H(p)$$, we can get:
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-29" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.29</span>.</p>
+
 
 The entropy of RV $$X$$ may take any value in $$[0,\log\lvert \mathcal{X}\rvert]$$.
 
@@ -1617,7 +1876,11 @@ We take the base of the logarithm to be $$\lvert \mathcal{X}\rvert$$ and $$H_{\l
 
 We need to pay additional attention that for accountable alphabet, its entropy may not be finite:
 
-**Example.** (Entropy of RV with accountable alphabet)
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-4" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.4</span> <span class="math-statement__title">(Entropy of RV with accountable alphabet)</span>.</p>
+
 
 
 1. Let $$X\in \mathbb{N}_+$$ be RV, s.t. $$p(i)=2^{-i}, i\in \mathbb{N}_+$$. Then $$H_2(X)=\sum_{i=1}^{\infty}i2^{-i}=2$$ is finite. We later learn that $$H(X)$$ can be approximated by the entropy of $$\bar{X}$$ (a truncation of $$X$$).
@@ -1644,7 +1907,11 @@ which does not converge.
 
 Let $$X$$ be a DRV with known distribution $$p_{X}$$, known as **prior distribution**, and $$\hat{X}$$ be the estimate of RV $$X$$, and the probability of error is denoted by $$P_e=Pr\{\hat{X}\neq X\}$$. We reclaim that when $$P_e$$ is small, $$X=\hat{X}$$ with probability close to 1. Intuitively, $$H(\hat{X}\mid X)\to 0$$ are equivalent. It is tighter than $$X$$ and $$\hat{X}$$ have nearly the same distribution, or $$D(p_{X}\Vert p_{\hat{X}})\to 0$$. We give the upper bound on conditional entropy with $$P_e$$:
 
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-30" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.30</span>.</p>
+
 
 (Fano's Inequality):<br>
 Let $$X$$ and $$\hat{X}$$ be RVs in the same alphabet $$\mathcal{X}$$. Then, when $$P_{e}$$ is small enough:
@@ -1665,7 +1932,11 @@ where $$h_b$$ is the binary entropy function.
 **Note.** ($$\ref{Fano's Inequality}$$) do not require $$\mathcal{X}$$ to be a finite set.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 Let $$Y$$ be an indicator RV such that:
 
@@ -1762,7 +2033,11 @@ $$
 where $$p_{max} = \max_{x}p(x)$$, and 	$$H_{l,\infty}(X) =- \log p_{max}$$ is called learning entropy of infinity degree. For example, for $$X\sim Ber(p)$$, $$H_{l,\infty}(X) =- \log \max \{p,1 - p\}$$, and $$p_{max}\geq 2^{- H(X)}$$.
 
 
-**Lemma (Reverse Fano's inequality, L. Baumn, 1997).**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-31" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.31</span> <span class="math-statement__title">(Reverse Fano&#39;s inequality, L. Baumn, 1997)</span>.</p>
+
 
 There exists a estimator s.t.
 
@@ -1776,7 +2051,12 @@ H(X\mid Y)\geq - \log (1 - P_{e})
 $$
 
 
-**Proof.** The estimator having minimum $$P_{e}$$ is MAP, which has the following UB:
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
+The estimator having minimum $$P_{e}$$ is MAP, which has the following UB:
 
 
 $$
@@ -1790,6 +2070,8 @@ P_{e} =& 1 - \sum_{y} p_{Y}(y)\max_{x}P_{X\mid Y}(x\mid y)\\
 \end{align}
 $$
 
+
+</div>
 
 ### Measure with CRV
 
@@ -1812,7 +2094,9 @@ $$
 when $$\lvert \mathcal{X}\rvert= \infty$$, we measure $$X$$ with $$H(X)$$ if the sum is finite. What  if $$X$$ is a CRV?
 
 
-**Definition (Quantized Entropy).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-12" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.12</span> <span class="math-statement__title">(Quantized Entropy)</span>.</p>
+
 
 For a mixed RV $$X$$ with CDF $$F_{X}$$, We take a uniform quantizer with sample size $$\Delta = \frac{1}{n}$$:
 
@@ -1853,12 +2137,20 @@ $$
 The motivation here is that we expect $$H(X_{n}) = h(X) + d\log n + o(n)$$.
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-5" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.5</span>.</p>
+
 
 (When $$X$$ is a DRV): $$X_{n} = X \forall n$$. Then $$d = 0$$, $$h(X) = H(X)$$.
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-6" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.6</span>.</p>
+
 
 (When $$X$$ is continuous): If $$\mu = \mathbb{P}\circ X^{-1}$$ is absolutely continuous with $$Leb$$, with PDF $$f_{X} = \frac{d \mu}{d Leb}$$, Then $$\forall i$$, $$\exists x_{i}\in (i\Delta,(i + 1)\Delta]$$,s.t.
 
@@ -1901,7 +2193,11 @@ $$
 where we call $$h(X) = H(X_{n}) - \log n$$ the differential entropy
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-7" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.7</span>.</p>
+
 
 (When $$X$$ is a mixed RV): Suppose a RV $$X$$ with $$f_{X}$$ w.p $$p$$ and with $$p_{X}$$ w.p. $$q =(1 - p)$$. A grouping/Fietition axiom is used here to make it consistence:
 
@@ -1944,7 +2240,11 @@ One interesting notice is that $$h(X)$$ here can be negative and infinite.
 Another is that differential entropy of DRV is $$- \infty$$, while discrete entropy of CRV is $$+ \infty$$.
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-8" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.8</span>.</p>
+
 
 $$X$$ is a CRV with $$f(x) = \frac{1}{a}, x\in (0,a]$$. Then
 
@@ -1961,7 +2261,11 @@ $$
 therefore, the entropy will be positive, negative, or $$0$$ depending on $$a$$ we choose.
 
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-9" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.9</span>.</p>
+
 
 Consider a Gaussian $$X\sim \mathcal{N}(0,1)$$ with $$f(x)$$
 
@@ -1978,7 +2282,11 @@ $$
 and for a non-standard RV $$Y = aX + c$$, $$h(Y) = h(X) + \log\lvert a\rvert$$. Therefore, for $$Y\sim \mathcal{N}(\mu,\sigma ^{2})$$, $$h(Y) = \frac{1}{2} \log_{2}(2\pi e\sigma ^{2})$$.
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-32" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.32</span>.</p>
+
 
 
 $$
@@ -1993,10 +2301,14 @@ $$
 w.e.iff $$X\sim \mathcal{N}(\mu,\sigma ^{2})$$
 
 
+</div>
+
 #### Relative entropy for general $$X$$ with $$P,Q$$
 
 
-**Definition.**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-13" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.13</span>.</p>
+
 
 Let $$P,Q$$ be 2 pdfs defined on continuous $$\mathcal{X}$$. Let $$P_{n}, Q_{n}$$ be the pmfs quantized by $$\Delta = \frac{1}{n}$$. Then
 
@@ -2010,7 +2322,11 @@ $$
 $$
 
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-33" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.33</span>.</p>
+
 
 If $$P<<Q$$, then the following equality holds as long as all of them are well-defined, i.e., $$< \infty$$:
 
@@ -2027,7 +2343,12 @@ $$
 Otherwise if $$P<<Q$$ not hold, we set $$D(P\Vert Q) = \infty$$.
 
 
-**Lemma.** Let $$X$$ be a CRV, then
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-34" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.34</span>.</p>
+
+Let $$X$$ be a CRV, then
 
 
 $$
@@ -2042,7 +2363,11 @@ $$
 w.e.iff $$X\sim \mathcal{N}(\mu,\sigma ^{2})$$
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 let $$X$$ with pdf $$f$$, and $$Y\sim \mathcal{N}(0,\sigma ^{2})$$ with pdf $$g$$, then $$\mathbb{P}\circ X^{-1}<<\mathbb{P}\circ Y^{-1}$$
 
@@ -2063,7 +2388,11 @@ then $$h(X)\leq \frac{1}{2}\log(2\pi e Var(X))$$.
 Equality holds when $$D(f\Vert g)= 0$$, or, $$f = g \mathbb{P}\circ X^{-1}$$- a.e.
 
 
-**Theorem (Source coding in CRV).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-35" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.35</span> <span class="math-statement__title">(Source coding in CRV)</span>.</p>
+
 
 
 - Lossless source coding is not be positive
@@ -2072,7 +2401,11 @@ Equality holds when $$D(f\Vert g)= 0$$, or, $$f = g \mathbb{P}\circ X^{-1}$$- a.
 - Lossy source coding is what we need, the problem is analogous to Discrete coding.
 
 
-**Definition (Channel CRV-channel Coding: Gaussian Channel).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-14" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.14</span> <span class="math-statement__title">(Channel CRV-channel Coding: Gaussian Channel)</span>.</p>
+
 
 Consider a continuous alphabet channel $$Y = f(X,Z)$$ is equivalent to $$P_{Y\mid X}(y,x)$$ for $$x,y\in\mathbb{R}$$. A simple one is the Gaussian Channel where $$Y = X + Z$$ and $$X\stackrel{\text{i.i.d.}}{\sim}N$$ and $$N\sim \mathcal{N}(0,\sigma ^{2})$$
 
@@ -2095,7 +2428,11 @@ $$
 $$
 
 
-**Definition (Gaussian Channel coding with power constraint).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-15" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.15</span> <span class="math-statement__title">(Gaussian Channel coding with power constraint)</span>.</p>
+
 
 Let $$(n,M)$$ be a channel code, the channel coding integrates an encoder:
 
@@ -2157,7 +2494,11 @@ $$
 $$
 
 
-**Definition.**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-16" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.16</span>.</p>
+
 
 $$(R,\tau)$$ is achievable if there exists a sequence of $$(n,M)$$ code s.t.
 
@@ -2185,7 +2526,11 @@ C(P) = \sup\left\{ R: (R,\tau) \text{x is achievable  and } \tau = P \right\}
 $$
 
 
-**Theorem (Capacity of Gaussian Channel with power constraints).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-36" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 2.36</span> <span class="math-statement__title">(Capacity of Gaussian Channel with power constraints)</span>.</p>
+
 
 the capacity of the Gaussian channel with noise level $$N$$ and power constraint $$P$$ is
 
@@ -2202,7 +2547,11 @@ $$
 **Note.** We call $$\frac{P}{N}$$ the SNR of the system.
 
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 The Achievability is based on the non-Bayesian Hypothesis testing, so can simply generalized to CRV case. A one-shot achievability is here. To this end, we choose $$M$$ sequences of $$x^{n}$$ from $$f$$, and the decoder is based on
 
@@ -2249,3 +2598,4 @@ The converse follows this idea:
 
 
 - $$\log M\leq 1 + P_{e}\log M + nI(X;Y)$$
+</div>

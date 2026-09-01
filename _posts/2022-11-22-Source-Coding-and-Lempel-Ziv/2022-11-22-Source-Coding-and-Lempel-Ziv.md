@@ -20,13 +20,19 @@ We revise the 0-error coding theorem and give a perspective on typicality. First
 
 ## Problem Statement
 
-**Definition (Coding System).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.1</span> <span class="math-statement__title">(Coding System)</span>.</p>
+
 
 A coding system with parameter $$(n,M)$$ consists of an encoder and decoder, where encoder is a function $$e: \mathcal{X}^{n}\to [M]$$ where $$M = 2^{nR}$$, and decoder is a function $$f:[M]\to \mathcal{X}^{n}$$.
 
 We notice that $$e$$ is always a surjection and $$f$$ is always an injection.
 
-**Definition (Achievable rate in coding system).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 1.2</span> <span class="math-statement__title">(Achievable rate in coding system)</span>.</p>
+
 
 A real number $$R$$ is said to be achievable iff $$\forall \epsilon>0$$, there exists $$N(\epsilon)\in \mathbb{N}$$ s.t. $$\forall n>N(\epsilon)$$ , there exists $$(n,M_{n})$$ coding theorem s.t.
 
@@ -62,14 +68,22 @@ $$
 The main result of 0-error data compression is as follows:
 
 <span id="capacity-of-0-error-data-compression"></span>
-**Theorem.**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-1-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 1.1</span>.</p>
+
 
 (Capacity of 0-error Data Compression):<br>
 The capacity of 0-error data compression problem with RV $$X$$ is $$H(X)$$.
 
 Some Polytime algorithms is given previously. We now give a new perspective, where the achievability is given by the random mapping over the typical set, while the converse is given by the Fano's inequality.
 
-**Proof.** (Achievability)
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span> <span class="math-statement__title">(Achievability)</span>.</p>
+
 
 The decoder knows $$e$$ and generates $$f$$ based on received indices.
 
@@ -87,7 +101,11 @@ P_{e} =& P(X^{n}\in A_{\epsilon}^{n}(p_{X})P(error\vert typical) + P(X^{n}\in \m
 \end{align}
 $$
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 (Converse): We aim to prove that under what constraints of $$R$$, there is no coding system $$(n,M)$$ that achieves $$R$$. By Fano, $$H(X^{n}\vert m)\leq 1 + P_{e}\log (\vert \mathcal{X}\vert ^{n} - 1)< \epsilon n\log\vert \mathcal{X}\vert $$. i.e., if $$P_{e}$$ is small, there is no much information of original $$X^{n}$$ given the observation at the decoder: $$m\in M$$.
 
@@ -107,9 +125,13 @@ $$
 
 or, $$R\geq H(X) - \frac{1}{n} - \epsilon(\log \vert \mathcal{X}- 1\vert )\geq H(X) - \epsilon$$ by disturbance iteration (take closer base).
 
+</div>
+
 ## Polytime Algorithms
 
-**Definition.**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.1</span>.</p>
+
 
 Let $$S\subseteq \mathcal{X}^{n}$$
 
@@ -123,7 +145,11 @@ n_{S}(x_{[n]}) =& 1 \text{ if } x_{[n]}\in S \text{ and 0 o.w.}
 \end{align}
 $$
 
-**Definition (typical-counting ($$A_{\epsilon}^{(n)}(p)$$) Algorithm I: Encoding).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.2</span> <span class="math-statement__title">(typical-counting ($$A_{\epsilon}^{(n)}(p)$$) Algorithm I: Encoding)</span>.</p>
+
 
 We focus on Bernoulli process $$p_{X}(1) = p, p_{X}(0) = 1 - p$$ and $$p\leq \frac{1}{2}$$ w.l.o.g. $$W_{\epsilon}^{(n)}(p_{X}) =\{\vert D(Q\Vert p_{X}) + H(Q) - H(p)\vert <\epsilon\}$$, where $$Q(0) = \frac{\# 0s \text{ in }x^{n}}{n}$$. From the formulation we have
 
@@ -164,7 +190,11 @@ $$
 
 where $$m =\frac{n\epsilon}{\log \frac{1 - p}{p}}$$
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.1</span>.</p>
+
 
 $$n = 4$$, $$w = 2$$, $$m = 0(\epsilon = 0)$$ $$S =\{0011,0101,0110,1001,1010,1100\}$$.
 
@@ -178,7 +208,11 @@ e_{S}(1001) = \sum_{j = 1}^{n}x_jn_{S}(x_{[j - 1]},0) = x_{1}n_{S}(0) + x_{4} *n
 \end{align}
 $$
 
-**Lemma (Complexity of $$e_{A_{\epsilon}^{(n)}}$$ Algothrim).**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 2.1</span> <span class="math-statement__title">(Complexity of $$e_{A_{\epsilon}^{(n)}}$$ Algothrim)</span>.</p>
+
 
 $$
 \begin{align}
@@ -190,7 +224,11 @@ $$
 
 where $$k = \Theta (n)$$. There is $$(2k - 1)$$ multiplication, each number is at most $$k\log n$$ bits long. So the complexity is $$O(k^{3}\log ^{2}n) = O(n^{3}\log ^{2}n )$$. The overall worst case complexity is at most $$O(n^{5}\log^{2}n)$$
 
-**Definition ($$e_{A_{\epsilon}^{(n)}}$$ Algothrim II: Decoding).**
+</div>
+
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-2-3" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 2.3</span> <span class="math-statement__title">($$e_{A_{\epsilon}^{(n)}}$$ Algothrim II: Decoding)</span>.</p>
+
 
 Given $$S,i$$.
 
@@ -198,7 +236,11 @@ Given $$S,i$$.
 
 2. For $$j = 2,3,\cdots, n$$, if $$i\geq n_{S}(x_{[j - 1]},0)$$ then $$x_{j} = 1$$ and $$i\leftarrow i - n_{S}(x_{[j - 1]},0)$$ else $$x_{j} = 0$$
 
-**Example.**
+</div>
+
+<div class="math-statement math-statement--example" data-statement="example" id="example-2-2" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 2.2</span>.</p>
+
 
 (followed by the last encoding example):
 Let $$i = 3$$. First, $$n_{S}(0) =\binom{3}{2} = 3$$. So $$i\geq n_{S}(0)$$, so $$x_{1} = 1$$, $$i\leftarrow 0$$
@@ -211,21 +253,29 @@ $$n_{S}(1000) = 0\leq i$$ so $$x_{4} = 1$$
 
 Therefore, the decoder decodes $$3$$ to $$1001$$.
 
+</div>
+
 ## Variable-rate Data Compression
 
 Another problem: obtain a coding system containing fixed rate $$R$$. Given an i.i.d. process $$X_{\mathbb{N}}$$. We use the notation $$\mathcal{X}^{<\infty}$$ to represent finite sequence from $$\mathcal{X}$$.
 
-**Definition (Coding System with parameter $$n$$).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-3-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 3.1</span> <span class="math-statement__title">(Coding System with parameter $$n$$)</span>.</p>
+
 
 A coding system with parameter $$(n,M)$$ consists of an encoder and decoder, where encoder is a function $$e: \mathcal{X}^{n}\to \{0,1\}^{<\infty}$$, and decoder is a function $$f:\{0,1\}^{\infty}\to \mathcal{X}^{n}$$. The performance is $$R =\frac{\mathbb{E}[l(e(X^{n}))]}{n}$$ where $$l(\alpha)$$ is the $$\#$$ bits in $$\alpha$$, or the string length.
 
 We notice that $$e$$ is always a surjection and $$f$$ is always an injection.
 
+</div>
+
 ## Universal Source Coding: Lempel-Ziv Algorithm
 
 Source coding without knowing the distribution, only knowing the data.
 
-**Example.**
+<div class="math-statement math-statement--example" data-statement="example" id="example-4-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Example 4.1</span>.</p>
+
 
 We have data from $$\{A,B\}$$: AABABBBABAABABBBABBABB
 
@@ -310,11 +360,19 @@ The answer is $$- \sum_{l}a_{l}\log a_{l} =(A + 1)\log(A + 1) - A\log A = A \log
 
 Then how does $$A$$ behave as $$n\to \infty$$? In LZ Coding, the average coding length $$A$$ gets larger as $$n$$ goes larger.
 
-**Lemma.**
+</div>
+
+<div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-4-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Lemma 4.1</span>.</p>
+
 
 $$A\to \infty$$ as $$n\to \infty$$.
 
-**Proof.**
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 If not, then, $$c(n) \to \theta n$$, then the average phrase length is $$\theta$$, which cannot be true.
 
@@ -343,16 +401,24 @@ $$
 
 as $$n\to \infty$$, $$\frac{\log A}{A}\to 0$$, $$\frac{c(n)\log c(n)}{n}\to H(X)$$.
 
+</div>
+
 ## Analysis for non-i.i.d. source
 
 Let $$X_{\mathbb{N}}$$ is non i.i.d. but stationary and ergodic.
 
-**Definition (Entropy rate).**
+<div class="math-statement math-statement--definition" data-statement="definition" id="definition-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Definition 5.1</span> <span class="math-statement__title">(Entropy rate)</span>.</p>
+
 
 For $$X_{\mathbb{N}}$$ be a stationary and ergodic random process. The entropy rate of $$X_{\mathbb{N}}$$ is
 $$h(X) = \lim\limits_{n \to \infty} \frac{H(X_{(n)})}{n}$$.
 
-**Theorem (LZ Source coding for $$X_{\mathbb{N}}$$).**
+</div>
+
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-5-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 5.1</span> <span class="math-statement__title">(LZ Source coding for $$X_{\mathbb{N}}$$)</span>.</p>
+
 
 $$
 \begin{align}
@@ -361,3 +427,4 @@ $$
 
 \end{align}
 $$
+</div>

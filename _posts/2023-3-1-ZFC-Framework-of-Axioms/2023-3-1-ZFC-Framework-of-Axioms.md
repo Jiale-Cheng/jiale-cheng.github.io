@@ -218,11 +218,20 @@ These nine axioms, together with first-order logic, form the basis of ZFC set th
 
 ## Compatibility of ZFC
 
-**Theorem:** The nine axioms of the ZFC framework are compatible with each other, i.e., there is no contradiction between them.
+<div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-10-1" markdown="1">
+<p class="math-statement__heading"><span data-statement-label>Theorem 10.1</span>.</p>
 
-**Proof:**
+The nine axioms of the ZFC framework are compatible with each other, i.e., there is no contradiction between them.
+
+</div>
+
+<div class="math-proof" markdown="1">
+<p class="math-statement__heading"><span>Proof</span>.</p>
+
 
 We will prove the compatibility of each pair of axioms:
+
+</div>
 
 ### Proof 1. Compatibility of Extensionality
 

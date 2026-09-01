@@ -87,6 +87,7 @@ defaults:
       mermaid: false
       highlight: false
       numbering: true
+      statements: true
       status: Completed
       protected: false
       commentable: true
