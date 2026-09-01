@@ -91,7 +91,7 @@ Weak convergence does not describe independence or correlation relations. Here a
 <div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-1-2" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Lemma 1.2</span>.</p>
 
-	(Scheffé's lemma): Let $$f_n$$ be a sequence of integrable functions on a measure space $$(X,\Sigma,\mu)$$ that converges a.e. to another integrable function $$f$$. Then:
+(Scheffé's lemma): Let $$f_n$$ be a sequence of integrable functions on a measure space $$(X,\Sigma,\mu)$$ that converges a.e. to another integrable function $$f$$. Then:
 
 $$
 \begin{align}
@@ -110,7 +110,7 @@ Thus, a.e. pointwise convergence of the densities implies convergence in distrib
 <div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-1-3" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Lemma 1.3</span> <span class="math-statement__title">(Levy&#39;s continuity theorem)</span>.</p>
 
-	The sequence $$\{X_n\}$$ converges in distribution to $$X$$ iff the sequence of corresponding characteristic functions $$\{\phi_n\}$$ converges pointwise to the characteristic function $$\phi$$ of $$X$$.
+The sequence $$\{X_n\}$$ converges in distribution to $$X$$ iff the sequence of corresponding characteristic functions $$\{\phi_n\}$$ converges pointwise to the characteristic function $$\phi$$ of $$X$$.
 
 
 </div>
@@ -118,7 +118,7 @@ Thus, a.e. pointwise convergence of the densities implies convergence in distrib
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-3" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 1.3</span> <span class="math-statement__title">(Convergence in Probability)</span>.</p>
 
-	A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge in probability to a RV $$X$$, denoted $$X_n\stackrel{p}{\to}X$$ iff
+A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge in probability to a RV $$X$$, denoted $$X_n\stackrel{p}{\to}X$$ iff
 
 $$
 \begin{align}
@@ -136,7 +136,7 @@ $$
 <div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-1-4" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Lemma 1.4</span>.</p>
 
-	The following 3 interpreters of convergence in probability is equivalent:
+The following 3 interpreters of convergence in probability is equivalent:
 
 * $$X_n\stackrel{p}{\to}X$$
 * $$\forall\epsilon>0,\exists N\in\mathbb{N}_+,\forall n\geq N,\forall\delta>0, Pr\{\vert{}X_n-X\vert{}>\delta\}<\epsilon$$.
@@ -163,7 +163,7 @@ So $$2\iff 3$$.
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-4" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 1.4</span> <span class="math-statement__title">(Convergence Almost Everywhere)</span>.</p>
 
-	A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge almost everywhere, or converges with probability 1 to a RV $$X$$, denoted $$X_n\stackrel{a.s.}{\to}X$$ iff
+A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge almost everywhere, or converges with probability 1 to a RV $$X$$, denoted $$X_n\stackrel{a.s.}{\to}X$$ iff
 
 $$
 \begin{align}
@@ -188,7 +188,7 @@ $$
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-5" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 1.5</span> <span class="math-statement__title">(Convergence Everywhere)</span>.</p>
 
-	A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge everywhere, or pointwise, to an RV $$X$$, denoted $$X_n\to X$$, if and only if
+A sequence $$X_1,X_2,\cdots$$ of RVs is said to converge everywhere, or pointwise, to an RV $$X$$, denoted $$X_n\to X$$, if and only if
 
 $$
 \begin{align}
@@ -213,7 +213,7 @@ $$
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-1-6" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 1.6</span> <span class="math-statement__title">(Convergence in Mean)</span>.</p>
 
-	Let $$r\geq 1$$, a sequence $$X_1,X_2,\cdots$$ of RVs is said to converge in the $$r$$-th mean, or in the $$L^r$$-norm to a RV $$X$$, denoted $$X_n\stackrel{L^r}{\to} X$$ iff the $$r$$-th absolute moments $$E[\vert{}X_n\vert{}^r]$$, and $$E[\vert{}X\vert{}^r]$$ exists, and
+Let $$r\geq 1$$, a sequence $$X_1,X_2,\cdots$$ of RVs is said to converge in the $$r$$-th mean, or in the $$L^r$$-norm to a RV $$X$$, denoted $$X_n\stackrel{L^r}{\to} X$$ iff the $$r$$-th absolute moments $$E[\vert{}X_n\vert{}^r]$$, and $$E[\vert{}X\vert{}^r]$$ exists, and
 
 $$
 \begin{align}
@@ -229,7 +229,7 @@ $$
 <div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-1-5" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Lemma 1.5</span> <span class="math-statement__title">(Implications among RV convergences)</span>.</p>
 
-	The relations among the above four types of convergence are as follows:
+The relations among the above four types of convergence are as follows:
 
 * Convergence in probability implies convergence in distribution, but convergence in distribution implies convergence in probability when the limiting random variable X is a constant.
 * Almost sure convergence implies convergence in probability, but convergence in probability does not imply almost sure convergence.
@@ -250,7 +250,7 @@ We review the definition of LLN, performance of large times of experiments that 
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-1" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 2.1</span>.</p>
 
-	(Khinchin's weak LLN): The sample average converges in probability towards the expected value
+(Khinchin's weak LLN): The sample average converges in probability towards the expected value
 
 $$
 \begin{align}
@@ -268,7 +268,7 @@ Actually, finite variance is not necessary though it may simplify the related pr
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-2" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 2.2</span>.</p>
 
-	(Chebyshev's weak LLN): For independent Lebesgue integrable RV sequence $$\{X_k\}_{k\in\mathbb{N}}$$ with equal expected value $$\mu$$, if $$\lim_{n\to\infty}Var(\bar{X}_n)=0$$, then:
+(Chebyshev's weak LLN): For independent Lebesgue integrable RV sequence $$\{X_k\}_{k\in\mathbb{N}}$$ with equal expected value $$\mu$$, if $$\lim_{n\to\infty}Var(\bar{X}_n)=0$$, then:
 
 $$
 \begin{align}
@@ -290,7 +290,7 @@ the weak LLN may hold even when the expectation does not exist.
 <div class="math-statement math-statement--example" data-statement="example" id="example-2-1" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Example 2.1</span>.</p>
 
-	Let $$\{X_k\}_{k\in\mathbb{N}}$$ be an independent zero-mean Gaussian RV sequence with $$Var(X_k)=\frac{2n}{\log (n+1)}$$, which is not bounded.
+Let $$\{X_k\}_{k\in\mathbb{N}}$$ be an independent zero-mean Gaussian RV sequence with $$Var(X_k)=\frac{2n}{\log (n+1)}$$, which is not bounded.
 
 $$
 \begin{align}
@@ -369,7 +369,7 @@ For sequence of i.i.d. functions of RV: $$\{f(X_k,\theta)\}_{k\in \mathbb{N}}$$ 
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-4" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 2.4</span>.</p>
 
-	(Uniform LLN): For i.i.d. functions of RVs $$\{f(X_k,\theta)\}_{k\in \mathbb{N}}$$ with parameter $$\theta\in\Theta$$, where $$E[f(X,\theta)]$$ exists for all $$\theta$$, if:
+(Uniform LLN): For i.i.d. functions of RVs $$\{f(X_k,\theta)\}_{k\in \mathbb{N}}$$ with parameter $$\theta\in\Theta$$, where $$E[f(X,\theta)]$$ exists for all $$\theta$$, if:
 
 * $$\Theta$$ is compact
 * $$f(x, \theta)$$ is continuous at each $$\theta \in \Theta$$ for almost all $$x\in\mathcal{X}$$, and measurable function of $$x$$ at each $$\theta$$
@@ -401,7 +401,7 @@ Moreover, an intuitive notion of probability as a long-run relative frequency le
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-2-5" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 2.5</span> <span class="math-statement__title">(Borel LLN)</span>.</p>
 
-	If an experiment $$(\Omega,\mathcal{B},\mathbf{P})$$ is repeated a large number of times independently and under identical conditions, then
+If an experiment $$(\Omega,\mathcal{B},\mathbf{P})$$ is repeated a large number of times independently and under identical conditions, then
 
 $$
 \begin{align}
@@ -432,7 +432,7 @@ $$
 <div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-2-7" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Lemma 2.7</span>.</p>
 
-	(Markov's Inequality): Let $$X$$ be a non-negative RV, then
+(Markov's Inequality): Let $$X$$ be a non-negative RV, then
 
 $$
 \begin{align}
@@ -476,7 +476,7 @@ We call the set $$\mathcal{W}_{[X]_\epsilon}^n$$ the weakly typical set, $$x^n\i
 <div class="math-proof" markdown="1">
 <p class="math-statement__heading"><span>Proof</span>.</p>
 
-	By the weak law of large numbers for i.i.d. sources, $$n\to\infty, -\frac{1}{n}\log p(X^n)=-\frac{1}{n}\sum_{i=1}^{n}\log p(X_i)\stackrel{p}{\to}-E[\log p(X)]=H(X)$$.
+By the weak law of large numbers for i.i.d. sources, $$n\to\infty, -\frac{1}{n}\log p(X^n)=-\frac{1}{n}\sum_{i=1}^{n}\log p(X_i)\stackrel{p}{\to}-E[\log p(X)]=H(X)$$.
 
 
 The weak AEP shows that a small set (compared with $$\mathcal{X}^n$$, $$\mathcal{W}_{[X]_\epsilon}^n$$ is exponentially small) contains almost all the probability mass and is nearly uniform. Thus, for a random sequence from $$\mathcal{X}^n$$, the probability is close to $$\frac{1}{\vert{}\mathcal{W}_{[X]_\epsilon}^n\vert{}}$$ with high probability.
@@ -490,7 +490,7 @@ The weak AEP shows that a small set (compared with $$\mathcal{X}^n$$, $$\mathcal
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-3-2" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 3.2</span> <span class="math-statement__title">(Cramer theorem)</span>.</p>
 
-	Let $$\{X_k\}_{k\in\mathbb{N}}$$ be a sequence of i.i.d. RVs with finite logarithmic moment-generating function $$\Lambda(t)=\log E[e^{tX}]<\infty$$. Then the Legendre transform of $$\Lambda$$ satisfies:
+Let $$\{X_k\}_{k\in\mathbb{N}}$$ be a sequence of i.i.d. RVs with finite logarithmic moment-generating function $$\Lambda(t)=\log E[e^{tX}]<\infty$$. Then the Legendre transform of $$\Lambda$$ satisfies:
 
 $$
 \begin{align}
@@ -508,7 +508,7 @@ $$
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-3-3" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 3.3</span> <span class="math-statement__title">(SMB Theorem)</span>.</p>
 
-	Let $$\{X_n\}$$ be a stationary ergodic process defined on a probability space $$(\Omega,\mathcal{B}, \mathbf{P})$$, then the weak AEP for $$\{X_n\}$$ shows that
+Let $$\{X_n\}$$ be a stationary ergodic process defined on a probability space $$(\Omega,\mathcal{B}, \mathbf{P})$$, then the weak AEP for $$\{X_n\}$$ shows that
 
 $$
 \begin{align}
@@ -527,7 +527,7 @@ The assumptions of stationarity/ergodicity/identical of RV is not necessary for 
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-3-4" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 3.4</span>.</p>
 
-	For independent source $$\{X_k\}_{k\in\mathbb{N}}$$ with bounded $$Var(\log p(X_i))$$, then the weak AEP holds:
+For independent source $$\{X_k\}_{k\in\mathbb{N}}$$ with bounded $$Var(\log p(X_i))$$, then the weak AEP holds:
 
 $$
 \begin{align}
@@ -549,7 +549,7 @@ We introduce a new kind of AEP, which is related to Borel's LLN. The following r
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-4-1" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 4.1</span> <span class="math-statement__title">(Empirical Distribution)</span>.</p>
 
-	For a given random sequence $$x^n\in \mathcal{X}^n$$, The number of appearances of $$a$$ in the sequence:
+For a given random sequence $$x^n\in \mathcal{X}^n$$, The number of appearances of $$a$$ in the sequence:
 
 $$
 \begin{align}
@@ -594,7 +594,7 @@ This indicates that the probability of a random sequence depends only on the dis
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-4-2" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 4.2</span> <span class="math-statement__title">(Cross Entropy)</span>.</p>
 
-	We define the cross entropy in an i.i.d. trial with $$n$$ implements of RV $$X$$ as:
+We define the cross entropy in an i.i.d. trial with $$n$$ implements of RV $$X$$ as:
 
 <span id="def-cross-entropy"></span>
 
@@ -623,7 +623,7 @@ It is easy to see that if the frequencies of $$a\in\mathcal{X}$$ agree for diffe
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-4-3" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 4.3</span> <span class="math-statement__title">(type)</span>.</p>
 
-	For an i.i.d. trial of $$n$$ samples of RV $$X$$ over a finite alphabet $$\mathcal{X}$$, the type with respect to empirical distribution $$Q$$ is defined by:
+For an i.i.d. trial of $$n$$ samples of RV $$X$$ over a finite alphabet $$\mathcal{X}$$, the type with respect to empirical distribution $$Q$$ is defined by:
 
 $$
 \begin{align}
@@ -652,7 +652,7 @@ which is a polynomial in $$n$$.
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-4-4" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 4.4</span> <span class="math-statement__title">(Rate of a Quantity)</span>.</p>
 
-	For any quantity $$M$$ which is exponentially large or exponentially small, we call the $$\frac{1}{n}\log M$$ the rate of $$M$$, where the $$\log$$ takes base of a convenient integer.
+For any quantity $$M$$ which is exponentially large or exponentially small, we call the $$\frac{1}{n}\log M$$ the rate of $$M$$, where the $$\log$$ takes base of a convenient integer.
 
 
 </div>
@@ -662,7 +662,7 @@ which is a polynomial in $$n$$.
 <div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-4-1" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Lemma 4.1</span> <span class="math-statement__title">(Size of a Type)</span>.</p>
 
-	For $$n$$ i.i.d. experiments over the implement of $$X\in\mathcal{X}$$, the size of any type satisfies:
+For $$n$$ i.i.d. experiments over the implement of $$X\in\mathcal{X}$$, the size of any type satisfies:
 
 $$
 \begin{align}
@@ -688,7 +688,7 @@ which can be an alternative definition of entropy.
 <div class="math-proof" markdown="1">
 <p class="math-statement__heading"><span>Proof</span>.</p>
 
-	 The size of any type can be shown combinatorially:
+ The size of any type can be shown combinatorially:
 
 $$
 \begin{align}
@@ -816,7 +816,7 @@ Although it seems that when $$P=Q$$, $$\frac{1}{n}logP_{X^n}(\mathcal{T}_Q^n)\si
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-4-5" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 4.5</span> <span class="math-statement__title">(Strongly Typical Set)</span>.</p>
 
-	Let $$X\sim p$$ be a RV defined on a finite alphabet $$\mathcal{X}$$. We define the the union of all "near maximum" types as the *Strongly Typical Set*:
+Let $$X\sim p$$ be a RV defined on a finite alphabet $$\mathcal{X}$$. We define the the union of all "near maximum" types as the *Strongly Typical Set*:
 
 $$
 \begin{align}
@@ -1059,7 +1059,7 @@ is a proper setting.
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-4-6" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 4.6</span>.</p>
 
-	(Substantial Set):<br>A set $$\mathcal{A}\in \mathcal{X}^n$$ is called a substantial set iff
+(Substantial Set):<br>A set $$\mathcal{A}\in \mathcal{X}^n$$ is called a substantial set iff
 
 $$
 \begin{align}
@@ -1139,7 +1139,7 @@ We now consider a bivariate distribution with two RVs $$X\in\mathcal{X}$$ and $$
 <div class="math-statement math-statement--definition" data-statement="definition" id="definition-6-1" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Definition 6.1</span>.</p>
 
-	(Jointly typical set): Let $$\{X_k,Y_k\}_{k\in\mathbb{N}}$$ be an i.i.d. information source with two RVs $$X\in\mathcal{X}$$ and $$Y\in \mathcal{Y}$$ over finite alphabets. The jointly typical set $$\mathcal{T}_{[XY]_\delta}^n$$ is
+(Jointly typical set): Let $$\{X_k,Y_k\}_{k\in\mathbb{N}}$$ be an i.i.d. information source with two RVs $$X\in\mathcal{X}$$ and $$Y\in \mathcal{Y}$$ over finite alphabets. The jointly typical set $$\mathcal{T}_{[XY]_\delta}^n$$ is
 
 $$
 \begin{align}
@@ -1157,7 +1157,7 @@ $$\forall (x^n,y^n)\in\mathcal{T}_{[XY]_\delta}^n$$ is called jointly typical.
 <div class="math-statement math-statement--theorem" data-statement="theorem" id="theorem-6-1" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Theorem 6.1</span> <span class="math-statement__title">(Properties of Jointly Typical Set)</span>.</p>
 
-		*  (Consistency): The jointly typical implies the typical separately:
+*  (Consistency): The jointly typical implies the typical separately:
 
 $$
 \begin{align}
@@ -1224,7 +1224,7 @@ $$
 <div class="math-proof" markdown="1">
 <p class="math-statement__heading"><span>Proof</span>.</p>
 
-	The proof is similar to the proof of strong AEP, omitted.
+The proof is similar to the proof of strong AEP, omitted.
 
 
 </div>
@@ -1348,7 +1348,7 @@ The CAEP shows that the rate of size of $$\vert{}\mathcal{T}_{[XY]_\delta}^n(x^n
 <div class="math-statement math-statement--lemma" data-statement="lemma" id="lemma-7-2" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Lemma 7.2</span>.</p>
 
-	Let
+Let
 
 $$
 \begin{align}
@@ -1384,7 +1384,7 @@ The typicality gives us an asymptotic perspective on the meaning of Shannon's me
 <div class="math-statement math-statement--example" data-statement="example" id="example-8-1" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Example 8.1</span>.</p>
 
-	Consider three RVs $$X$$, $$Y$$, and $$Z$$.
+Consider three RVs $$X$$, $$Y$$, and $$Z$$.
 
 $$
 \begin{align}

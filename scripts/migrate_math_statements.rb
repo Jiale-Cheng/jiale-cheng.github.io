@@ -214,17 +214,110 @@ def migrate(lines, markers)
   output.join
 end
 
+def remove_base_indent(line)
+  line.sub(/\A\t+/, "").sub(/\A {4}/, "")
+end
+
+def normalize_existing_environments(text)
+  inside_environment = false
+  math_closer = nil
+  fence_character = nil
+  changed_lines = 0
+
+  normalized = text.lines.map do |line|
+    if line.match?(/^<div class="math-(?:statement|proof)\b/)
+      inside_environment = true
+      math_closer = nil
+      fence_character = nil
+      next line
+    end
+
+    if inside_environment && line.match?(%r{^</div>})
+      inside_environment = false
+      math_closer = nil
+      fence_character = nil
+      next line
+    end
+
+    next line unless inside_environment
+
+    stripped = line.lstrip
+    stripped_content = stripped.chomp
+
+    if fence_character
+      if stripped_content.match?(/\A#{Regexp.escape(fence_character)}{3,}/)
+        normalized_line = remove_base_indent(line)
+        changed_lines += 1 if normalized_line != line
+        fence_character = nil
+        next normalized_line
+      end
+      next line
+    end
+
+    if (fence_match = stripped_content.match(/\A(`{3,}|~{3,})/))
+      normalized_line = remove_base_indent(line)
+      changed_lines += 1 if normalized_line != line
+      fence_character = fence_match[1][0]
+      next normalized_line
+    end
+
+    if math_closer
+      math_closer = nil if stripped_content == math_closer
+      next line
+    end
+
+    if stripped_content == "$$"
+      normalized_line = remove_base_indent(line)
+      changed_lines += 1 if normalized_line != line
+      math_closer = "$$"
+      next normalized_line
+    end
+
+    if stripped_content == "\\["
+      normalized_line = remove_base_indent(line)
+      changed_lines += 1 if normalized_line != line
+      math_closer = "\\]"
+      next normalized_line
+    end
+
+    normalized_line = remove_base_indent(line)
+    changed_lines += 1 if normalized_line != line
+    normalized_line
+  end.join
+
+  [normalized, changed_lines]
+end
+
 dry_run = ARGV.delete("--dry-run")
+normalize_existing = ARGV.delete("--normalize-existing")
 paths = Dir.glob("_posts/**/*.md").sort
 changed_files = 0
 statement_count = 0
+normalized_files = 0
+normalized_lines = 0
 
 paths.each do |path|
-  lines = File.readlines(path)
+  source = File.read(path)
+
+  if normalize_existing
+    source, changed_line_count = normalize_existing_environments(source)
+    if changed_line_count.positive?
+      normalized_files += 1
+      normalized_lines += changed_line_count
+      puts "#{dry_run ? 'Would normalize' : 'Normalized'} #{path}: #{changed_line_count} lines"
+      File.write(path, source) unless dry_run
+    end
+  end
+
+  lines = source.lines
   markers = collect_markers(lines)
   next if markers.empty?
 
-  migrated = migrate(lines, markers).sub(/\n+\z/, "\n")
+  migrated = migrate(lines, markers)
+  migrated, changed_line_count = normalize_existing_environments(migrated)
+  normalized_files += 1 if changed_line_count.positive? && !normalize_existing
+  normalized_lines += changed_line_count unless normalize_existing
+  migrated = migrated.sub(/\n+\z/, "\n")
   changed_files += 1
   statement_count += markers.length
   puts "#{dry_run ? 'Would migrate' : 'Migrated'} #{path}: #{markers.length} environments"
@@ -232,3 +325,4 @@ paths.each do |path|
 end
 
 puts "#{dry_run ? 'Would migrate' : 'Migrated'} #{statement_count} environments in #{changed_files} files."
+puts "#{dry_run ? 'Would normalize' : 'Normalized'} #{normalized_lines} indented content lines in #{normalized_files} files."
