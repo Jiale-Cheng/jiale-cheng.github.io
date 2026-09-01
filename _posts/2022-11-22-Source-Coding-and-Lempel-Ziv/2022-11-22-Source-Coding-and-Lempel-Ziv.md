@@ -11,7 +11,7 @@ mermaid: false
 highlight: false
 toc: true
 categories: Info-Theory
-tags: [Info-Theory, Source-Coding, Universal-Coding]
+tags: [Source-Coding, Universal-Coding]
 keywords: Source-coding Typical-set Lempel-Ziv Entropy-rate
 description: Notes on source coding through typicality, polynomial-time coding, variable-rate compression, and Lempel-Ziv coding.
 status: Archived

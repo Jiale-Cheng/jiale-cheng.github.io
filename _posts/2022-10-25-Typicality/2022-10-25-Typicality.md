@@ -7,7 +7,7 @@ type:
 repopath:
 mathjax: true
 categories: Info-Theory
-tags: [Info-Theory, AEP, Method-of-Types]
+tags: [AEP, Method-of-Types]
 keywords: Typical-set RV
 description: Notes on Typicality
 status: Archived

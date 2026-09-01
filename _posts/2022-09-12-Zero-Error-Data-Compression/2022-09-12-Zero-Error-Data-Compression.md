@@ -7,7 +7,7 @@ type:
 repopath:
 mathjax: true
 categories: Info-Theory
-tags: [Info-Theory, Source-Coding, Huffman-Coding]
+tags: [Source-Coding, Huffman-Coding]
 keywords: Zero-error data compression prefix code Huffman Shannon-Fano
 description: Notes on 0-Error Data Compression
 status: Archived

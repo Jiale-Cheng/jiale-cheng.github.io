@@ -11,7 +11,7 @@ mermaid: false
 highlight: false
 toc: true
 categories: Info-Theory
-tags: [Info-Theory, Hypothesis-Testing, KL-Divergence]
+tags: [Hypothesis-Testing, KL-Divergence]
 keywords: Neyman-Pearson Hypothesis-testing KL-divergence Bayes-estimation
 description: Notes on Neyman-Pearson detection, error exponents, Bayesian hypothesis testing, and estimation.
 status: Archived

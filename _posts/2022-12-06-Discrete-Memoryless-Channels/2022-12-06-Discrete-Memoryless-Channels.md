@@ -11,7 +11,7 @@ mermaid: false
 highlight: false
 toc: true
 categories: Info-Theory
-tags: [Info-Theory, Channel-Coding, DMC]
+tags: [Channel-Coding, DMC]
 keywords: Discrete-memoryless-channel Channel-coding Capacity
 description: Notes on discrete memoryless channels, channel capacity, coding theorems, and general channel models.
 status: Archived

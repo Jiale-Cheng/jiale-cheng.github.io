@@ -7,7 +7,7 @@ type:
 repopath:
 mathjax: true
 categories: Info-Theory
-tags: [Info-Theory, Entropy, Information-Inequalities]
+tags: [Entropy, Information-Inequalities]
 keywords: entropy relative-entropy mutual-information
 description: Notes on entropy, relative entropy, mutual information, information inequalities, and their extensions to continuous random variables.
 status: Archived
