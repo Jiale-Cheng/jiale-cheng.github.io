@@ -30,6 +30,10 @@
   var searchOptions = document.querySelector("[data-tag-map-search-options]");
   var searchStatus = document.querySelector("[data-tag-map-search-status]");
   var resetButton = document.querySelector("[data-tag-map-reset]");
+  var categoryDetails = document.querySelector("[data-tag-map-categories]");
+  var categoryOptions = document.querySelector("[data-tag-map-category-options]");
+  var categorySummary = document.querySelector("[data-tag-map-category-summary]");
+  var clearCategoriesButton = document.querySelector("[data-tag-map-category-clear]");
 
   var sourcePosts;
   try {
@@ -44,95 +48,120 @@
     return [];
   }
 
+  function normalizeCategories(categories) {
+    var normalized;
+    if (Array.isArray(categories)) {
+      normalized = categories.filter(Boolean).map(String);
+    } else if (typeof categories === "string" && categories.trim()) {
+      normalized = [categories.trim()];
+    } else {
+      normalized = [];
+    }
+    return normalized.length ? normalized : ["Undefined"];
+  }
+
   var posts = sourcePosts.map(function (post) {
     return {
       title: String(post.title || "Untitled post"),
       url: String(post.url || "#"),
       date: String(post.date || ""),
+      categories: normalizeCategories(post.categories),
       tags: normalizeTags(post.tags)
     };
   }).filter(function (post) {
     return post.tags.length > 0;
   });
 
+  var activePosts = posts.slice();
   var nodesById = Object.create(null);
-  posts.forEach(function (post) {
-    post.tags.forEach(function (tag) {
-      if (!nodesById[tag]) {
-        nodesById[tag] = {
-          id: tag,
-          label: tag.replace(/-/g, " "),
-          posts: [],
-          edges: [],
-          neighborIds: Object.create(null),
-          x: 0,
-          y: 0,
-          vx: 0,
-          vy: 0,
-          radius: 48,
-          phase: 0,
-          index: 0,
-          pinned: false,
-          pinReason: null,
-          dragging: false,
-          suppressClickUntil: 0,
-          element: null
-        };
-      }
-      if (nodesById[tag].posts.indexOf(post) === -1) {
-        nodesById[tag].posts.push(post);
-      }
-    });
-  });
-
-  var nodes = Object.keys(nodesById).sort(function (a, b) {
-    return a.localeCompare(b);
-  }).map(function (id, index) {
-    var node = nodesById[id];
-    node.index = index;
-    node.phase = index * 1.618;
-    return node;
-  });
-
+  var nodes = [];
   var edgesById = Object.create(null);
-  posts.forEach(function (post) {
-    var uniqueTags = post.tags.filter(function (tag, index, allTags) {
-      return allTags.indexOf(tag) === index;
-    }).sort();
+  var edges = [];
 
-    for (var first = 0; first < uniqueTags.length; first += 1) {
-      for (var second = first + 1; second < uniqueTags.length; second += 1) {
-        var source = uniqueTags[first];
-        var target = uniqueTags[second];
-        var id = source + "\u0000" + target;
-        if (!edgesById[id]) {
-          edgesById[id] = {
-            id: id,
-            source: nodesById[source],
-            target: nodesById[target],
+  function buildGraphData(filteredPosts) {
+    nodesById = Object.create(null);
+    filteredPosts.forEach(function (post) {
+      post.tags.forEach(function (tag) {
+        if (!nodesById[tag]) {
+          nodesById[tag] = {
+            id: tag,
+            label: tag.replace(/-/g, " "),
             posts: [],
-            element: null,
-            countElement: null
+            edges: [],
+            neighborIds: Object.create(null),
+            x: 0,
+            y: 0,
+            vx: 0,
+            vy: 0,
+            radius: 48,
+            phase: 0,
+            index: 0,
+            pinned: false,
+            pinReason: null,
+            dragging: false,
+            suppressClickUntil: 0,
+            element: null
           };
         }
-        edgesById[id].posts.push(post);
+        if (nodesById[tag].posts.indexOf(post) === -1) {
+          nodesById[tag].posts.push(post);
+        }
+      });
+    });
+
+    nodes = Object.keys(nodesById).sort(function (a, b) {
+      return a.localeCompare(b);
+    }).map(function (id, index) {
+      var node = nodesById[id];
+      node.index = index;
+      node.phase = index * 1.618;
+      return node;
+    });
+
+    edgesById = Object.create(null);
+    filteredPosts.forEach(function (post) {
+      var uniqueTags = post.tags.filter(function (tag, index, allTags) {
+        return allTags.indexOf(tag) === index;
+      }).sort();
+
+      for (var first = 0; first < uniqueTags.length; first += 1) {
+        for (var second = first + 1; second < uniqueTags.length; second += 1) {
+          var source = uniqueTags[first];
+          var target = uniqueTags[second];
+          var id = source + "\u0000" + target;
+          if (!edgesById[id]) {
+            edgesById[id] = {
+              id: id,
+              source: nodesById[source],
+              target: nodesById[target],
+              posts: [],
+              element: null,
+              countElement: null
+            };
+          }
+          edgesById[id].posts.push(post);
+        }
       }
-    }
-  });
+    });
 
-  var edges = Object.keys(edgesById).map(function (id) {
-    return edgesById[id];
-  });
+    edges = Object.keys(edgesById).map(function (id) {
+      return edgesById[id];
+    });
 
-  edges.forEach(function (edge) {
-    edge.source.edges.push(edge);
-    edge.target.edges.push(edge);
-    edge.source.neighborIds[edge.target.id] = true;
-    edge.target.neighborIds[edge.source.id] = true;
-  });
+    edges.forEach(function (edge) {
+      edge.source.edges.push(edge);
+      edge.target.edges.push(edge);
+      edge.source.neighborIds[edge.target.id] = true;
+      edge.target.neighborIds[edge.source.id] = true;
+    });
+  }
 
   function postCountLabel(count) {
     return count + (count === 1 ? " post" : " posts");
+  }
+
+  function tagCountLabel(count) {
+    return count + (count === 1 ? " tag" : " tags");
   }
 
   function clamp(value, minimum, maximum) {
@@ -298,8 +327,12 @@
   function closeResults() {
     results.hidden = true;
     selected = null;
-    nodes.forEach(function (node) { node.element.classList.remove("is-selected"); });
-    edges.forEach(function (edge) { edge.element.classList.remove("is-selected"); });
+    nodes.forEach(function (node) {
+      if (node.element) node.element.classList.remove("is-selected");
+    });
+    edges.forEach(function (edge) {
+      if (edge.element) edge.element.classList.remove("is-selected");
+    });
   }
 
   function clearHighlight() {
@@ -612,6 +645,7 @@
 
   function populateSearchOptions() {
     if (!searchOptions) return;
+    searchOptions.textContent = "";
     nodes.forEach(function (node) {
       var option = document.createElement("option");
       option.value = node.label;
@@ -675,8 +709,126 @@
     clearHighlight();
     closeResults();
     if (searchInput) searchInput.value = "";
-    setSearchStatus(nodes.length + (nodes.length === 1 ? " tag available." : " tags available."));
+    setSearchStatus(graphStatusMessage());
     render();
+  }
+
+  function getCategoryCatalog() {
+    var counts = Object.create(null);
+    posts.forEach(function (post) {
+      post.categories.forEach(function (category) {
+        counts[category] = (counts[category] || 0) + 1;
+      });
+    });
+    return Object.keys(counts).sort(function (left, right) {
+      return left.localeCompare(right);
+    }).map(function (category) {
+      return { id: category, count: counts[category] };
+    });
+  }
+
+  function selectedCategories() {
+    if (!categoryOptions) return [];
+    return Array.prototype.slice.call(
+      categoryOptions.querySelectorAll('input[type="checkbox"]:checked')
+    ).map(function (input) {
+      return input.value;
+    });
+  }
+
+  function updateCategorySummary(categories) {
+    if (!categorySummary) return;
+    if (categories.length === 0) {
+      categorySummary.textContent = "All";
+    } else if (categories.length === 1) {
+      categorySummary.textContent = categories[0].replace(/-/g, " ");
+    } else {
+      categorySummary.textContent = categories.length + " selected";
+    }
+  }
+
+  function populateCategoryOptions() {
+    if (!categoryOptions) return;
+    categoryOptions.textContent = "";
+    getCategoryCatalog().forEach(function (category, index) {
+      var label = document.createElement("label");
+      var checkbox = document.createElement("input");
+      var name = document.createElement("span");
+      var count = document.createElement("span");
+
+      checkbox.type = "checkbox";
+      checkbox.value = category.id;
+      checkbox.id = "tag-map-category-" + index;
+      checkbox.addEventListener("change", rebuildGraph);
+      name.textContent = category.id.replace(/-/g, " ");
+      count.className = "tag-map-categories__count";
+      count.textContent = String(category.count);
+      label.appendChild(checkbox);
+      label.appendChild(name);
+      label.appendChild(count);
+      categoryOptions.appendChild(label);
+    });
+  }
+
+  function graphStatusMessage() {
+    var categories = selectedCategories();
+    return tagCountLabel(nodes.length) + " from " + postCountLabel(activePosts.length) +
+      (categories.length ? " in the selected categories." : ".");
+  }
+
+  function cancelActiveDrag() {
+    if (!activeDrag) return;
+    var node = activeDrag.node;
+    node.dragging = false;
+    if (node.element) {
+      node.element.classList.remove("is-dragging");
+      if (node.element.hasPointerCapture(activeDrag.pointerId)) {
+        node.element.releasePointerCapture(activeDrag.pointerId);
+      }
+    }
+    activeDrag = null;
+  }
+
+  function rebuildGraph() {
+    var categories = selectedCategories();
+    stopAnimation();
+    cancelActiveDrag();
+    closeResults();
+    clearHighlight();
+
+    activePosts = posts.filter(function (post) {
+      if (categories.length === 0) return true;
+      return post.categories.some(function (category) {
+        return categories.indexOf(category) !== -1;
+      });
+    });
+
+    nodesLayer.textContent = "";
+    edgesLayer.textContent = "";
+    buildGraphData(activePosts);
+    createEdges();
+    createNodes();
+    populateSearchOptions();
+    if (searchInput) searchInput.value = "";
+
+    stageWidth = 0;
+    stageHeight = 0;
+    emptyMessage.hidden = nodes.length !== 0;
+    emptyMessage.textContent = categories.length ?
+      "No tagged posts match the selected categories." :
+      "No tagged posts are available yet.";
+    updateCategorySummary(categories);
+    setSearchStatus(graphStatusMessage());
+    measure();
+    updateMotion();
+  }
+
+  function clearCategorySelection() {
+    if (!categoryOptions) return;
+    categoryOptions.querySelectorAll('input[type="checkbox"]').forEach(function (input) {
+      input.checked = false;
+    });
+    rebuildGraph();
   }
 
   function initializeStars() {
@@ -696,20 +848,17 @@
     });
   }
 
-  createEdges();
-  createNodes();
-  populateSearchOptions();
-  if (nodes.length === 0) emptyMessage.hidden = false;
-  setSearchStatus(nodes.length + (nodes.length === 1 ? " tag available." : " tags available."));
-  measure();
+  populateCategoryOptions();
+  rebuildGraph();
   initializeStars();
-  updateMotion();
 
   if (searchForm) searchForm.addEventListener("submit", handleSearch);
   if (resetButton) resetButton.addEventListener("click", resetLayout);
+  if (clearCategoriesButton) clearCategoriesButton.addEventListener("click", clearCategorySelection);
   if (closeResultsButton) closeResultsButton.addEventListener("click", closeResults);
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && results && !results.hidden) closeResults();
+    if (event.key === "Escape" && categoryDetails && categoryDetails.open) categoryDetails.open = false;
   });
   document.addEventListener("visibilitychange", updateMotion);
   window.addEventListener("pointerup", finishDrag, true);

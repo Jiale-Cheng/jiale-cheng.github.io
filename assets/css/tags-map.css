@@ -124,7 +124,7 @@ html.tags-map-theme,
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.65rem;
-  width: min(100%, 46rem);
+  width: min(100%, 64rem);
   margin: 0 auto 0.9rem;
 }
 
@@ -156,6 +156,151 @@ html.tags-map-theme,
 .tag-map-search__input:focus {
   border-color: #8de8d0;
   box-shadow: 0 0 0 3px rgba(141, 232, 208, 0.16);
+}
+
+.tag-map-categories {
+  position: relative;
+  flex: 0 1 15rem;
+  min-width: 12rem;
+  color: #e8f5f1;
+  font-size: 0.8rem;
+}
+
+.tag-map-categories summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  height: 2.75rem;
+  padding: 0 0.9rem;
+  font-weight: 800;
+  list-style: none;
+  background: rgba(8, 19, 27, 0.72);
+  border: 1px solid rgba(157, 222, 207, 0.42);
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.tag-map-categories summary::-webkit-details-marker {
+  display: none;
+}
+
+.tag-map-categories summary::after {
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-left: auto;
+  content: "";
+  border-right: 2px solid #8de8d0;
+  border-bottom: 2px solid #8de8d0;
+  transform: rotate(45deg) translateY(-0.15rem);
+  transition: transform 0.18s ease;
+}
+
+.tag-map-categories[open] summary::after {
+  transform: rotate(225deg) translate(-0.12rem, -0.12rem);
+}
+
+.tag-map-categories summary:focus-visible {
+  outline: 3px solid rgba(141, 232, 208, 0.52);
+  outline-offset: 3px;
+}
+
+.tag-map-categories__summary {
+  max-width: 7rem;
+  overflow: hidden;
+  color: #8de8d0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag-map-categories__panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  z-index: 20;
+  width: min(21rem, calc(100vw - 2rem));
+  padding: 0.9rem;
+  margin: 0;
+  color: #26383f;
+  background: rgba(251, 254, 253, 0.98);
+  border: 1px solid rgba(157, 222, 207, 0.72);
+  border-radius: 0.75rem;
+  box-shadow: 0 1rem 2.6rem rgba(0, 0, 0, 0.34);
+}
+
+.tag-map-categories__help {
+  margin: 0 0 0.65rem;
+  color: #66777d;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.tag-map-categories__options {
+  display: grid;
+  gap: 0.18rem;
+  max-height: 16rem;
+  overflow: auto;
+}
+
+.tag-map-categories__options label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.42rem;
+  cursor: pointer;
+}
+
+.tag-map-categories__options label:hover {
+  background: #e8f5f1;
+}
+
+.tag-map-categories__options input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: #17866e;
+}
+
+.tag-map-categories__options input:focus-visible {
+  outline: 2px solid #17866e;
+  outline-offset: 2px;
+}
+
+.tag-map-categories__count {
+  min-width: 1.6rem;
+  padding: 0.12rem 0.4rem;
+  color: #356258;
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-align: center;
+  background: #dff1ec;
+  border-radius: 999px;
+}
+
+.tag-map-categories__clear {
+  width: 100%;
+  margin-top: 0.7rem;
+  padding: 0.48rem 0.65rem;
+  color: #176653;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: transparent;
+  border: 1px solid #a8cec4;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.tag-map-categories__clear:hover,
+.tag-map-categories__clear:focus-visible {
+  color: #fff;
+  background: #176653;
+  border-color: #176653;
 }
 
 .tag-map-control-button {
@@ -519,6 +664,17 @@ html.tags-map-theme,
     flex-basis: 100%;
   }
 
+  .tag-map-categories {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .tag-map-categories__panel {
+    position: static;
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+
   .tag-map-control-button--secondary {
     width: 100%;
   }
@@ -549,6 +705,7 @@ html.tags-map-theme,
 @media (prefers-reduced-motion: reduce) {
   .tag-map-header__back,
   .tag-map-control-button,
+  .tag-map-categories summary::after,
   .tag-map-node,
   .tag-map-edge {
     transition: none;
