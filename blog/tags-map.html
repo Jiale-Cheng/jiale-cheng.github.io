@@ -15,6 +15,29 @@ permalink: /blog/tags-map/
 
   <section class="tag-map-graph" data-tag-map aria-labelledby="tag-map-heading">
     <h2 class="visually-hidden" id="tag-map-heading">Interactive map of blog tags</h2>
+
+    <div class="tag-map-controls">
+      <form class="tag-map-search" data-tag-map-search role="search">
+        <label class="visually-hidden" for="tag-map-search-input">Search for a tag</label>
+        <input
+          id="tag-map-search-input"
+          class="tag-map-search__input"
+          type="search"
+          list="tag-map-search-options"
+          placeholder="Search tags"
+          autocomplete="off"
+          spellcheck="false"
+          data-tag-map-search-input
+        >
+        <datalist id="tag-map-search-options" data-tag-map-search-options></datalist>
+        <button class="tag-map-control-button tag-map-search__submit" type="submit">Find tag</button>
+      </form>
+      <button class="tag-map-control-button tag-map-control-button--secondary" type="button" data-tag-map-reset>
+        Reset layout
+      </button>
+      <p class="tag-map-search__status" data-tag-map-search-status aria-live="polite"></p>
+    </div>
+
     <div class="tag-map-stage" data-tag-map-stage aria-describedby="tag-map-hint">
       <div class="tag-map-edges" data-tag-map-edges></div>
       <div class="tag-map-nodes" data-tag-map-nodes></div>
@@ -28,7 +51,9 @@ permalink: /blog/tags-map/
         <ul class="tag-map-results__list" data-tag-map-results-list></ul>
       </aside>
     </div>
-    <p class="tag-map-hint" id="tag-map-hint">Select a tag or a numbered connection to explore its posts.</p>
+    <p class="tag-map-hint" id="tag-map-hint">
+      Search, select, or drag a tag. Dragged tags stay pinned; double-click or press Shift+Enter to release one.
+    </p>
   </section>
 
   <script id="tag-map-data" type="application/json">
