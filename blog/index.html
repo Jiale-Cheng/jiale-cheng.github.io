@@ -6,12 +6,14 @@ description: Notes on mathematics, information theory, communications, and relat
 ---
 <div class="blog-index">
   <nav class="blog-index__tools" aria-label="Browse posts">
+    <a href="{{ '/blog/' | relative_url }}" aria-current="page">Browse by time</a>
     <a href="{{ '/blog/tags/' | relative_url }}">Browse by tag</a>
     <a href="{{ '/blog/categories/' | relative_url }}">Browse by category</a>
     <a href="{{ '/blog/search/' | relative_url }}">Search posts</a>
   </nav>
 
-  {% for post in site.posts %}
+  {% assign blog_posts = paginator.posts | default: site.posts %}
+  {% for post in blog_posts %}
   <article class="post-preview">
     <a class="post-preview__link" href="{{ post.url | relative_url }}">
       <h2 class="post-preview__title">{{ post.title }}</h2>
@@ -37,4 +39,22 @@ description: Notes on mathematics, information theory, communications, and relat
   </article>
   {% unless forloop.last %}<hr>{% endunless %}
   {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="blog-index-pagination" aria-label="Blog pages">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" rel="prev">Newer posts</a>
+    {% else %}
+    <span aria-disabled="true">Newer posts</span>
+    {% endif %}
+
+    <span class="blog-index-pagination__status">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" rel="next">Older posts</a>
+    {% else %}
+    <span aria-disabled="true">Older posts</span>
+    {% endif %}
+  </nav>
+  {% endif %}
 </div>

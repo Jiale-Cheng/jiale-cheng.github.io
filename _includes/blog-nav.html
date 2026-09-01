@@ -21,10 +21,31 @@
       <span></span>
     </button>
     <div class="blog-nav__menu" id="blog-nav-menu">
-      <a href="{{ '/' | relative_url }}"{% if blog_nav_active == 'home' %} class="is-active" aria-current="page"{% endif %}>HOME</a>
-      <a href="{{ '/blog/' | relative_url }}"{% if blog_nav_active == 'posts' %} class="is-active" aria-current="page"{% endif %}>BLOGS</a>
-      <a href="{{ '/about/' | relative_url }}"{% if blog_nav_active == 'about' %} class="is-active" aria-current="page"{% endif %}>ABOUT</a>
-      <a href="{{ '/blog/tags/' | relative_url }}"{% if blog_nav_active == 'tags' %} class="is-active" aria-current="page"{% endif %}>TAGS</a>
+      <a class="blog-nav__link{% if blog_nav_active == 'home' %} is-active{% endif %}" href="{{ '/' | relative_url }}"{% if blog_nav_active == 'home' %} aria-current="page"{% endif %}>HOME</a>
+
+      <div class="blog-nav__item">
+        <a class="blog-nav__link blog-nav__link--dropdown{% if blog_nav_active == 'posts' %} is-active{% endif %}" href="{{ '/blog/' | relative_url }}" aria-haspopup="true"{% if blog_nav_active == 'posts' %} aria-current="page"{% endif %}>
+          BLOGS<span class="blog-nav__caret" aria-hidden="true"></span>
+        </a>
+        <div class="blog-nav__dropdown" aria-label="Browse blogs">
+          <a class="blog-nav__dropdown-link" href="{{ '/blog/' | relative_url }}">By Time</a>
+          <a class="blog-nav__dropdown-link" href="{{ '/blog/tags/' | relative_url }}">Tags</a>
+          <a class="blog-nav__dropdown-link" href="{{ '/blog/categories/' | relative_url }}">Category</a>
+          <a class="blog-nav__dropdown-link" href="{{ '/blog/search/' | relative_url }}">Search</a>
+        </div>
+      </div>
+
+      <a class="blog-nav__link{% if blog_nav_active == 'about' %} is-active{% endif %}" href="{{ '/about/' | relative_url }}"{% if blog_nav_active == 'about' %} aria-current="page"{% endif %}>ABOUT</a>
+
+      <div class="blog-nav__item">
+        <a class="blog-nav__link blog-nav__link--dropdown{% if blog_nav_active == 'tags' %} is-active{% endif %}" href="{{ '/blog/tags/' | relative_url }}" aria-haspopup="true"{% if blog_nav_active == 'tags' %} aria-current="page"{% endif %}>
+          TAGS<span class="blog-nav__caret" aria-hidden="true"></span>
+        </a>
+        <div class="blog-nav__dropdown" aria-label="Browse tags">
+          <a class="blog-nav__dropdown-link" href="{{ '/blog/tags/' | relative_url }}">Tag List</a>
+          <a class="blog-nav__dropdown-link" href="{{ '/blog/tags-map/' | relative_url }}">Tag Map</a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

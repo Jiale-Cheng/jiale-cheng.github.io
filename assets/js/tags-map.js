@@ -195,6 +195,7 @@
       button.addEventListener("pointermove", continueDrag);
       button.addEventListener("pointerup", finishDrag);
       button.addEventListener("pointercancel", finishDrag);
+      button.addEventListener("lostpointercapture", finishDrag);
       button.addEventListener("mouseenter", function () { highlightNode(node); });
       button.addEventListener("mouseleave", function () {
         if (!node.dragging) clearHighlight();
@@ -378,8 +379,10 @@
 
   function finishDrag(event) {
     if (!activeDrag || event.pointerId !== activeDrag.pointerId) return;
-    var node = activeDrag.node;
-    if (activeDrag.moved) {
+    var completedDrag = activeDrag;
+    var node = completedDrag.node;
+    activeDrag = null;
+    if (completedDrag.moved) {
       updatePinnedState(node, true, "drag");
       node.suppressClickUntil = Date.now() + 350;
       setSearchStatus(node.label + " pinned in its new position.");
@@ -389,7 +392,6 @@
     if (node.element.hasPointerCapture(event.pointerId)) {
       node.element.releasePointerCapture(event.pointerId);
     }
-    activeDrag = null;
     render();
   }
 
@@ -710,6 +712,8 @@
     if (event.key === "Escape" && results && !results.hidden) closeResults();
   });
   document.addEventListener("visibilitychange", updateMotion);
+  window.addEventListener("pointerup", finishDrag, true);
+  window.addEventListener("pointercancel", finishDrag, true);
   window.addEventListener("resize", measure, { passive: true });
   if (typeof reducedMotion.addEventListener === "function") {
     reducedMotion.addEventListener("change", updateMotion);
