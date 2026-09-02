@@ -146,7 +146,7 @@ The abstract tangent space and its chart-transition law are intrinsic. A particu
 
 ### Restricting a smooth map
 
-Let $$L\subset M$$ and $$K\subset N$$ be submanifolds, and suppose that $$f:M\to N$$ is smooth with $$f(L)\subset K$$. The restricted map $$f|_L:L\to K$$ satisfies the type-correct identity
+Let $$L\subset M$$ and $$K\subset N$$ be submanifolds, and suppose that $$f:M\to N$$ is smooth with $$f(L)\subset K$$. The restricted map $$f\vert_L:L\to K$$ satisfies the type-correct identity
 
 $$
 i_K\circ f|_L=f\circ i_L.
@@ -165,7 +165,7 @@ $$
 T_p(f|_L)=(T_pf)|_{T_pL}.
 $$
 
-The geometric reason is simple: a curve in $$L$$ is also the same curve in $$M$$, and $$(f|_L)\circ\gamma=f\circ\gamma$$. Differentiating these two equal curves produces the same velocity.
+The geometric reason is simple: a curve in $$L$$ is also the same curve in $$M$$, and $$(f\vert_L)\circ\gamma=f\circ\gamma$$. Differentiating these two equal curves produces the same velocity.
 
 The same adapted-chart argument gives several useful consequences:
 
@@ -199,7 +199,7 @@ $$
 
 Let $$f:M^m\to N^n$$ be smooth.
 
-1. If $$f$$ is an immersion, then every $$p\in M$$ has an open neighborhood $$U$$ such that $$f|_U:U\to N$$ is an embedding.
+1. If $$f$$ is an immersion, then every $$p\in M$$ has an open neighborhood $$U$$ such that $$f\vert_U:U\to N$$ is an embedding.
 2. If $$f$$ is an embedding, then $$f(M)$$ is an $$m$$-dimensional submanifold of $$N$$ and
 
 $$
@@ -288,7 +288,7 @@ For $$m=1$$, the first factor contains $$q\in S^1\subset\mathbb R^2$$, while the
 <div class="math-statement math-statement--example" data-statement="example" id="ex-spherical-slices" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Example</span> <span class="math-statement__title">(Spherical Slices)</span>.</p>
 
-For $$1\leq\ell<m$$ and $$y\in\mathbb R^{m-\ell}$$ with $$|y|<1$$, define
+For $$1\leq\ell<m$$ and $$y\in\mathbb R^{m-\ell}$$ with $$\lvert y\rvert<1$$, define
 
 $$
 L_y:=\sqrt{1-|y|^2}\,S^\ell\times\{y\}\subset S^m.
@@ -375,7 +375,7 @@ $$
 
 Therefore $$\chi:=\Phi\circ\varphi$$ is a submanifold chart of $$M$$ for $$L$$. This proves the dimension statement.
 
-The restriction $$f|_L$$ is constant, so $$T_p(f|_L)=0$$. The restriction identity from the first section gives
+The restriction $$f\vert_L$$ is constant, so $$T_p(f\vert_L)=0$$. The restriction identity from the first section gives
 
 $$
 T_pL\subset\ker T_pf.
@@ -757,7 +757,7 @@ and $$Dh(x)v=-v^n$$ is surjective. Thus the half-space model and a regular inequ
 <div class="math-statement math-statement--example" data-statement="example" id="ex-closed-ball" markdown="1">
 <p class="math-statement__heading"><span data-statement-label>Example</span> <span class="math-statement__title">(The Closed Ball)</span>.</p>
 
-For $$r>0$$, let $$f(x)=|x|^2$$ on $$\mathbb R^n$$. If $$|p|=r$$, then
+For $$r>0$$, let $$f(x)=\lvert x\rvert^2$$ on $$\mathbb R^n$$. If $$\lvert p\rvert=r$$, then
 
 $$
 df_p(v)=2(p\mid v).
