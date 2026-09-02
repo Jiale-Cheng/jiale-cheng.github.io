@@ -67,7 +67,7 @@ $$
 
 The point is not that $$L$$ was already a linear plane. Rather, the chart bends the ambient manifold into coordinates in which $$L$$ becomes one.
 
-### The smooth structure induced on the subset
+**The smooth structure induced on the subset.**
 
 Give $$L$$ the relative topology inherited from $$M$$. For a submanifold chart, set
 
@@ -104,7 +104,7 @@ is also a homeomorphism, where $$f(M)$$ carries the relative topology induced fr
 
 The immersion condition says that no tangent direction is collapsed. It is local and differential. The homeomorphism condition says that the topology of the parameter space agrees with the topology that the image inherits from $$N$$. It is global.
 
-### The natural inclusion and tangent spaces
+**The natural inclusion and tangent spaces.**
 
 Once $$L$$ has the induced smooth structure, the natural inclusion
 
@@ -144,7 +144,7 @@ The abstract tangent space and its chart-transition law are intrinsic. A particu
 
 </div>
 
-### Restricting a smooth map
+**Restricting a smooth map.**
 
 Let $$L\subset M$$ and $$K\subset N$$ be submanifolds, and suppose that $$f:M\to N$$ is smooth with $$f(L)\subset K$$. The restricted map $$f\vert_L:L\to K$$ satisfies the type-correct identity
 
@@ -395,7 +395,7 @@ $$
 
 Fixing the output fixes the $$n$$ coordinates $$x$$ and leaves the $$m-n$$ coordinates $$z$$ free. The tangent directions along the fiber are precisely the directions killed by the projection.
 
-### The local converse
+**The local converse.**
 
 Every submanifold can locally be written as a regular zero set. If $$L^\ell\subset M^m$$ and $$\varphi=(\varphi^1,\ldots,\varphi^m)$$ is an adapted chart, define
 
@@ -502,7 +502,7 @@ $$
 
 with $$\operatorname{int}(B)$$ a $$b$$-dimensional manifold without boundary and $$\partial B$$ a $$(b-1)$$-dimensional manifold without boundary.
 
-### Why this is not merely gluing two manifolds
+**Why this is not merely gluing two manifolds.**
 
 The decomposition
 
@@ -530,7 +530,7 @@ For example, $$S^1\subset\mathbb R^2$$ has empty manifold boundary, but its topo
 
 </div>
 
-### Intrinsic charts on the manifold with boundary
+**Intrinsic charts on the manifold with boundary.**
 
 An ambient adapted chart retains all $$n$$ coordinates and records how $$B$$ sits in $$N$$. An intrinsic chart keeps only the first $$b$$ coordinates needed for calculus on $$B$$. If $$\psi$$ is adapted and $$U=V\cap B$$, then
 
@@ -911,7 +911,7 @@ Every open cover of a smooth manifold admits a subordinate smooth partition of u
 
 The proof has four stages. Keeping the fixed cover visible throughout prevents the construction from becoming a string of unexplained auxiliary objects.
 
-### Step 1: construct one local cutoff
+**Step 1: Construct one local cutoff.**
 
 Fix $$p\in X$$ and first choose a member $$U_\alpha$$ of the fixed cover containing $$p$$. Choose a chart
 
@@ -959,7 +959,7 @@ $$
 
 Because the support of $$\chi'$$ stays away from the edge of $$\varphi(U)$$, extending by zero introduces no loss of smoothness. We have therefore constructed a global smooth cutoff that is positive near $$p$$ and supported inside the preselected cover member $$U_\alpha$$.
 
-### Step 2: exhaust the manifold by compact sets
+**Step 2: Exhaust the manifold by compact sets.**
 
 Choose a countable cover of $$X$$ by relatively compact open sets. Repeatedly use finite subcovers of compact sets to obtain compact sets
 
@@ -971,7 +971,7 @@ $$
 
 This compact exhaustion lets us handle a noncompact manifold one compact layer at a time.
 
-### Step 3: choose finitely many cutoffs on each shell
+**Step 3: Choose finitely many cutoffs on each shell.**
 
 Set $$K_{-1}:=\varnothing$$ and
 
@@ -1004,7 +1004,7 @@ and the positive sets of the finitely many $$\chi_{j,i}$$ cover $$W_j$$.
 
 The cutoffs can also be confined to the band formed by the neighboring shells. Hence near a fixed point only finitely many shell indices occur, and each shell contributes only finitely many cutoffs. The entire family $$\{\chi_{j,i}\}$$ is locally finite.
 
-### Step 4: regroup and normalize
+**Step 4: Regroup and normalize.**
 
 The cutoffs are currently indexed by shell and finite-subcover position. Regroup them according to the fixed original cover:
 
@@ -1066,7 +1066,7 @@ To obtain them, add $$U_0:=X\setminus K$$ to make a cover of all of $$X$$ and ap
 
 2. Replacing smooth maps by $$C^k$$ maps throughout gives a $$C^k$$ partition of unity on every $$C^k$$ manifold, for each positive integer $$k$$.
 
-### Moving a partition from a refinement to the original cover
+**Moving a partition from a refinement to the original cover.**
 
 Suppose
 
