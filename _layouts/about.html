@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="about-theme">
+  <head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/site-nav.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+  </head>
+  <body>
+    {% include blog-nav.html overlay=false active="about" %}
+    <main id="main-content" class="about-main">
+      {{ content }}
+    </main>
+    <footer class="about-footer">
+      <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </footer>
+    <script src="{{ '/assets/js/blog-nav.js' | relative_url }}"></script>
+  </body>
+</html>
