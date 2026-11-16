@@ -30,20 +30,20 @@ description: Research, publications, talks, service, and awards of Jiale Cheng, 
   <div class="section-heading"><h2 id="news-heading">News</h2></div>
   <ul class="news">
     <li>
-      <time datetime="2026-07">Jul 2026</time>
-      <div>New preprint: <a href="https://arxiv.org/abs/2607.09087">Achieving Almost Exact Recovery in Almost Quadratic Time: Rank-Based Graph Matching via Local Tree Correlation Tests</a>. Submitted to <strong>ACM SIGMETRICS 2027</strong>.</div>
-    </li>
-    <li>
-      <time datetime="2026-09">Sep 2026</time>
-      <div>I attended the <a href="https://allerton.csl.illinois.edu/">62nd Allerton Conference on Communication, Control, and Computing (Allerton 2026)</a> in Urbana, Illinois.</div>
+      <time datetime="2026-11">Nov 2026</time>
+      <div>New preprint: <a href="https://arxiv.org/abs/2611.02281">Near-Quadratic Error-Free Graph Matching above Otter's Threshold via Approximate Local Tree Correlation Testing</a>. Submitted to <strong>STOC 2027</strong>.</div>
     </li>
     <li>
       <time datetime="2026-10">Oct 2026</time>
       <div>Our paper on rank-based graph matching has been accepted to <strong>ACM SIGMETRICS 2027</strong>.</div>
     </li>
     <li>
-      <time datetime="2026-11">Nov 2026</time>
-      <div>New preprint: <a href="https://arxiv.org/abs/2611.02281">Near-Quadratic Error-Free Graph Matching above Otter's Threshold via Approximate Local Tree Correlation Testing</a>. Submitted to <strong>STOC 2027</strong>.</div>
+      <time datetime="2026-09">Sep 2026</time>
+      <div>I attended the <a href="https://allerton.csl.illinois.edu/">62nd Allerton Conference on Communication, Control, and Computing (Allerton 2026)</a> in Urbana, Illinois.</div>
+    </li>
+    <li>
+      <time datetime="2026-07">Jul 2026</time>
+      <div>New preprint: <a href="https://arxiv.org/abs/2607.09087">Achieving Almost Exact Recovery in Almost Quadratic Time: Rank-Based Graph Matching via Local Tree Correlation Tests</a>. Submitted to <strong>ACM SIGMETRICS 2027</strong>.</div>
     </li>
   </ul>
 </section>
