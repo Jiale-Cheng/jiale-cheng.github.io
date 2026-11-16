@@ -17,7 +17,7 @@ description: Research, publications, talks, service, and awards of Jiale Cheng, 
 </figure>
 <div class="profile-copy"><div class="bio">
 <p>I am a fourth-year Ph.D. candidate at the <a href="https://eecs.engin.umich.edu/">University of Michigan</a>, advised by <a href="https://leiying.engin.umich.edu/">Prof. Lei Ying</a>. I received my M.S. and B.Eng. (Hons.) from Southeast University.</p>
-<p>I study fundamental limits and efficient algorithms for stochastic systems and learning, with applications to graph matching, communications, and data privacy. My current work focuses on graph alignment and inference.</p>
+<p>I study fundamental limits and efficient algorithms in stochastic systems and learning theory, with applications to graph matching, communications, and data privacy. My current work focuses on graph alignment and inference.</p>
 </div></div>
 <div class="profile-links" aria-label="Contact and academic profiles">
 <a href="mailto:jlcheng@umich.edu"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="1.5"/><path d="m3 5 7 6 7-6"/></svg>Email</a>

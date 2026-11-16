@@ -1,6 +1,6 @@
 # Site settings
 title: Jiale Cheng
-description: Ph.D. candidate at the University of Michigan working on graph alignment and information theory.
+description: Ph.D. candidate at the University of Michigan studying fundamental limits and efficient algorithms in stochastic systems and learning theory.
 baseurl: ""
 url: "https://jiale-cheng.github.io"
 repository: Jiale-Cheng/jiale-cheng.github.io
@@ -13,7 +13,7 @@ blog_post_header_image: /assets/images/blog-post-header.jpg
 # GitHub User settings
 username: Jiale Cheng
 github_username: jiale-cheng
-user_description: Ph.D. candidate in Electrical and Computer Engineering at the University of Michigan, studying graph alignment, information theory, and their applications to networks and systems.
+user_description: Ph.D. candidate in Electrical and Computer Engineering at the University of Michigan, studying fundamental limits and efficient algorithms in stochastic systems and learning theory, with applications to graph matching, communications, and data privacy.
 user_title: Ph.D. candidate
 email: jlcheng@umich.edu
 
@@ -22,7 +22,7 @@ author:
   name:           Jiale Cheng
   picture:        
   email:          jlcheng@umich.edu
-  description:    Researching graph alignment, information theory, and their applications to networks and systems.
+  description:    Researching stochastic systems and learning theory, with applications to graph matching, communications, and data privacy.
   twitter:
   facebook:
   github:         https://github.com/Jiale-Cheng
