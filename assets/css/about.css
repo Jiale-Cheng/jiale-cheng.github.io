@@ -1,87 +1,61 @@
+/* About uses the shared blog typography, navigation, and footer. */
 html.about-theme {
-  color-scheme: light;
-  --ink: #26303c;
-  --muted: #687180;
-  --blue: #17629b;
-  --rule: #e1e5e9;
-  --navy: #173b61;
-  --green: #2b4720;
+  --about-ink: #1a222c;
+  --about-muted: #73818b;
+  --about-link: #247b92;
+  --about-rule: #e1e8eb;
 }
 
-* {
-  box-sizing: border-box;
+.about-main {
+  width: min(100% - 4.5rem, 1080px);
+  margin: 6.75rem auto 0;
 }
 
-html.about-theme {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-.about-theme body {
-  margin: 0;
-  background: #fff;
-  color: var(--ink);
-  font: 16px/1.65 Georgia,"Times New Roman",serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: var(--blue);
+.about-main a {
   text-decoration: none;
   text-underline-offset: 4px;
 }
 
-a:hover {
+.about-main a:hover {
   text-decoration: underline;
 }
 
-a:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 5px;
-}
-
-.about-main {
-  width: calc(100% - 72px);
-  max-width: 1080px;
-  margin: 46px auto 0;
+.about-main p {
+  margin: 0 0 0.875rem;
 }
 
 .profile-heading {
-  margin-bottom: 31px;
+  margin-bottom: 2rem;
 }
 
-h1 {
-  margin: 0 0 5px;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -.7px;
-  color: var(--navy);
+.about-main h1 {
+  margin: 0 0 0.5rem;
+  color: var(--about-ink);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
 }
 
-p {
-  margin: 0 0 14px;
-}
-
-.affiliation {
-  font-size: 17px;
-  color: var(--muted);
+.about-main .affiliation {
   margin: 0;
+  color: var(--about-muted);
+  font-size: 0.95rem;
 }
 
 .profile {
   display: grid;
-  grid-template-columns: 190px minmax(0,1fr) 168px;
-  gap: 34px;
+  grid-template-columns: 190px minmax(0, 1fr) 168px;
   align-items: start;
-  padding-bottom: 36px;
-  margin-bottom: 35px;
-  border-bottom: 1px solid var(--rule);
+  gap: 2.125rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--about-rule);
 }
 
 .portrait {
   margin: 0;
-  padding-top: 3px;
+  padding-top: 0.2rem;
 }
 
 .portrait img {
@@ -90,17 +64,12 @@ p {
   height: 183px;
   object-fit: cover;
   object-position: 50% 30%;
-  background: #f1f2f3;
-  border-radius: 3px;
+  background: #f2f6f7;
+  border-radius: 0.45rem;
 }
 
 .profile-copy {
   min-width: 0;
-}
-
-.bio {
-  font-size: 16px;
-  line-height: 1.65;
 }
 
 .bio p:last-child {
@@ -109,42 +78,48 @@ p {
 
 .profile-links {
   display: grid;
-  gap: 19px;
-  padding-top: 3px;
-  font-size: 15px;
-  font-weight: 600;
+  gap: 0.8rem;
+  padding-top: 0.2rem;
+  font-size: 0.875rem;
+  font-weight: 650;
 }
 
-.profile-links>a {
+.profile-links > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 7px 12px;
-  min-height: 38px;
-  color: #fff;
-  background: var(--green);
-  border-radius: 3px;
-  text-align: center;
+  min-height: 2.6rem;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  color: var(--about-link);
+  background: transparent;
+  border: 1px solid #9fc7d0;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
-.profile-links>a:hover {
-  filter: brightness(1.12);
+.profile-links > a:hover,
+.profile-links > a:focus-visible {
+  color: #006f86;
+  background: #e7f2f4;
+  border-color: #76aebb;
   text-decoration: none;
 }
 
 .profile-links svg {
+  flex-shrink: 0;
   width: 15px;
   height: 15px;
-  stroke: currentColor;
   fill: none;
-  stroke-width: 1.6;
+  stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
+  stroke-width: 1.6;
 }
 
 .about-section {
-  margin-bottom: 39px;
+  margin-bottom: 2.75rem;
 }
 
 .section-heading {
@@ -152,192 +127,179 @@ p {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 8px 20px;
-  margin-bottom: 18px;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
-h2 {
+.about-main h2 {
   margin: 0;
-  color: var(--green);
-  font-size: 25px;
-  font-weight: 600;
+  color: #263238;
+  font-size: 1.5rem;
+  font-weight: 720;
+  letter-spacing: -0.025em;
   line-height: 1.4;
-  letter-spacing: -.4px;
 }
 
-.section-heading>a {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size: 11px;
-  color: var(--muted);
+.section-heading > a {
+  color: var(--about-muted);
+  font-size: 0.75rem;
+}
+
+.news,
+.pub-list,
+.talk-list,
+.awards {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .news {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 11px;
-  font-size: 15px;
-  line-height: 1.7;
+  gap: 0.875rem;
+  font-size: 0.925rem;
 }
 
 .news li {
   display: grid;
-  grid-template-columns: 101px minmax(0,1fr);
-  gap: 12px;
+  grid-template-columns: 6.25rem minmax(0, 1fr);
+  gap: 0.75rem;
 }
 
-.news time,
-.news-label {
-  font-size: 13px;
-  color: var(--muted);
-  padding-top: 2px;
+.news time {
+  padding-top: 0.125rem;
+  color: var(--about-muted);
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 
-.news-label.accepted {
-  color: var(--green);
-  font-weight: 600;
-}
-
-.news strong {
-  font-weight: 600;
-}
-
 .pub-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 23px;
+  gap: 1.75rem;
 }
 
 .pub {
   position: relative;
-  padding-left: 38px;
+  padding-left: 2.375rem;
 }
 
 .pub-number {
   position: absolute;
+  top: 0.125rem;
   left: 0;
-  top: 1px;
-  color: var(--muted);
-  font-size: 14px;
+  color: var(--about-muted);
+  font-size: 0.8rem;
 }
 
-.pub h3 {
-  font-size: 16px;
+.pub h3,
+.talk-list h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 650;
   line-height: 1.55;
-  font-weight: 600;
-  margin: 0 0 4px;
 }
 
 .pub h3 a {
-  color: var(--navy);
+  color: #263238;
 }
 
-.authors {
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 0 0 2px;
-  color: #535e6d;
+.pub h3 a:hover,
+.pub h3 a:focus-visible {
+  color: #0085a1;
+}
+
+.about-main .authors {
+  margin: 0 0 0.2rem;
+  color: #586671;
+  font-size: 0.875rem;
 }
 
 .authors strong {
   color: #303b49;
-  font-weight: 600;
+  font-weight: 650;
 }
 
-.venue {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--muted);
-  margin: 0 0 6px;
+.about-main .venue,
+.about-main .talk-meta {
+  margin: 0 0 0.45rem;
+  color: var(--about-muted);
+  font-size: 0.825rem;
 }
 
-.venue .accepted-venue {
-  color: var(--green);
-  font-weight: 600;
+.accepted-venue {
+  color: #247b92;
+  font-weight: 650;
+}
+
+.featured-paper {
+  color: var(--about-ink);
+  font-weight: 700;
 }
 
 .pub-links {
   display: flex;
-  gap: 15px;
   align-items: center;
-  font-size: 13px;
-  line-height: 1.5;
+  gap: 1rem;
+  font-size: 0.8rem;
+  font-weight: 550;
 }
 
-.pub-links a {
-  font-weight: 500;
+.about-main .equal {
+  margin: 1rem 0 0 2.375rem;
+  color: var(--about-muted);
+  font-size: 0.75rem;
 }
 
-.equal {
-  font-size: 12px;
-  color: var(--muted);
-  margin: 16px 0 0 38px;
+.talk-list {
+  gap: 1.5rem;
 }
 
-h3.subheading {
-  margin: 0 0 10px;
-  font-size: 16px;
-  font-weight: 600;
+.about-main .talk-meta {
+  margin-bottom: 0;
 }
 
-.service {
-  font-size: 15px;
-  line-height: 1.7;
+.about-main .subheading {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.service-list {
+  display: grid;
+  gap: 0.5rem;
   margin: 0;
-  color: #535e6d;
+  padding-left: 1.2em;
+  font-size: 0.925rem;
 }
 
 .awards {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
+  gap: 0.75rem;
 }
 
 .awards li {
   display: grid;
-  grid-template-columns: 1fr 40px;
-  gap: 18px;
-  font-size: 15px;
-  line-height: 1.65;
+  grid-template-columns: 1fr 2.5rem;
+  gap: 1.125rem;
+  font-size: 0.925rem;
 }
 
 .awards span {
-  color: var(--muted);
-  font-size: 13px;
+  padding-top: 0.125rem;
+  color: var(--about-muted);
+  font-size: 0.8rem;
   text-align: right;
-  padding-top: 2px;
 }
 
 .award-note {
   display: block;
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 1px;
+  margin-top: 0.125rem;
+  color: var(--about-muted);
+  font-size: 0.8rem;
 }
 
-.about-footer {
-  width: calc(100% - 72px);
-  max-width: 1080px;
-  margin: 40px auto 0;
-  padding: 19px 0 28px;
-  border-top: 1px solid var(--rule);
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  color: var(--muted);
-  font: 11px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-}
-
-@media(max-width:840px) {
+@media (max-width: 840px) {
   .profile {
-    grid-template-columns: 145px minmax(0,1fr);
-    gap: 23px;
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 1.5rem;
   }
 
   .portrait img {
@@ -346,46 +308,33 @@ h3.subheading {
   }
 
   .profile-links {
-    grid-column: 1/-1;
     display: flex;
+    grid-column: 1 / -1;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 0.75rem;
     padding-top: 0;
   }
 
-  .profile-links>a {
+  .profile-links > a {
     min-width: 125px;
   }
-
-  .bio {
-    font-size: 15px;
-  }
-
 }
 
-@media(max-width:560px) {
+@media (max-width: 560px) {
   .about-main {
-    width: calc(100% - 40px);
-    margin-top: 31px;
+    width: calc(100% - 2.5rem);
+    margin-top: 5.5rem;
   }
 
   .profile-heading {
-    margin-bottom: 23px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .affiliation {
-    font-size: 15px;
+    margin-bottom: 1.5rem;
   }
 
   .profile {
     grid-template-columns: 1fr;
-    padding-bottom: 27px;
-    margin-bottom: 29px;
-    gap: 20px;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .portrait img {
@@ -395,91 +344,40 @@ h3.subheading {
 
   .profile-links {
     grid-column: auto;
-    gap: 9px;
+    gap: 0.55rem;
   }
 
-  .profile-links>a {
+  .profile-links > a {
     min-width: 0;
-    padding: 8px 12px;
-    font-size: 13px;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
   }
 
-  .about-section {
-    margin-bottom: 31px;
-  }
-
-  h2 {
-    font-size: 23px;
-  }
-
-  .news {
-    font-size: 14px;
+  .about-main h2 {
+    font-size: 1.35rem;
   }
 
   .news li {
-    grid-template-columns: 80px minmax(0,1fr);
-    gap: 8px;
-  }
-
-  .news time,
-  .news-label {
-    font-size: 12px;
+    grid-template-columns: 4.7rem minmax(0, 1fr);
+    gap: 0.5rem;
   }
 
   .pub {
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
 
-  .pub-number {
-    font-size: 12px;
+  .about-main .equal {
+    margin-left: 1.875rem;
   }
-
-  .pub h3 {
-    font-size: 15px;
-  }
-
-  .authors {
-    font-size: 14px;
-  }
-
-  .venue {
-    font-size: 13px;
-  }
-
-  .equal {
-    margin-left: 30px;
-  }
-
-  .service,
-  .awards li {
-    font-size: 14px;
-  }
-
-  .about-footer {
-    width: calc(100% - 40px);
-  }
-
 }
 
-@media(prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   html.about-theme {
     scroll-behavior: auto;
   }
 
-}
-
-/* The shared navigation is fixed; keep the profile below it. */
-.about-main { margin-top: 108px; }
-.profile-links > a { white-space: nowrap; }
-.profile-links svg { flex-shrink: 0; }
-.featured-paper { color: #26303c; font-weight: 700; }
-.talk-list { display: grid; gap: 21px; margin: 0; padding: 0; list-style: none; }
-.talk-list h3 { margin: 0 0 4px; font-size: 16px; font-weight: 600; line-height: 1.55; }
-.about-main .talk-meta { margin: 0; color: #687180; font-size: 14px; line-height: 1.65; }
-.service-list { display: grid; gap: 8px; margin: 0; padding-left: 1.2em; font-size: 15px; }
-@media (max-width: 560px) {
-  .about-main { margin-top: 87px; }
-  .talk-list h3 { font-size: 15px; }
-  .about-main .talk-meta { font-size: 13px; }
-  .service-list { font-size: 14px; }
+  .profile-links > a {
+    transition: none;
+  }
 }

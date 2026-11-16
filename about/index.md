@@ -7,15 +7,17 @@ mathjax: false
 description: Research, publications, talks, service, and awards of Jiale Cheng, a Ph.D. candidate at the University of Michigan.
 ---
 
-<div class="profile-heading"><h1 id="profile-name">Jiale Cheng</h1><p class="affiliation">Ph.D. Candidate · Electrical and Computer Engineering · University of Michigan, Ann Arbor</p></div>
+<div class="profile-heading">
+  <h1 id="profile-name">Jiale Cheng</h1>
+  <p class="affiliation">Ph.D. Candidate · Electrical and Computer Engineering · University of Michigan, Ann Arbor</p>
+</div>
 <section class="profile" aria-labelledby="profile-name">
 <figure class="portrait">
 <img src="{{ '/about/portrait.png' | relative_url }}" alt="Jiale Cheng" width="190" height="183">
-
 </figure>
 <div class="profile-copy"><div class="bio">
 <p>I am a fourth-year Ph.D. candidate at the <a href="https://eecs.engin.umich.edu/">University of Michigan</a>, advised by <a href="https://leiying.engin.umich.edu/">Prof. Lei Ying</a>. I received my M.S. and B.Eng. (Hons.) from Southeast University.</p>
-<p>I study fundamental limits and efficient algorithms for stochastic systems and learning, with applications to <strong>graph matching</strong>, communications, and data privacy. My current work focuses on graph alignment and inference.</p>
+<p>I study fundamental limits and efficient algorithms for stochastic systems and learning, with applications to graph matching, communications, and data privacy. My current work focuses on graph alignment and inference.</p>
 </div></div>
 <div class="profile-links" aria-label="Contact and academic profiles">
 <a href="mailto:jlcheng@umich.edu"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="1.5"/><path d="m3 5 7 6 7-6"/></svg>Email</a>
@@ -23,6 +25,7 @@ description: Research, publications, talks, service, and awards of Jiale Cheng, 
 <a href="https://scholar.google.com/citations?user=YAsOVwwAAAAJ" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m1 7 9-4 9 4-9 4zM5 9v5c3 2 7 2 10 0V9M18 8v6"/></svg>Google Scholar</a>
 </div>
 </section>
+
 <section class="about-section" aria-labelledby="news-heading">
   <div class="section-heading"><h2 id="news-heading">News</h2></div>
   <ul class="news">
@@ -44,6 +47,7 @@ description: Research, publications, talks, service, and awards of Jiale Cheng, 
     </li>
   </ul>
 </section>
+
 <section class="about-section" aria-labelledby="publications-heading">
 <div class="section-heading"><h2 id="publications-heading">Selected Publications</h2><a href="https://scholar.google.com/citations?user=YAsOVwwAAAAJ" target="_blank" rel="noopener noreferrer">Full list on Google Scholar ↗</a></div>
 <ol class="pub-list">
@@ -85,6 +89,7 @@ description: Research, publications, talks, service, and awards of Jiale Cheng, 
 </ol>
 <p class="equal">* Equal contribution.</p>
 </section>
+
 <section class="about-section" aria-labelledby="talks-heading">
   <div class="section-heading"><h2 id="talks-heading">Talks and Presentations</h2></div>
   <ul class="talk-list">
